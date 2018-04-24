@@ -5,15 +5,17 @@
 # Site
 title: Yulin Lewis' Blog
 subtitle: Coding in life.
-description: Just do it |·ω ·`) 
+description: >
+  不想当写手的码农不是好咸鱼
+  _(xз」∠)_
 keywords:
 author: 雨临Lewis
-language: en
-timezone: UTC+8
+language: zh-Hans
+timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://lewky.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
