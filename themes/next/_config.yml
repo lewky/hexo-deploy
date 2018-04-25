@@ -26,9 +26,13 @@ override: false
 
 # For example, you put your favicons into `hexo-site/source/images` directory.
 # Then need to rename & redefine they on any other names, otherwise icons from Next will rewrite your custom icons in Hexo.
+# 将你的网站图标放到`{站点根目录}/source/` (推荐）或者`hexo-site/themes/next/source/images/`目录下
+# 默认的Next主题的网站图标放在`{站点根目录}/themes/next/source/images/`目录下
+# 如果你想将自己的网站图标放到`{站点根目录}/source/`根目录下，必须将`/images`从路径中去掉
+# 如果你将网站图标放到了`{站点根目录}/source/images`路径下，需要令网站图标的名字和`{站点根目录}/themes/next/source/images/`路径下的网站图标不同，否则网站图标会使用后者的同名图标
 favicon:
   small: favicon-16x16.ico
-  medium: ffavicon-32x32.ico
+  medium: favicon-32x32.ico
   apple_touch_icon: /images/apple-touch-icon-next.png
   safari_pinned_tab: /images/logo.svg
   #android_manifest: /images/manifest.json
@@ -91,6 +95,11 @@ index_with_subtitle: false
 # Key is the name of menu item. If translate for this menu will find in languages - this translate will be loaded; if not - Key name will be used. Key is case-senstive.
 # Value before `||` delimeter is the target link.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, question icon will be loaded.
+# 如果该站点是运行在子目录之下（比如：domain.tld/blog；这里的blog就是指我们的博客，前边的是上一级的域名），需要将路径前的斜杠去掉（/archives -> archives；即是将原本的绝对路径改成了相对路径）。
+# 用法：`Key：/link/ || 菜单图标`
+# Key就是菜单名，如果对该菜单名进行了国际化，即将其翻译放到对应的languages文件夹中，将会根据你设置的语言进行加载对应的菜单名翻译；如果没有设置翻译，则会使用这里的Key作为菜单名。这里的Key是大小写敏感的。
+# 在`||`分隔符之前的值是该菜单对应的路径
+# 在`||`分隔符之后的值是FontAwesome的图标（不懂的请百度什么是FontAwesome以及其用法），如果不指定图标，将会自动使用question这个图标。
 menu:
   home: / || home
   about: /about/ || user
@@ -126,6 +135,7 @@ scheme: Gemini
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+# 如果不指定图标，会默认使用globe图标
 social:
   GitHub: https://github.com/lewky || github
   E-Mail: mailto:1019175915@qq.com || envelope
@@ -151,10 +161,11 @@ links_layout: block
 #links:
   #Title: http://example.com/
 
+# 侧边栏头像
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
 # in site  directory(source/uploads): /uploads/avatar.gif
-# 头像地址
+# 头像的路径可以放在主题对应文件夹的source里，也可以放在站点根目录的source里，建议放在站点路径上
 avatar: /images/avatar.jpg
 
 # Table Of Contents in the Sidebar
