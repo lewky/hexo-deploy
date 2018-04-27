@@ -102,11 +102,11 @@ index_with_subtitle: false
 # 在`||`分隔符之后的值是FontAwesome的图标（不懂的请百度什么是FontAwesome以及其用法），如果不指定图标，将会自动使用question这个图标。
 menu:
   home: / || home
-  about: /about/ || user
   tags: /tags/ || tags
   categories: /categories/ || th
   archives: /archives/ || archive
   schedule: /schedule/ || calendar
+  about: /about/ || user
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
