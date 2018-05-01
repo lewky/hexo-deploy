@@ -39,7 +39,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "Lewis, 雨临Lewis"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -47,9 +47,10 @@ keywords: "Hexo, NexT"
 rss:
 
 footer:
+  # 指定页脚的建站日期，若不指定默认使用当前的年份。
   # Specify the date when the site was setup.
   # If not defined, current year will be used.
-  #since: 2015
+  since: 2018
 
   # Icon between year and copyright info.
   icon: user
@@ -67,7 +68,7 @@ footer:
     version: true
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  #custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -135,6 +136,7 @@ scheme: Gemini
 # Key is the link label showing to end users.
 # Value before `||` delimeter is the target permalink.
 # Value after `||` delimeter is the name of FontAwesome icon. If icon (with or without delimeter) is not specified, globe icon will be loaded.
+# 社交链接
 # 如果不指定图标，会默认使用globe图标
 social:
   GitHub: https://github.com/lewky || github
@@ -147,6 +149,7 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
+  建站日志: 建站日志.html
 
 social_icons:
   enable: true
