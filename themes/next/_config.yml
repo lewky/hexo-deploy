@@ -220,35 +220,50 @@ sidebar:
 # ---------------------------------------------------------------
 
 # Automatically scroll page to section which is under <!-- more --> mark.
+# 自动将页面滚动到<!-- more -->标记下的地方。
 scroll_to_more: true
 
 # Automatically saving scroll position on each post/page in cookies.
-save_scroll: false
+# 自动保存每篇文章或页面上一次滚动的地方。
+save_scroll: true
 
 # Automatically excerpt description in homepage as preamble text.
+# 自动在首页对文章进行摘要描述作为前言文本。
 excerpt_description: true
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
+# 自动摘要。不推荐。
+# 请在文章中使用<!-- more -->标志来精确控制摘要长度。
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 # Post meta display settings
+# 文章元数据展示设置
 post_meta:
-  item_text: true
+  # 文本显示
+  item_text: false
+  # 创建时间
   created_at: true
-  updated_at: false
+  # 更新时间
+  updated_at: true
+  # 目录分类
   categories: true
 
 # Post wordcount display settings
 # Dependencies: https://github.com/willin/hexo-wordcount
+# 文章字数展示设置
 post_wordcount:
+  # 文本显示
   item_text: true
-  wordcount: false
-  min2read: false
+  # 文章字数统计
+  wordcount: true
+  # 阅读时长
+  min2read: true
+  # 站点总字数统计
   totalcount: false
-  separated_meta: true
+  separated_meta: false
 
 # Wechat Subscriber
 #wechat_subscriber:
