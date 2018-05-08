@@ -106,8 +106,8 @@ menu:
   archives: /archives/ || archive
   categories: /categories/ || th
   tags: /tags/ || tags
-  schedule: /schedule/ || calendar
   about: /about/ || user
+  schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
@@ -221,11 +221,11 @@ sidebar:
 
 # Automatically scroll page to section which is under <!-- more --> mark.
 # 自动将页面滚动到<!-- more -->标记下的地方。
-scroll_to_more: true
+scroll_to_more: false
 
 # Automatically saving scroll position on each post/page in cookies.
 # 自动保存每篇文章或页面上一次滚动的地方。
-save_scroll: true
+save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
 # 自动在首页对文章进行摘要描述作为前言文本。
