@@ -8,8 +8,8 @@ author: 博主
 
 menu:
   home: 首页
-  archives: 归档
-  categories: 分类
+  archives: 文章
+  categories: 专栏
   tags: 标签
   about: 关于
   search: 搜索
@@ -31,8 +31,8 @@ post:
   untitled: 未命名
   toc_empty: 此文章未包含目录
   visitors: 阅读次数
-  wordcount: 字数统计
-  min2read: 阅读时长
+  wordcount: 本文共计
+  min2read: 阅文耗时
   totalcount: Site words total count
   copyright:
     author: 本文作者

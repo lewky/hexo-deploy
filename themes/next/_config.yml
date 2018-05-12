@@ -107,7 +107,7 @@ menu:
   categories: /categories/ || th
   tags: /tags/ || tags
   about: /about/ || user
-  schedule: /schedule/ || calendar
+  #schedule: /schedule/ || calendar
   #sitemap: /sitemap.xml || sitemap
   #commonweal: /404/ || heartbeat
 
@@ -233,7 +233,7 @@ excerpt_description: true
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
-# 自动摘要。不推荐。
+# 不推荐使用自动摘要。
 # 请在文章中使用<!-- more -->标志来精确控制摘要长度。
 auto_excerpt:
   enable: true
@@ -243,7 +243,7 @@ auto_excerpt:
 # 文章元数据展示设置
 post_meta:
   # 文本显示
-  item_text: true
+  item_text: false
   # 创建时间
   created_at: true
   # 更新时间
@@ -273,12 +273,14 @@ post_wordcount:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 # Reward
+# 打赏
 #reward_comment: Donate comment here
 #wechatpay: /images/wechatpay.jpg
 #alipay: /images/alipay.jpg
 #bitcoin: /images/bitcoin.png
 
 # Declare license on posts
+# 文章协议描述
 post_copyright:
   enable: false
   license: CC BY-NC-SA 3.0
@@ -290,7 +292,8 @@ post_copyright:
 # ---------------------------------------------------------------
 
 # Reduce padding / margin indents on devices with narrow width.
-mobile_layout_economy: false
+# 用限定的宽度来减少设备上的内外间距的缩进。
+mobile_layout_economy: true
 
 # Android Chrome header panel color ($black-deep).
 android_chrome_color: "#222"
@@ -304,11 +307,12 @@ custom_logo:
   enabled: false
   image:
 
+# 语法高亮主题
 # Code Highlight theme
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+highlight_theme: night eighties
 
 
 # ---------------------------------------------------------------
@@ -754,8 +758,15 @@ canvas_ribbon:
 #    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
 # Be aware that you should use the same version as internal ones to avoid potential problems.
 # Please use the https protocol of CDN files when you enable https on your site.
+# 脚本供应商
+# 为你想要定制的供应商设置CDN地址
+# 比如：
+#    jquery: https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js
+# 请注意，您应该使用与内部版本相同的版本以避免潜在的问题。
+# 如果您的站点允许使用https，请使用https协议的CDN文件。
 vendors:
   # Internal path prefix. Please do not edit it.
+  # 供应商的内部路径前缀，请不要修改它。
   _internal: lib
 
   # Internal version: 2.1.3
