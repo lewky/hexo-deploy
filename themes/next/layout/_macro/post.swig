@@ -52,7 +52,7 @@
                     <i class="fa fa-thumb-tack"></i>
                   </span>
                 {% endif %}
-                <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">{#
+                <a class="post-title-link" target="_blank" href="{{ url_for(post.path) }}" itemprop="url">{#
                 #}{{ post.title | default(__('post.untitled'))}}{#
               #}</a>{#
             #}{% else %}{{ post.title }}{% endif %}{#
@@ -61,6 +61,13 @@
         {% endif %}
 
         <div class="post-meta">
+	  {% if post.top %}
+	    <span class="post-meta-item-icon">
+                <i class="fa fa-thumb-tack"></i>
+            </span>
+            <font color="red">置顶</font>
+            <span class="post-meta-divider">|</span>
+          {% endif %}
           <span class="post-time">
             {% if theme.post_meta.created_at %}
               <span class="post-meta-item-icon">

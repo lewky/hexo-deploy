@@ -13,7 +13,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://lewky.github.io
+url: https://lewky.coding.me
 root: /
 # permalink: :year/:month/:day/:title/
 # permalink_defaults:
@@ -30,7 +30,7 @@ archive_dir: archives
 category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
-skip_render:
+skip_render: README.md
 
 # Writing
 # 写作相关设置
@@ -44,9 +44,11 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
+# 代码高亮设置
   enable: true
   line_number: true
   auto_detect: false
+# 将tab替换成四个空格
   tab_replace: '    '
   
 # Home page setting
@@ -78,7 +80,7 @@ time_format: HH:mm:ss
 ## Set per_page to 0 to disable pagination
 ## 这里的分页只影响到archives页面的文章数目
 ## 设置成0可以取消分页
-per_page: 8
+per_page: 10
 pagination_dir: page
 
 # Extensions

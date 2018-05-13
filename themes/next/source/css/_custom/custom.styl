@@ -1,1 +1,47 @@
 // Custom styles.
+
+/* 文章内链接文本样式 */
+.post-body p a,
+.post-body li a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+  &:hover {
+    color: #fc6423;
+    border-bottom: none;
+    border-bottom: 1px solid #fc6423;
+  }
+}
+
+/* 行内代码块的自定义样式 */
+code {
+    color: #d500fc;
+    background: rgba(78, 240, 233, 0.42);
+    margin: 2px;
+    border: 1px solid #d6d6d6;
+}
+
+/* 去掉图片边框 */
+.posts-expand .post-body img {
+    border: none;
+    padding: 0px;
+}
+.post-gallery .post-gallery-img img {
+    padding: 3px;
+}
+
+/* 右下角返回顶部按钮样式 */
+.back-to-top {
+    line-height: 1.5;
+    right: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    background-color: rgba(111, 66, 193, 0.78);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+}
+.back-to-top.back-to-top-on {
+    bottom: 10px;
+}
