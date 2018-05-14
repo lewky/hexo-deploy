@@ -1,10 +1,19 @@
+# default
 .DS_Store
 Thumbs.db
 db.json
 *.log
+*.md
 node_modules/
 public/
 .deploy*/
+
+# source
 source/_posts
 source/_drafts
 source/images/posts
+
+# scaffolds
+!scaffolds/draft.md
+!scaffolds/page.md
+!scaffolds/post.md

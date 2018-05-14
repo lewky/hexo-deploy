@@ -1,5 +1,5 @@
 ---
-title: {{ title }}
+title: NexT主题个性化 - 
 date: {{ date }}
 tags:
   - Hexo

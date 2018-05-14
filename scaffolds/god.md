@@ -1,5 +1,5 @@
 ---
-title: {{ title }}
+title: Java修仙 - 第 夜之
 date: {{ date }}
 tags:
   - Java
