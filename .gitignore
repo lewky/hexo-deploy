@@ -13,6 +13,7 @@ source/_drafts
 source/images/posts
 
 # scaffolds
+scaffolds/*
 !scaffolds/draft.md
 !scaffolds/page.md
 !scaffolds/post.md

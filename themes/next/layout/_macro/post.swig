@@ -52,7 +52,7 @@
                     <i class="fa fa-thumb-tack"></i>
                   </span>
                 {% endif %}
-                <a class="post-title-link" target="_blank" href="{{ url_for(post.path) }}" itemprop="url">{#
+                <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">{#
                 #}{{ post.title | default(__('post.untitled'))}}{#
               #}</a>{#
             #}{% else %}{{ post.title }}{% endif %}{#

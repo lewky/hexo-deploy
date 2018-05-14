@@ -215,7 +215,7 @@ sidebar:
 
   # Sidebar offset from top menubar in pixels (only for Pisces | Gemini).
   # 侧边栏和上方的菜单栏的间距(只对 Pisces 和 Gemini 主题有效)
-  offset: 12
+  offset: 0
 
   # Back to top in sidebar (only for Pisces | Gemini).
   # 侧边栏显示回到顶部(只对 Pisces 和 Gemini 主题有效)

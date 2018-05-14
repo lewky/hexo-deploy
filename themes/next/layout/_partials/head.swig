@@ -7,9 +7,13 @@
         if('{{ page.password }}'){
             if (prompt('请输入文章密码') !== '{{ page.password }}'){
                 alert('密码错误！');
-                window.opener = null;
-		window.open('', '_self');
-		window.close();
+		if (history.length === 1) {
+		    window.opener = null;
+		    window.open('', '_self');
+		    window.close();
+                } else {
+                    history.back();
+                }
             }
         }
     })();
