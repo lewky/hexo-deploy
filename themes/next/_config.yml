@@ -173,6 +173,11 @@ links_layout: block
 # in site  directory(source/uploads): /uploads/avatar.gif
 # 头像的路径可以放在主题对应文件夹的source里，也可以放在站点根目录的source里，建议放在站点路径上
 avatar: /images/avatar.jpg
+# 头像挂件
+avatar_plug:
+  # false表示关闭头像挂件，允许的值有：bilibili
+  # b站头像挂件: bilibili
+  theme: bilibili
 
 # Table Of Contents in the Sidebar
 # 侧栏文章目录设置

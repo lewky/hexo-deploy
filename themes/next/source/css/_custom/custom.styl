@@ -46,9 +46,9 @@ code {
     bottom: 10px;
 }
 
-/* 头像样式 */
+/* 开启bilibili头像挂件时的头像样式 */
 /* box-shadow: 5px 5px 5px rgba(60, 131, 191, 0.45); */
-.site-author-image {
+.site-author-image-bilibili {
     display: block;
     margin-top: 16px;
     margin-bottom: 30px;
@@ -59,8 +59,8 @@ code {
     border-radius: 50%;
 }
 
-/* 头像挂件样式 */
-.site-avatar-plug {
+/* bilibili头像挂件样式 */
+.site-avatar-plug-bilibili {
     position: absolute;
     display: block;
     margin-top: -20px;
@@ -69,4 +69,15 @@ code {
     max-width: 168px;
     height: auto;
     z-index: 1;
+}
+
+/* 关闭头像挂件时的头像样式 */
+.site-author-image {
+    display: block;
+    margin: 0 auto;
+    padding: 2px;
+    max-width: 120px;
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 50%;
 }

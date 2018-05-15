@@ -29,11 +29,21 @@
       <section class="site-overview-wrap sidebar-panel{% if not display_toc or toc(page.content).length <= 1 %} sidebar-panel-active{% endif %}">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            {% if theme.avatar %}
-	      <img class="site-avatar-plug" src="/images/avatar-plug/5.png" />
-              <img class="site-author-image" itemprop="image"
-                src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
-                alt="{{ theme.author }}" />
+            {% if theme.avatar_plug.theme %}
+	      {% if theme.avatar_plug.theme === 'bilibili' %}
+	        <img class="site-avatar-plug-bilibili" src="/images/avatar-plug/bilibili_9.png" />
+                <img class="site-author-image-bilibili" itemprop="image"
+                  src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
+                  alt="{{ theme.author }}" />
+	      {% else %}
+	        <img class="site-author-image" itemprop="image"
+                    src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
+                    alt="{{ theme.author }}" />
+	      {% endif %}
+	    {% else %}
+	        <img class="site-author-image" itemprop="image"
+                  src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
+                  alt="{{ theme.author }}" />
             {% endif %}
               <p class="site-author-name" itemprop="name">{{ theme.author }}</p>
               <p class="site-description motion-element" itemprop="description">{#

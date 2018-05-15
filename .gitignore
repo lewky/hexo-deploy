@@ -7,10 +7,11 @@ node_modules/
 public/
 .deploy*/
 
-# source
+# resources
 source/_posts
 source/_drafts
 source/images/posts
+source/Ω®’æ»’÷æ.md
 
 # scaffolds
 scaffolds/*
