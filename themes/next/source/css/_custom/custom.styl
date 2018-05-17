@@ -1,6 +1,6 @@
 // Custom styles.
 
-/* 文章内链接文本样式 */
+/* 文章内部的超链 */
 .post-body p a,
 .post-body li a {
   color: #0593d3;
@@ -13,7 +13,7 @@
   }
 }
 
-/* 行内代码块的自定义样式 */
+/* 行内代码块 */
 code {
     color: #d500fc;
     background: rgba(78, 240, 233, 0.42);
@@ -30,7 +30,7 @@ code {
     padding: 3px;
 }
 
-/* 右下角返回顶部按钮样式 */
+/* 页面右下角的返回顶部按钮 */
 .back-to-top {
     line-height: 1.5;
     right: 10px;
@@ -46,7 +46,7 @@ code {
     bottom: 10px;
 }
 
-/* 开启bilibili头像挂件时的头像样式 */
+/* 使用bilibili头像挂件时的头像 */
 .site-author-image-bilibili {
     display: block;
     margin-top: -132px;
@@ -58,7 +58,7 @@ code {
     border-radius: 50%;
 }
 
-/* bilibili头像挂件样式 */
+/* bilibili头像挂件 */
 .site-avatar-plug-bilibili {
     position: relative;
     display: block;
@@ -68,7 +68,7 @@ code {
     z-index: 1;
 }
 
-/* 关闭头像挂件时的头像样式 */
+/* 不使用头像挂件时的头像 */
 .site-author-image {
     display: block;
     margin: 0 auto;
@@ -79,7 +79,7 @@ code {
     border-radius: 50%;
 }
 
-/* 站点标题样式 */
+/* 站点标题 */
 .site-title {
     display: inline-block;
     vertical-align: top;
@@ -89,4 +89,38 @@ code {
     font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
     text-shadow: 5px 5px 3px rgba(47, 138, 216, 0.47);
     color: rgb(50, 158, 220);
+}
+
+/* 消除菜单图标的右内间距 */
+.menu .menu-item .fa {
+    margin-right: 0;
+}
+
+/* 选中菜单时显示图标 */
+.menu-item-active a:after {
+    position: absolute;
+    font-family: 'FontAwesome';
+    content: " \f0f4";
+    color: rgba(210, 65, 65, 0.57);
+    margin-left: 18px;
+}
+
+.menu .menu-item a:hover,
+.menu-item-active a {
+    background: rgba(228, 188, 188, 0.32);
+    border-radius: 5px;
+}
+
+.site-nav ul {
+    width: 101%;
+    margin-top: -16px;
+}
+
+.site-nav li {
+    float: left;
+    width: 50%;
+}
+
+.sidebar-inner {
+    top: 0;
 }

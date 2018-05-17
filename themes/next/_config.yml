@@ -151,7 +151,7 @@ social:
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
   站点首页: / || home
-  建站日志: /建站日志.html || fa fa-cog fa-spin
+  建站日志: /siting_log.html || fa fa-cog fa-spin
 
 social_icons:
   enable: true

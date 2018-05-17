@@ -1,4 +1,4 @@
-# default
+﻿# default
 .DS_Store
 Thumbs.db
 db.json
@@ -11,7 +11,7 @@ public/
 source/_posts
 source/_drafts
 source/images/posts
-source/建站日志.md
+source/siting_log.md
 
 # scaffolds
 scaffolds/*
