@@ -178,6 +178,7 @@ avatar_plug:
   # false表示关闭头像挂件，允许的值有：bilibili
   # b站头像挂件: bilibili
   theme: bilibili
+  image: /images/avatar-plug/bilibili_9.png
 
 # Table Of Contents in the Sidebar
 # 侧栏文章目录设置

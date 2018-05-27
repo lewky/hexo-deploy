@@ -31,7 +31,7 @@
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             {% if theme.avatar_plug.theme %}
 	      {% if theme.avatar_plug.theme === 'bilibili' %}
-	        <img class="site-avatar-plug-bilibili" src="/images/avatar-plug/bilibili_9.png" />
+	        <img class="site-avatar-plug-bilibili" src="{{ url_for( theme.avatar_plug.image ) }}" />
                 <img class="site-author-image-bilibili" itemprop="image"
                   src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
                   alt="{{ theme.author }}" />

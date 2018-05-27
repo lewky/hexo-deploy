@@ -8,7 +8,8 @@ public/
 .deploy*/
 
 # resources
-source/_posts
+source/_posts/*
+!source/_posts/hello-world.md
 source/_drafts
 source/images/posts
 

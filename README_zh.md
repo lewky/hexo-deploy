@@ -1,39 +1,37 @@
 # lewky.github.io
 [README](https://github.com/lewky/lewky.github.io/blob/dev/README.md) | [中文文档](https://github.com/lewky/lewky.github.io/blob/dev/README_zh.md)
 
-It's a repository for my hexo blog and you can access my blog by :zap: https://lewky.github.io/
+这是我的hexo博客代码仓库，你可以通过 :zap: https://lewky.github.io/ 来访问我的博客。
 
-There are two branch in this repository :
+本仓库存在两个分支：
 * master
 * dev
 
-**master** branch is deployed by github pages;
-**dev** branch is an empty hexo blog with my own cutomed NexT theme. 
+**master** 分支用来部署 github pages;
+**dev** 分支是使用了我自己定制的NexT主题的一个空的hexo博客，你可以通过克隆该dev分支来得到一个新的不包含任何文章(hello-world文章除外)的hexo博客。
 
-You can clone dev branch to get my hexo blog without posts except hello-world.md.
+## 使用步骤
 
-## How to play
-
-1. create a folder for your blog site and open `git bash` in this folder path, then clone dev branch:
+1. 创建一个文件作为你的博客站点根目录，在该目录下打开 `git bash` 并使用下边的命令克隆dev分支：
 ```bash
 git clone -b dev https://github.com/lewky/lewky.github.io.git ./
 ```
 
-2. install dependencies:
+2. 接着安装项目依赖(请确保已经安装了Node.js和hexo) :
 ```bash
 npm install
 ```
 
-3. deploy your blog in local:
+3. 在本地部署站点进行调试:
 ```bash
 hexo clean
 hexo g
 hexo s
 ```
 
-## Customed NexT theme
+## NexT主题个性化
 
-This theme is based on `NexT-Gemini` theme, most of css code with comments is in `themes/next/source/css/_custom/custom.styl`. 
+本博客的主题基于 `NexT-Gemini` 主题, 大部分css代码和注释都在 `themes/next/source/css/_custom/custom.styl`. 
 
 * 添加头像挂件(目前只有b站主题，可关闭)
 * 添加页面头部彩带(`Fork me on GitHub`) 

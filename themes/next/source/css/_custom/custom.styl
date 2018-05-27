@@ -21,6 +21,12 @@ code {
     border: 1px solid #d6d6d6;
 }
 
+/* 预格式代码块(用tab键插入的代码块) */
+pre code {
+    margin: 0;
+    border: none;
+}
+
 /* 去掉图片边框 */
 .posts-expand .post-body img {
     border: none;
@@ -102,25 +108,27 @@ code {
     font-family: 'FontAwesome';
     content: " \f0f4";
     color: rgba(210, 65, 65, 0.57);
-    margin-left: 18px;
+    right: 15px;
 }
 
+/* 选中菜单时的背景样式 */
 .menu .menu-item a:hover,
 .menu-item-active a {
-    background: rgba(228, 188, 188, 0.32);
+    background: rgba(238, 238, 238, 0.56)
     border-radius: 5px;
 }
 
+/* 菜单栏一行两个菜单按钮 */
 .site-nav ul {
     width: 101%;
     margin-top: -16px;
 }
-
 .site-nav li {
     float: left;
     width: 50%;
 }
 
+/* 侧边栏样式 */
 .sidebar-inner {
     top: 0;
 }
