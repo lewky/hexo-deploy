@@ -7,7 +7,7 @@ There are two branch in this repository :
 * master
 * dev
 
-**master** branch is deployed by github pages;
+**master** branch is deployed by github pages;  
 **dev** branch is an empty hexo blog with my own cutomed NexT theme. 
 
 You can clone dev branch to get my hexo blog without posts except hello-world.md.

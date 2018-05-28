@@ -7,7 +7,7 @@
 * master
 * dev
 
-**master** 分支用来部署 github pages;
+**master** 分支用来部署 github pages;  
 **dev** 分支是使用了我自己定制的NexT主题的一个空的hexo博客，你可以通过克隆该dev分支来得到一个新的不包含任何文章(hello-world文章除外)的hexo博客。
 
 ## 使用步骤
