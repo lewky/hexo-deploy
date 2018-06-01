@@ -68,7 +68,8 @@ footer:
     version: false
   # -------------------------------------------------------------
   # Any custom text can be defined here.
-  # custom_text: Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  # Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  custom_text: Hosted by <a href="https://pages.coding.me" style="font-weight:bold">Coding Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
