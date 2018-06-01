@@ -39,7 +39,7 @@ favicon:
   #ms_browserconfig: /images/browserconfig.xml
 
 # Set default keywords (Use a comma to separate)
-keywords: "Lewis,雨临Lewis,Hexo,NexT,Java,Java Web,前端,Java修仙,框架"
+keywords:
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.

@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Yulin Lewis' Blog
-subtitle: '赵子龙一身是<font color="orange">胆</font><br>程序猿遍体皆<font color="red">肝</font>'
-description: '不想当写手的码农不是好咸鱼<br>_(xз」∠)_'
-keywords: 雨临Lewis
-author: 雨临Lewis
+title: Someone' Blog
+subtitle: 'Hello World!'
+description: 'Hello World!'
+keywords: Someone
+author: Someone
 language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: https://lewky.coding.me
+url: http://yoursite.com
 root: /
 # permalink: :year/:month/:day/:title/
 # permalink_defaults:
@@ -93,8 +93,8 @@ theme: next
 deploy:
   type: git
   repo:
-    github: git@github.com:lewky/lewky.github.io.git,master
-    coding: git@git.coding.net:lewky/lewky.git,master
+    github: git@github.com:username/username.github.io.git,master
+    coding: git@git.coding.net:username/username.git,master
 
 markdown: redcarpet
 redcarpet:
