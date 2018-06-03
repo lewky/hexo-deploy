@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
     });
 });
 
-/* bilibili头像挂件点击事件 */
+/* 点击头像更换b站挂件 */
 var a_click = 1;
 var avatar_plug = 0;
 jQuery(document).ready(function($) {
@@ -48,7 +48,7 @@ jQuery(document).ready(function($) {
 	var frequency = 3;
 	/* 头像挂件数量 */
 	var plug_count = 38;
-	$(".site-avatar-plug-bilibili").click(function(e) {
+	$(".site-author-image-bilibili").click(function(e) {
 		if (a_click % frequency === 0) {
 			avatar_plug ++;
 			$(".site-avatar-plug-bilibili").attr("src","/images/avatar-plug/bilibili_" + avatar_plug + ".png");
@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 		if (avatar_plug === plug_count) {
 			avatar_plug = 0;
 		}
-		$(".site-avatar-plug-bilibili").attr("alt","再点击" + (frequency - a_click % frequency) + "次头像试试看~~");
+		$(".site-author-image-bilibili").attr("alt","再点击" + (frequency - a_click % frequency) + "次头像试试看~~");
 		a_click ++;
 	});
 });
