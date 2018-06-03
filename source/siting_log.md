@@ -9,6 +9,7 @@ categories:
 {% cq %}
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fa fa-refresh fa-lg fa-spin"></i>
 {% endcq%}
+* 2018-06-03: 添加头像旋转
 * 2018-06-01：去掉脚注超链的底部线条
 * 2018-05-31：
 	* 添加 `custom.js` 文件

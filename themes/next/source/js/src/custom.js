@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 		if (avatar_plug === plug_count) {
 			avatar_plug = 0;
 		}
-		$(".site-avatar-plug-bilibili").attr("alt","再点击" + (frequency - a_click % frequency) + "次头像试试看~~");
+		$(".site-author-image-bilibili").attr("alt","再点击" + (frequency - a_click % frequency) + "次头像试试看~~");
 		a_click ++;
 	});
 });
