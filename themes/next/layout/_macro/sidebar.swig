@@ -109,7 +109,10 @@
                   <span class="links-of-author-item">
                     <a href="{{ link.split('||')[0] | trim }}" target="_blank" title="{{ name }}">
                       {% if theme.social_icons.enable %}
-                        <i class="fa fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>{#
+		      {#
+                        <i class="fas fa-fw fa-{{ link.split('||')[1] | trim | default('globe') }}"></i>
+		      #}
+			<i class="fa-fw {{ link.split('||')[1] | trim | default('fas fa-globe') }}"></i>{#
                     #}{% endif %}{#
                       #}{% if not theme.social_icons.icons_only %}{#
                         #}{{ name }}{#

@@ -54,7 +54,7 @@
               $('<span>').addClass('post-meta-divider').text('|')
             ).append(
               $('<span>').addClass('post-meta-item-icon').append(
-                $('<i>').addClass('fa fa-users')
+                $('<i>').addClass('fas fa-users')
               )
               ).append($('<span>').text('{{ __("post.visitors")}} ' + count))
           )

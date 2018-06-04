@@ -1,10 +1,10 @@
 <div class="popup search-popup local-search-popup">
   <div class="local-search-header clearfix">
     <span class="search-icon">
-      <i class="fa fa-search"></i>
+      <i class="fas fa-search"></i>
     </span>
     <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
+      <i class="far fa-times-circle"></i>
     </span>
     <div class="local-search-input-wrapper">
       <input autocomplete="off"
