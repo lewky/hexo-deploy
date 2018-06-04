@@ -9,7 +9,10 @@ categories:
 {% cq %}
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fa fa-refresh fa-lg fa-spin"></i>
 {% endcq%}
-* 2018-06-03: 添加头像旋转
+* 2018-06-04：
+	* CDN有时候加载比较慢，所以去掉原本引入的 `Font Awesome 4` 和 `Font Awesome Free CDN`，直接将下载好的 `Font Awesome 5` 解压复制到 `lib` 目录下
+	* 这里吐槽一下，由于 `Font Awesome` 从版本4升级到5修改了很多图标的名称，所以我花了一个多小时的时间去一个个替换这些改动的图标，累死...
+* 2018-06-03：添加头像旋转
 * 2018-06-01：去掉脚注超链的底部线条
 * 2018-05-31：
 	* 添加 `custom.js` 文件

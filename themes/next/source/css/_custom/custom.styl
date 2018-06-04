@@ -104,10 +104,15 @@ pre code {
 }
 
 /* 选中菜单时显示图标 */
-.menu-item-active a:after {
+.menu-item-active a::after {
     position: absolute;
-    font-family: 'FontAwesome';
-    content: "\f0f4";
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Brands";
+    content: "\f286";
     color: rgba(210, 65, 65, 0.57);
     right: 15px;
 }

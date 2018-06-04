@@ -42,7 +42,7 @@
         <li class="menu-item menu-item-{{ itemName | replace(' ', '-') }}">
           <a href="{{ url_for(path.split('||')[0]) | trim }}" rel="section">
             {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-fw fa-{{ path.split('||')[1] | trim | default('question-circle') }}"></i> <br />
+              <i class="menu-item-icon fa-fw {{ path.split('||')[1] | trim | default('fas fa-question-circle') }}"></i> <br />
             {% endif %}
             {{ __('menu.' + name) | replace('menu.', '') }}
           </a>
@@ -57,7 +57,7 @@
             <a href="javascript:;" class="popup-trigger">
           {% endif %}
             {% if theme.menu_icons.enable %}
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+              <i class="menu-item-icon fas fa-search fa-fw"></i> <br />
             {% endif %}
             {{ __('menu.search') }}
           </a>

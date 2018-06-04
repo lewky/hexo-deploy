@@ -53,7 +53,7 @@ footer:
   since: 2018
 
   # Icon between year and copyright info.
-  icon: user
+  icon: fas fa-user
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
@@ -69,7 +69,7 @@ footer:
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   # Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
-  custom_text: Hosted by <a href="https://pages.coding.me" style="font-weight:bold">Coding Pages</a> / <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
+  custom_text: Hosted by <a href="https://pages.coding.me" style="font-weight:bold">Coding Pages</a> / <a target="_blank" href="https://pages.github.com" style="font-weight:bold">GitHub Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -104,14 +104,14 @@ index_with_subtitle: false
 # 在`||`分隔符之前的值是该菜单对应的路径
 # 在`||`分隔符之后的值是FontAwesome的图标（不懂的请百度什么是FontAwesome以及其用法），如果不指定图标，将会自动使用question这个图标。
 menu:
-  home: / || home
-  archives: /archives/ || archive
-  categories: /categories/ || th
-  tags: /tags/ || tags
-  about: /about/ || user
-  #schedule: /schedule/ || calendar
-  #sitemap: /sitemap.xml || sitemap
-  #commonweal: /404/ || heartbeat
+  home: / || fas fa-home
+  archives: /archives/ || fas fa-archive
+  categories: /categories/ || fas fa-th
+  tags: /tags/ || fas fa-tags
+  about: /about/ || fas fa-user
+  #schedule: /schedule/ || fas fa-calendar
+  #sitemap: /sitemap.xml || fas fa-sitemap
+  #commonweal: /404/ || fas fa-heartbeat
 
 # Enable/Disable menu icons.
 menu_icons:
@@ -141,8 +141,8 @@ scheme: Gemini
 # 社交链接
 # 如果不指定图标，会默认使用globe图标
 social:
-  GitHub: https://github.com/lewky || github
-  E-Mail: mailto:1019175915@qq.com || envelope
+  GitHub: https://github.com/lewky || fab fa-github
+  E-Mail: mailto:1019175915@qq.com || fas fa-envelope
   #Google: https://plus.google.com/yourname || google
   #Twitter: https://twitter.com/yourname || twitter
   #FB Page: https://www.facebook.com/yourname || facebook
@@ -151,8 +151,8 @@ social:
   #YouTube: https://youtube.com/yourname || youtube
   #Instagram: https://instagram.com/yourname || instagram
   #Skype: skype:yourname?call|chat || skype
-  站点首页: / || home
-  建站日志: /siting_log.html || fa fa-cog fa-spin
+  站点首页: / || fas fa-home
+  建站日志: /siting_log.html || fas fa-cog fa-spin
 
 social_icons:
   enable: true
