@@ -93,6 +93,8 @@ theme: next
 deploy:
   type: git
   repo:
+    # 请将这里的username改为你的用户名，比如你的GitHub用户名是lewis,这里的url就应该是如下：
+    # git@github.com:lewis/lewis.github.io.git,master
     github: git@github.com:username/username.github.io.git,master
     coding: git@git.coding.net:username/username.git,master
 
