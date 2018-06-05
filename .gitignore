@@ -6,15 +6,3 @@ db.json
 node_modules/
 public/
 .deploy*/
-
-# resources
-source/_posts/*
-!source/_posts/hello-world.md
-source/_drafts
-source/images/posts
-
-# scaffolds
-scaffolds/*
-!scaffolds/draft.md
-!scaffolds/page.md
-!scaffolds/post.md

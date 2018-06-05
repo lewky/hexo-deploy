@@ -143,14 +143,14 @@ scheme: Gemini
 social:
   GitHub: https://github.com/lewky || fab fa-github
   E-Mail: mailto:1019175915@qq.com || fas fa-envelope
-  #Google: https://plus.google.com/yourname || google
-  #Twitter: https://twitter.com/yourname || twitter
-  #FB Page: https://www.facebook.com/yourname || facebook
-  #VK Group: https://vk.com/yourname || vk
-  #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
-  #Instagram: https://instagram.com/yourname || instagram
-  #Skype: skype:yourname?call|chat || skype
+  #Google: https://plus.google.com/yourname || fab fa-google
+  #Twitter: https://twitter.com/yourname || fab fa-twitter
+  #FB Page: https://www.facebook.com/yourname || fab fa-facebook-f
+  #VK Group: https://vk.com/yourname || fab fa-vk
+  #StackOverflow: https://stackoverflow.com/yourname || fab fa-stack-overflow
+  #YouTube: https://youtube.com/yourname || fab fa-youtube
+  #Instagram: https://instagram.com/yourname || fab fa-instagram
+  #Skype: skype:yourname?call|chat || fab fa-skype
   站点首页: / || fas fa-home
   建站日志: /siting_log.html || fas fa-cog fa-spin
 
@@ -188,7 +188,7 @@ toc:
 
   # Automatically add list number to toc.
   # 自动为文章目录添加行号
-  number: false
+  number: true
 
   # If true, all words will placed on next lines if header width longer then sidebar width.
   # 如果标题长度超过侧边栏宽度则放到下一行继续显示

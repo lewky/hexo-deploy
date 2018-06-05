@@ -413,7 +413,7 @@
           <div class="post-nav-next post-nav-item">
             {% if post.next %}
               <a href="{{ url_for(post.next.path) }}" rel="next" title="{{ post.next.title }}">
-                <i class="fa fa-chevron-left"></i> {{ post.next.title }}
+                <i class="fas fa-chevron-left"></i> {{ post.next.title }}
               </a>
             {% endif %}
           </div>
@@ -423,7 +423,7 @@
           <div class="post-nav-prev post-nav-item">
             {% if post.prev %}
               <a href="{{ url_for(post.prev.path) }}" rel="prev" title="{{ post.prev.title }}">
-                {{ post.prev.title }} <i class="fa fa-chevron-right"></i>
+                {{ post.prev.title }} <i class="fas fa-chevron-right"></i>
               </a>
             {% endif %}
           </div>
