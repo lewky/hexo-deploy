@@ -5,6 +5,7 @@ tags:
   - NexT
 categories:
   - Hexo
+abbrlink: 6da50a16
 date: 2018-06-05 23:14:09
 ---
 有两种方法，一种是全局生效，一种是对具体某篇文章生效。
