@@ -68,6 +68,10 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 添加底部 `Hosted by`（如果需要使用自定义域名解析到Coding.net，不建议去掉该项）
 * 添加全站字数统计（会延长 `hexo g` 的时间）
 
+### 页面相关
+
+* 添加鼠标点击文字特效
+
 ### 站点标题
 
 * 修改样式，使用字体阴影
