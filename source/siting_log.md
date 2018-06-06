@@ -9,6 +9,7 @@ categories:
 {% cq %}
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
+* 2018-06-06：启用 `Gitment`
 * 2018-06-05：开启文章目录显示功能，替换掉显示错误的FontAwesome图标
 * 2018-06-04：
 	* CDN有时候加载比较慢，所以去掉原本引入的 `Font Awesome 4` 和 `Font Awesome Free CDN`，直接将下载好的 `Font Awesome 5` 解压复制到 `lib` 目录下
