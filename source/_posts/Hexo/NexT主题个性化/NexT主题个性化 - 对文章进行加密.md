@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 对文章进行加密
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化

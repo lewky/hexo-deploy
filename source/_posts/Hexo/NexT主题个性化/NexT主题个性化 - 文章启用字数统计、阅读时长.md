@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 文章启用字数统计、阅读时长
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化

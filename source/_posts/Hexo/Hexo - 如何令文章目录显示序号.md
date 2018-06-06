@@ -13,7 +13,7 @@ date: 2018-06-05 23:14:09
 ## 全局生效
 
 在NexT的主题配置文件 `_config.yml`中启用如下配置：
-
+<!-- more -->
 ```html
 # Table Of Contents in the Sidebar
 # 侧栏文章目录设置
@@ -24,7 +24,7 @@ toc:
   # 自动为文章目录添加行号
   number: true
 ```
-<!-- more -->
+
 设置为true后就可以对站点下所有文章自动添加序号，如果想取消这个功能，再设置为false即可。
 
 ## 对具体某篇文章生效

@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 让所有的文章链接在新窗口打开
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化

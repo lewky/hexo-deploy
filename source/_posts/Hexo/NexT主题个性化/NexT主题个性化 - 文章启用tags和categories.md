@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 文章启用tags和categories
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化

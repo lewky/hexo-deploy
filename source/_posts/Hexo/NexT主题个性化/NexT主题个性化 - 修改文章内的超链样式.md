@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 修改文章内的超链样式
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化

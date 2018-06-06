@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 添加文章置顶功能
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化

@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 修改语法高亮的主题
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化

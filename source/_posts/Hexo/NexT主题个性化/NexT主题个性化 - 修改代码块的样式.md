@@ -2,6 +2,7 @@
 title: NexT主题个性化 - 修改行内代码块的样式
 tags:
   - Hexo
+  - NexT
   - NexT主题个性化
 categories:
   - NexT主题个性化
