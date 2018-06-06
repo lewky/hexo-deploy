@@ -53,7 +53,7 @@
 
     {% if not theme.sidebar.b2t %}
       <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
+        <i class="fas fa-arrow-up"></i>
         {% if theme.sidebar.scrollpercent %}
           <span id="scrollpercent"><span>0</span>%</span>
         {% endif %}
@@ -63,7 +63,7 @@
     {% if theme.needmoreshare2.enable and theme.needmoreshare2.float.enable %}
       <div id="needsharebutton-float">
         <span class="btn">
-          <i class="fa fa-share-alt" aria-hidden="true"></i>
+          <i class="fas fa-share-alt" aria-hidden="true"></i>
         </span>
       </div>
     {% endif %}

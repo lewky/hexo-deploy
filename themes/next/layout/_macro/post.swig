@@ -38,18 +38,18 @@
               {% if post.sticky > 0 %}
                 {{ post.sticky }}
                 <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
-                  <i class="fa fa-thumb-tack"></i>
+                  <i class="fas fa-thumbtack"></i>
                 </span>
               {% endif %}
               <a class="post-title-link post-title-link-external" target="_blank" href="{{ url_for(post.link) }}" itemprop="url">
                 {{ post.title or post.link }}
-                <i class="fa fa-external-link"></i>
+                <i class="fas fa-external-link-alt"></i>
               </a>
             {% else %}{#
             #}{% if is_index %}
                 {% if post.sticky > 0 %}
                   <span class="post-sticky-flag" title="{{ __('post.sticky') }}">
-                    <i class="fa fa-thumb-tack"></i>
+                    <i class="fas fa-thumbtack"></i>
                   </span>
                 {% endif %}
                 <a class="post-title-link" href="{{ url_for(post.path) }}" itemprop="url">{#
@@ -234,7 +234,7 @@
                   <span class="post-meta-divider">|</span>
                 {% endif %}
                 <span class="post-meta-item-icon">
-                  <!--<i class="fa fa-file-word-o"></i>-->
+                  <!--<i class="far fa-file-word"></i>-->
 		  <i class="fas fa-book-open"></i>
                 </span>
                 {% if theme.post_wordcount.item_text %}
@@ -400,7 +400,7 @@
           {% endif %}
           <div id="needsharebutton-postbottom">
             <span class="btn">
-              <i class="fa fa-share-alt" aria-hidden="true"></i>
+              <i class="fas fa-share-alt" aria-hidden="true"></i>
             </span>
           </div>
         {% endif %}
