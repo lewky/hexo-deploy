@@ -97,7 +97,7 @@
           {% if theme.rss %}
             <div class="feed-link motion-element">
               <a href="{{ url_for(theme.rss) }}" rel="alternate">
-                <i class="fa fa-rss"></i>
+                <i class="fas fa-rss-square"></i>
                 RSS
               </a>
             </div>
@@ -136,7 +136,7 @@
           {% if theme.links %}
             <div class="links-of-blogroll motion-element {{ "links-of-blogroll-" + theme.links_layout | default('inline') }}">
               <div class="links-of-blogroll-title">
-                <i class="fa  fa-fw fa-{{ theme.links_icon | default('globe') | lower }}"></i>
+                <i class="fa-fw {{ theme.links_icon | default('fas fa-globe') | lower }}"></i>
                 {{ theme.links_title }}
               </div>
               <ul class="links-of-blogroll-list">
@@ -177,7 +177,7 @@
 
       {% if theme.sidebar.b2t %}
         <div class="back-to-top">
-          <i class="fa fa-arrow-up"></i>
+          <i class="fas fa-arrow-up"></i>
           {% if theme.sidebar.scrollpercent %}
             <span id="scrollpercent"><span>0</span>%</span>
           {% endif %}

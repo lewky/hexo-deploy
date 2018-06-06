@@ -7,7 +7,7 @@ categories:
   - 建站日志
 ---
 {% cq %}
-<font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fa fa-refresh fa-lg fa-spin"></i>
+<font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
 * 2018-06-05：开启文章目录显示功能，替换掉显示错误的FontAwesome图标
 * 2018-06-04：

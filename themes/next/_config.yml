@@ -459,16 +459,16 @@ valine:
 # Introduction: https://imsun.net/posts/gitment-introduction/
 # You can get your Github ID from https://api.github.com/users/<Github username>
 gitment:
-  enable: false
+  enable: true
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
   cleanly: false # Hide 'Powered by ...' on footer, and more
-  language: # Force language, or auto switch by theme
-  github_user: # MUST HAVE, Your Github ID
-  github_repo: # MUST HAVE, The repo you use to store Gitment comments
-  client_id: # MUST HAVE, Github client id for the Gitment
-  client_secret: # EITHER this or proxy_gateway, Github access secret token for the Gitment
+  language: auto # Force language, or auto switch by theme
+  github_user: lewky # MUST HAVE, Your Github ID
+  github_repo: lewky.github.io # MUST HAVE, The repo you use to store Gitment comments
+  client_id: 231398dc59369c95385f # MUST HAVE, Github client id for the Gitment
+  client_secret: 63ad742f9962c6bcf08a5536adde879c12a931a3 # EITHER this or proxy_gateway, Github access secret token for the Gitment
   proxy_gateway: # Address of api proxy, See: https://github.com/aimingoo/intersect
   redirect_protocol: # Protocol of redirect_uri with force_redirect_protocol when mint enabled
 
@@ -621,15 +621,15 @@ busuanzi_count:
   enable: false
   # custom uv span for the whole site
   site_uv: true
-  site_uv_header: <i class="fa fa-user"></i>
+  site_uv_header: <i class="fas fa-user"></i>
   site_uv_footer:
   # custom pv span for the whole site
   site_pv: true
-  site_pv_header: <i class="fa fa-eye"></i>
+  site_pv_header: <i class="fas fa-eye"></i>
   site_pv_footer:
   # custom pv span for one page only
   page_pv: true
-  page_pv_header: <i class="fa fa-file-o"></i>
+  page_pv_header: <i class="far fa-file"></i>
   page_pv_footer:
 
 

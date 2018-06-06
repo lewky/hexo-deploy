@@ -42,7 +42,7 @@
       $("body")
         .append('<div class="search-popup-overlay local-search-pop-overlay">' +
           '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '<i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>' +
           '</div>' +
           '</div>')
         .css('overflow', 'hidden');
@@ -251,9 +251,9 @@
               })
             };
             if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="fas fa-search fa-5x" /></div>'
             } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+              resultContent.innerHTML = '<div id="no-result"><i class="far fa-frown fa-5x" /></div>'
             } else {
               resultItems.sort(function (resultLeft, resultRight) {
                 if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
