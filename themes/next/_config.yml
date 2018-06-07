@@ -151,6 +151,8 @@ social:
   #YouTube: https://youtube.com/yourname || fab fa-youtube
   #Instagram: https://instagram.com/yourname || fab fa-instagram
   #Skype: skype:yourname?call|chat || fab fa-skype
+  CSDN: https://blog.csdn.net/lewky_liu || fab fa-cuttlefish
+  博客园: http://www.cnblogs.com/yulinlewis || fas fa-book
   站点首页: / || fas fa-home
   建站日志: /siting_log.html || fas fa-cog fa-spin
 
@@ -162,11 +164,12 @@ social_icons:
 # Blog rolls
 # 侧栏友链设置，建议使用上边的侧边栏更好
 links_icon: link
-links_title: Links
+links_title: <i class="fas fa-arrow-circle-down"></i><font color="#36c7e8"> 友链 </font><i class="fas fa-hand-holding-heart"></i>
 links_layout: block
 #links_layout: inline
-#links:
+links:
   #Title: http://example.com/
+  Java工程师成神之路(2018版本): /posts/5044311b.html
 
 # 侧边栏头像
 # Sidebar Avatar

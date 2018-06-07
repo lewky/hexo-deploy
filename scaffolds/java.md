@@ -2,7 +2,7 @@
 title: {{ title }}
 date: {{ date }}
 tags:
-  - java
+  - Java
 categories:
-  - java
+  - Java
 ---

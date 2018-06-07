@@ -1,10 +1,10 @@
 ---
-title: Hexo - 如何令文章目录显示序号
+title: NexT - 如何令文章目录显示序号
 tags:
   - Hexo
   - NexT
 categories:
-  - Hexo
+  - NexT
 abbrlink: 6da50a16
 date: 2018-06-05 23:14:09
 ---
