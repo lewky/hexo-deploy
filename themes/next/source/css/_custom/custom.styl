@@ -1,15 +1,27 @@
 // Custom styles.
 
+/* 消除超链底部线条 */
+a {
+  border-bottom: 0;
+}
+
 /* 文章内部的超链 */
 .post-body p a,
 .post-body li a {
   color: #0593d3;
-  border-bottom: none;
   border-bottom: 1px solid #0593d3;
   &:hover {
     color: #fc6423;
-    border-bottom: none;
     border-bottom: 1px solid #fc6423;
+  }
+}
+
+/* 友链样式 */
+.links-of-blogroll-list a {
+  color: #fc6423;
+  &:hover {
+    color: #0593d3;
+    text-decoration: underline;
   }
 }
 

@@ -160,7 +160,7 @@ social_icons:
   transition: false
 
 # Blog rolls
-# 侧栏友链设置，建议使用上边的侧边栏更好
+# 侧栏友链设置
 links_icon: link
 links_title: Links
 links_layout: block
