@@ -1,70 +1,7 @@
 // Custom styles.
 
-/* 消除超链底部线条 */
-a {
-  border-bottom: 0;
-}
+/* -----------start：头像相关---------- */
 
-/* 文章内部的超链 */
-.post-body p a,
-.post-body li a {
-  color: #0593d3;
-  border-bottom: 1px solid #0593d3;
-  &:hover {
-    color: #fc6423;
-    border-bottom: 1px solid #fc6423;
-  }
-}
-
-/* 友链样式 */
-.links-of-blogroll-list a {
-  color: #fc6423;
-  &:hover {
-    color: #0593d3;
-    text-decoration: underline;
-  }
-}
-
-/* 行内代码块 */
-code {
-    color: #d500fc;
-    background: rgba(78, 240, 233, 0.42);
-    margin: 2px;
-    border: 1px solid #d6d6d6;
-}
-
-/* 预格式代码块(用tab键插入的代码块) */
-pre code {
-    margin: 0;
-    border: none;
-}
-
-/* 去掉图片边框 */
-.posts-expand .post-body img {
-    border: none;
-    padding: 0px;
-}
-.post-gallery .post-gallery-img img {
-    padding: 3px;
-}
-
-/* 页面右下角的返回顶部按钮 */
-.back-to-top {
-    line-height: 1.5;
-    right: 10px;
-    padding-right: 5px;
-    padding-left: 5px;
-    padding-top: 2.5px;
-    padding-bottom: 2.5px;
-    background-color: rgba(111, 66, 193, 0.78);
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
-}
-.back-to-top.back-to-top-on {
-    bottom: 10px;
-}
-
-/* 头像相关 */
 /* 使用bilibili头像挂件时的头像 */
 .site-author-image-bilibili {
     display: block;
@@ -97,74 +34,6 @@ pre code {
     height: auto;
     border: 1px solid #eee;
     border-radius: 50%;
-}
-
-/* 站点标题 */
-.site-title {
-    display: inline-block;
-    vertical-align: top;
-    line-height: 36px;
-    font-size: 21px;
-    font-weight: bold;
-    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
-    text-shadow: 5px 5px 3px rgba(47, 138, 216, 0.47);
-    color: rgb(50, 158, 220);
-}
-
-/* 消除菜单图标的右内间距 */
-.menu .menu-item .fa {
-    margin-right: 0;
-}
-
-/* 选中菜单时显示图标 */
-.menu-item-active a::after {
-    position: absolute;
-    display: inline-block;
-    font-style: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 Brands";
-    content: "\f286";
-    color: rgba(210, 65, 65, 0.57);
-    right: 15px;
-}
-
-/* 选中菜单时的背景样式 */
-.menu .menu-item a:hover,
-.menu-item-active a {
-    background: rgba(238, 238, 238, 0.56)
-    border-radius: 5px;
-}
-
-/* 菜单栏一行两个菜单按钮 */
-.site-nav ul {
-    width: 101%;
-    margin-top: -16px;
-}
-.site-nav li {
-    float: left;
-    width: 50%;
-}
-
-/* 侧边栏样式 */
-.sidebar-inner {
-    top: 0;
-}
-
-/* 缩小文章摘要里标题和正文的间距 */
-.posts-expand .post-meta {
-    margin: 3px 0 30px 0;
-}
-
-/* 设置文章摘要里的图片的最大宽度 */
-.posts-expand .post-body .fancybox img {
-    max-width: 70%;
-}
-
-/* 去掉脚注超链的底部线条 */
-footer a {
-    border-bottom: 0;
 }
 
 /* 头像旋转 */
@@ -217,3 +86,167 @@ img:hover {
     transform: rotateZ(-360deg);
   }
 }
+
+/* -----------end：头像相关---------- */
+
+
+/* -----------start：图片相关---------- */
+
+/* 去掉图片边框 */
+.posts-expand .post-body img {
+    border: none;
+    padding: 0px;
+}
+.post-gallery .post-gallery-img img {
+    padding: 3px;
+}
+
+/* -----------end：图片相关---------- */
+
+
+/* -----------start：页面底部相关---------- */
+
+/* 页面右下角的返回顶部按钮 */
+.back-to-top {
+    line-height: 1.5;
+    right: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    background-color: rgba(111, 66, 193, 0.78);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
+}
+.back-to-top.back-to-top-on {
+    bottom: 10px;
+}
+
+/* -----------end：页面底部相关---------- */
+
+
+/* -----------start：页面相关---------- */
+
+/* 消除超链底部线条 */
+a {
+  border-bottom: 0;
+}
+
+/* -----------end：页面相关---------- */
+
+
+/* -----------start：站点标题---------- */
+
+/* 站点标题 */
+.site-title {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 36px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Lato', "PingFang SC", "Microsoft YaHei", sans-serif;
+    text-shadow: 5px 5px 3px rgba(47, 138, 216, 0.47);
+    color: rgb(50, 158, 220);
+}
+
+/* -----------end：站点标题---------- */
+
+
+/* -----------start：菜单栏相关---------- */
+
+/* 消除菜单图标的右内间距 */
+.menu .menu-item .fa {
+    margin-right: 0;
+}
+
+/* 选中菜单时显示图标 */
+.menu-item-active a::after {
+    position: absolute;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Brands";
+    content: "\f286";
+    color: rgba(210, 65, 65, 0.57);
+    right: 15px;
+}
+
+/* 选中菜单时的背景样式 */
+.menu .menu-item a:hover,
+.menu-item-active a {
+    background: rgba(238, 238, 238, 0.56)
+    border-radius: 5px;
+}
+
+/* 菜单栏一行两个菜单按钮 */
+.site-nav ul {
+    width: 101%;
+    margin-top: -16px;
+}
+.site-nav li {
+    float: left;
+    width: 50%;
+}
+
+/* -----------end：菜单栏相关---------- */
+
+
+/* -----------start：侧边栏相关---------- */
+
+/* 侧边栏样式 */
+.sidebar-inner {
+    top: 0;
+}
+
+/* 友链样式 */
+.links-of-blogroll-list a {
+  color: #fc6423;
+  &:hover {
+    color: #0593d3;
+    text-decoration: underline;
+  }
+}
+
+/* -----------end：侧边栏相关---------- */
+
+
+/* -----------start：文章相关---------- */
+
+/* 文章内部的超链 */
+.post-body p a,
+.post-body li a {
+  color: #0593d3;
+  border-bottom: 1px solid #0593d3;
+  &:hover {
+    color: #fc6423;
+    border-bottom: 1px solid #fc6423;
+  }
+}
+
+/* 行内代码块 */
+code {
+    color: #d500fc;
+    background: rgba(78, 240, 233, 0.42);
+    margin: 2px;
+    border: 1px solid #d6d6d6;
+}
+
+/* 预格式代码块(用tab键插入的代码块) */
+pre code {
+    margin: 0;
+    border: none;
+}
+
+/* 缩小文章摘要里标题和正文的间距 */
+.posts-expand .post-meta {
+    margin: 3px 0 30px 0;
+}
+
+/* 设置文章摘要里的图片的最大宽度 */
+.posts-expand .post-body .fancybox img {
+    max-width: 70%;
+}
+
+/* -----------end：文章相关---------- */
