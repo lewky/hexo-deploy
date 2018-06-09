@@ -87,6 +87,7 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 添加 `by-nc-sa` 许可协议
 * 添加站点首页
 * 添加建站日志(`siting_log.md`)
+* 修改友链样式
 
 ### 文章相关
 
