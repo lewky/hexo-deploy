@@ -66,11 +66,13 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 修改回到顶部按钮样式
 * 启用回到顶部按钮显示百分比
 * 添加底部 `Hosted by`（如果需要使用自定义域名解析到Coding.net，不建议去掉该项）
+* 消除 `Hosted by` 的超链底部线条
 * 添加全站字数统计（会延长 `hexo g` 的时间）
 
 ### 页面相关
 
 * 添加鼠标点击文字特效
+* 修改鼠标指针
 
 ### 站点标题
 
@@ -97,3 +99,4 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 修改永久链接格式，利于SEO
 * 修改 `scaffolds` 目录下的 `post/draft.md` 模板
 * 修改行内代码块、超链样式
+* 修改引用块样式

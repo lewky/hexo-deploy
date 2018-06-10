@@ -122,14 +122,21 @@ img:hover {
     bottom: 10px;
 }
 
+/* 消除Hosted by的超链底部线条 */
+.footer-custom a {
+  border-bottom: 0;
+}
 /* -----------end：页面底部相关---------- */
 
 
 /* -----------start：页面相关---------- */
 
-/* 消除超链底部线条 */
+/* 鼠标样式 */
+:active {
+  cursor: url("/images/cursor/Diamond-Sword.cur"),auto!important;
+}
 a {
-  border-bottom: 0;
+  cursor: url("/images/cursor/Diamond-Pickaxe.cur"),auto!important;
 }
 
 /* -----------end：页面相关---------- */
@@ -203,6 +210,7 @@ a {
 /* 友链样式 */
 .links-of-blogroll-list a {
   color: #fc6423;
+  border-bottom: 0;
   &:hover {
     color: #0593d3;
     text-decoration: underline;
@@ -237,6 +245,22 @@ code {
 pre code {
     margin: 0;
     border: none;
+}
+
+/* 引用块样式 */
+blockquote {
+    padding: 16px;
+    border-left: 8px solid #DDDFE4;
+    color: #999;
+    font-size: 15px;
+    background: #EEF0F4;
+}
+blockquote p {
+    margin: 0;
+    line-height: 22px;
+}
+.blockquote-center {
+    background: white;
 }
 
 /* 缩小文章摘要里标题和正文的间距 */

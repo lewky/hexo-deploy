@@ -414,7 +414,8 @@ han: false
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+# 百度统计ID
+baidu_analytics: 47b25e60aa6b987f98f7abab729fa0f6
 
 # Duoshuo ShortName
 #duoshuo_shortname:
@@ -456,13 +457,13 @@ valine:
 
 # Support for LiveRe comments system.
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-#livere_uid: your uid
+livere_uid: MTAyMC8zNzIyMS8xMzc1NQ==
 
 # Gitment
 # Introduction: https://imsun.net/posts/gitment-introduction/
 # You can get your Github ID from https://api.github.com/users/<Github username>
 gitment:
-  enable: true
+  enable: false
   mint: true # RECOMMEND, A mint on Gitment, to support count, language and proxy_gateway
   count: true # Show comments count in post meta area
   lazy: false # Comments lazy loading with a button
@@ -602,8 +603,8 @@ rating:
 # 显示每篇文章的阅读量
 leancloud_visitors:
   enable: false
-  app_id: #<app_id>
-  app_key: #<app_key>
+  app_id: #
+  app_key: #
 
 # Another tool to show number of visitors to each article.
 # visit https://console.firebase.google.com/u/0/ to get apiKey and projectId
@@ -644,7 +645,8 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+# 允许百度推送，博客将会自动推送url给百度，这对SEO会很有帮助。
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
