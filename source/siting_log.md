@@ -9,3 +9,7 @@ categories:
 {% cq %}
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
+
+## 20xx-xx-xx
+
+> 使用 `Hexo` 搭建个人博客
