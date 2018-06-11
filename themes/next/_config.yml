@@ -151,10 +151,10 @@ social:
   #YouTube: https://youtube.com/yourname || fab fa-youtube
   #Instagram: https://instagram.com/yourname || fab fa-instagram
   #Skype: skype:yourname?call|chat || fab fa-skype
-  #CSDN: https://blog.csdn.net || fab fa-cuttlefish
-  #博客园: http://www.cnblogs.com || fas fa-book
+  #CSDN: https://blog.csdn.net/yourname || fab fa-cuttlefish
+  #博客园: http://www.cnblogs.com/yourname || fas fa-book
   站点首页: / || fas fa-home
-  建站日志: /siting_log.html || fas fa-cog fa-spin
+  建站日志: /posts/e62c38c4.html || fas fa-cog fa-spin
 
 social_icons:
   enable: true
