@@ -1,14 +1,19 @@
 ---
 title: 建站日志
-date: 2018-04-24
 tags:
   - 建站日志
 categories:
   - 建站日志
+abbrlink: e62c38c4
+date: 2018-04-24 00:00:00
 ---
 {% cq %}
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
+
+## 2018-06-12
+
+使用 `sitemap` 和 `baidusitemap`
 
 ## 2018-06-10
 
