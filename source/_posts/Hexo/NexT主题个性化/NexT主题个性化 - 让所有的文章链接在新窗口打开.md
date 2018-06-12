@@ -32,18 +32,4 @@ date: 2018-05-13 16:49:42
 
 在这两个超链里添加 `target="_blank"` ，最终修改如下：
 
-```html
-<a class="post-title-link" target="_blank" href="{{ url_for(post.path) }}" itemprop="url">
-  {% if post.type === 'picture' %}
-    {{ post.content }}
-  {% else %}
-    <span itemprop="name">{{ post.title | default(__('post.untitled')) }}</span>
-  {% endif %}
-</a>
-```
-
-```html
-	<a class="post-title-link" target="_blank" href="{{ url_for(post.path) }}" itemprop="url">{#
-    #}{{ post.title | default(__('post.untitled'))}}{#
-  #}</a>
-```
+![target_blank.jpg](/images/posts/next/target_blank.jpg)
