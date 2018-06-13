@@ -268,11 +268,12 @@ auto_excerpt:
 # 文章元数据展示设置
 post_meta:
   # 文本显示
-  item_text: false
+  item_text: true
   # 创建时间
   created_at: true
   # 更新时间
-  updated_at: true
+  # 这个更新时间有点问题，因为每次重新生成文章/部署时都会刷新更新时间，不建议使用
+  updated_at: false
   # 目录分类
   categories: true
 

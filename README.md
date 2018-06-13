@@ -19,7 +19,7 @@ You can clone dev branch to get my hexo blog without posts except hello-world.md
 git clone -b dev https://github.com/lewky/lewky.github.io.git ./
 ```
 
-2. install dependencies:
+2. install dependencies(please confirm you have installed Node.js, Git & Hexo in your computer, and it will spend much time on this step, please wait a minute):
 ```bash
 npm install
 ```
@@ -31,12 +31,20 @@ hexo g
 hexo s
 ```
 
+4. deploy your blog in Github Pages after configuring your personal configuration:
+```bash
+hexo clean
+hexo g -d
+```
+
+You can refer to [README.md](https://github.com/lewky/hexo-blog-demo) in my another repository to complete your hexo blog.
+
 ## Customed NexT theme
 
 This theme is based on `NexT-Gemini` theme, most of css/js code with comments is in: 
 
->`themes/next/source/css/_custom/custom.styl`
->`themes/next/source/js/src/custom.js`
+1. `themes/next/source/css/_custom/custom.styl`
+2. `themes/next/source/js/src/custom.js`
 
 ## Features
 

@@ -12,12 +12,12 @@
 
 ## 使用步骤
 
-1. 创建一个文件作为你的博客站点根目录，在该目录下打开 `git bash` 并使用下边的命令克隆dev分支：
+1. 创建一个文件夹作为你的博客站点根目录，在该目录下打开 `git bash` 并使用下边的命令克隆dev分支：
 ```bash
 git clone -b dev https://github.com/lewky/lewky.github.io.git ./
 ```
 
-2. 接着安装项目依赖(请确保已经安装了Node.js和hexo) :
+2. 接着安装项目依赖(请确保已经安装了Node.js，Git和Hexo，另外该步骤会耗时较久，请耐心等待) :
 ```bash
 npm install
 ```
@@ -29,12 +29,20 @@ hexo g
 hexo s
 ```
 
+4. 在配置好相关的配置后，通过以下命令将个人博客远程部署到 `GitHub Pages` 上：
+```bash
+hexo clean
+hexo g -d
+```
+
+你可以参考我另一个GitHub仓库的 [README.md](https://github.com/lewky/hexo-blog-demo) 来进一步了解完善你的Hexo博客。
+
 ## NexT主题个性化
 
 本博客的主题基于 `NexT-Gemini` 主题, 大部分css代码和注释都在下面的文件中：
 
->`themes/next/source/css/_custom/custom.styl`
->`themes/next/source/js/src/custom.js` 
+1. `themes/next/source/css/_custom/custom.styl`
+2. `themes/next/source/js/src/custom.js`
 
 ## 自定义主题特色
 
