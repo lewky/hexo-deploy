@@ -124,8 +124,43 @@ img:hover {
 
 /* 消除Hosted by的超链底部线条 */
 .footer-custom a {
-  border-bottom: 0;
+    border-bottom: 0;
 }
+
+/* 文章底部标签样式 */
+.post-tags a {
+    display: inline-block;
+    padding: 0 15px;
+    border-radius: 2px;
+    border-bottom: none;
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    &:hover {
+        color: #fff;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.26);
+    }
+}
+
+/* 文章底部标签的颜色 */
+.post-tags a:nth-child(n+1) {
+    background:#8bc34a;
+}
+.post-tags a:nth-child(n+2) {
+    background:#673ab7;
+}
+.post-tags a:nth-child(n+3) {
+    background:#ff9800;
+}
+.post-tags a:nth-child(n+4) {
+    background:#f44336;
+}
+.post-tags a:nth-child(n+5) {
+    background:#00abc0;
+}
+.post-tags a:nth-child(n+6) {
+    background:#2196f3;
+}
+
 /* -----------end：页面底部相关---------- */
 
 
@@ -230,15 +265,25 @@ a {
 
 /* -----------start：文章相关---------- */
 
-/* 文章内部的超链 */
+/* 文章内部、底部的超链 */
 .post-body p a,
-.post-body li a {
+.post-body li a,
+.post-footer p a,
+.post-footer li a {
   color: #0593d3;
   border-bottom: 1px solid #0593d3;
   &:hover {
     color: #fc6423;
     border-bottom: 1px solid #fc6423;
   }
+}
+
+/**/
+.post-nav a {
+    color: #2a80a7;
+    &:hover {
+        color: #a166ab;
+    }
 }
 
 /* 行内代码块 */
@@ -257,14 +302,14 @@ pre code {
 
 /* 引用块样式 */
 blockquote {
-    padding: 16px;
+    padding: 1px 16px 1px 16px;
     border-left: 8px solid #DDDFE4;
     color: #999;
     font-size: 15px;
     background: #EEF0F4;
 }
 blockquote p {
-    margin: 0;
+    margin: 20px 0 20px 0;
     line-height: 22px;
 }
 .blockquote-center {
