@@ -11,6 +11,10 @@ date: 2018-04-24 00:00:00
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
 
+## 2018-06-14
+
+修改文章标签样式
+
 ## 2018-06-12
 
 使用 `sitemap` 和 `baidusitemap`
