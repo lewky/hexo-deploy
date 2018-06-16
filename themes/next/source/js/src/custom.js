@@ -60,3 +60,13 @@ jQuery(document).ready(function($) {
 		a_click ++;
 	});
 });
+
+/* 轮播背景图片 */
+$(function () {  
+	$(".container").css({ opacity: .95 });   //设置透明度
+	$.backstretch([  
+		  "/images/background/saber1.jpg",
+		  "/images/background/saber2.jpg",
+		  "/images/background/bg1.jpg"
+	], { duration: 30000, fade: 750 });  
+});  
