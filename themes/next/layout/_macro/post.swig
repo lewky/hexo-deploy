@@ -301,33 +301,60 @@
       {% if is_index %}
         {% if post.description and theme.excerpt_description %}
           {{ post.description }}
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" target="_blank" href="{{ url_for(post.path) }}">
-              {{ __('post.read_more') }} &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+	  <!--noindex-->
+	  <div class="post-footer-index">
+	    {% if post.tags and post.tags.length %}
+	      <div class="post-tags">
+		{% for tag in post.tags %}
+		  <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fas fa-tag"></i> {{ tag.name }}</a>
+		{% endfor %}
+	      </div>
+	    {% endif %}
+            <div class="post-button text-center">
+              <a class="btn" target="_blank" href="{{ url_for(post.path) }}">
+                {{ __('post.read_more') }} &raquo;
+              </a>
+            </div>
+	  </div>
+	  <!--/noindex-->          
         {% elif post.excerpt  %}
           {{ post.excerpt }}
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" target="_blank" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
-              {{ __('post.read_more') }} &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+	  <!--noindex-->
+	  <div class="post-footer-index">
+	    {% if post.tags and post.tags.length %}
+	      <div class="post-tags">
+		{% for tag in post.tags %}
+		  <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fas fa-tag"></i> {{ tag.name }}</a>
+		{% endfor %}
+	      </div>
+	    {% endif %}
+	    <div class="post-button text-center">
+	      <a class="btn" target="_blank" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
+	        {{ __('post.read_more') }} &raquo;
+	      </a>
+	    </div>
+	  </div>
+	  <!--/noindex-->
         {% elif theme.auto_excerpt.enable %}
           {% set content = post.content | striptags %}
           {{ content.substring(0, theme.auto_excerpt.length) }}
           {% if content.length > theme.auto_excerpt.length %}...{% endif %}
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" target="_blank" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
-              {{ __('post.read_more') }} &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+	  <!--noindex-->
+	  <div class="post-footer-index">
+	    {% if post.tags and post.tags.length %}
+	      <div class="post-tags">
+		{% for tag in post.tags %}
+		  <a href="{{ url_for(tag.path) }}" rel="tag"><i class="fas fa-tag"></i> {{ tag.name }}</a>
+		{% endfor %}
+	      </div>
+	    {% endif %}
+            <div class="post-button text-center">
+              <a class="btn" target="_blank" href="{{ url_for(post.path) }}{% if theme.scroll_to_more %}#{{ __('post.more') }}{% endif %}" rel="contents">
+                {{ __('post.read_more') }} &raquo;
+              </a>
+            </div>
+	  </div>
+	  <!--/noindex-->
         {% else %}
           {% if post.type === 'picture' %}
             <a href="{{ url_for(post.path) }}">{{ post.content }}</a>

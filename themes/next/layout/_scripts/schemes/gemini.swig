@@ -1,3 +1,6 @@
+<!-- 图片轮播js文件cdn -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
 {%
   set scripts = [
     'src/custom.js',

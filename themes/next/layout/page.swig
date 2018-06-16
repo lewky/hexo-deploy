@@ -37,6 +37,7 @@
               {{ tagcloud({min_font: 12, max_font: 30, amount: 300, color: true, start_color: '#ccc', end_color: '#111'}) }}
             </div>
           </div>
+	  {{ page.content }}
         {% elif page.type === 'categories' %}
           <div class="category-all-page">
             <div class="category-all-title">
@@ -46,6 +47,7 @@
               {{ list_categories() }}
             </div>
           </div>
+	  {{ page.content }}
         {% else %}
           {{ page.content }}
         {% endif %}
