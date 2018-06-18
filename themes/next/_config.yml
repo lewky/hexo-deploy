@@ -53,7 +53,7 @@ footer:
   since: 2018
 
   # Icon between year and copyright info.
-  icon: fas fa-user
+  icon: fas fa-heart
 
   # If not defined, will be used `author` from Hexo main config.
   copyright:
@@ -82,10 +82,11 @@ canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
 # 设置为true会改变侧边栏的层次，站点描述会被隐藏
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
+# 启用该设置会在你的浏览器标签页的网页title后加上subtitle，不建议使用
 index_with_subtitle: false	
 
 
@@ -170,6 +171,7 @@ links_layout: block
 links:
   #Title: http://example.com/
   Java工程师成神之路(2018版本): /posts/5044311b.html
+  前方高能，High起来!!!: /high/
 
 # 侧边栏头像
 # Sidebar Avatar
@@ -848,7 +850,7 @@ vendors:
 
   # Internal version: 4.6.2
   # See: http://fontawesome.io/
-  fontawesome:
+  fontawesome: https://cdn.bootcss.com/font-awesome/4.6.2/css/font-awesome.min.css
 
   # Internal version: 1
   # https://www.algolia.com

@@ -68,6 +68,13 @@
             <font color="red">置顶</font>
             <span class="post-meta-divider">|</span>
           {% endif %}
+	  {% if post.password %}
+	    <span class="post-meta-item-icon">
+                <i class="fas fa-lock"></i>
+            </span>
+            <font color="#ada51b">加密</font>
+            <span class="post-meta-divider">|</span>
+          {% endif %}
           <span class="post-time">
             {% if theme.post_meta.created_at %}
               <span class="post-meta-item-icon">
