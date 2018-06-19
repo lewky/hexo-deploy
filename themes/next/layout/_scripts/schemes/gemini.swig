@@ -3,9 +3,9 @@
 
 {%
   set scripts = [
-    'src/custom.js',
     'src/affix.js',
-    'src/schemes/pisces.js'
+    'src/schemes/pisces.js',
+    'src/custom.js'
   ]
 %}
 

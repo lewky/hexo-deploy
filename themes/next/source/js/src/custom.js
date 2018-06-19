@@ -68,5 +68,17 @@ $(function () {
 		  "/images/background/saber1.jpg",
 		  "/images/background/saber2.jpg",
 		  "/images/background/bg1.jpg"
-	], { duration: 30000, fade: 750 });  
-});  
+	], { duration: 1000, fade: 1500 });  
+});
+
+/* 拉姆蕾姆回到顶部或底部按钮 */
+$(function() {
+	$("#lamu img").eq(0).click(function() {
+		$("body").animate({scrollTop:0},800);
+		return false;
+	});
+	$("#leimu img").eq(0).click(function() {
+		$("body").animate({scrollTop:$(document).height()},800);
+		return false;
+	});
+});

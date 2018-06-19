@@ -101,13 +101,21 @@ img:hover {
     padding: 3px;
 }
 
+/* 背景图片透明度 */
+.backstretch {
+    opacity: .85;
+}
+
 /* -----------end：图片相关---------- */
 
 /* -----------start：页面头部相关---------- */
 
 /* GitHub Cornor */
+.github-corner {
+    opacity: 1 !important;
+}
 .github-corner :hover .octo-arm {
-  animation: octocat-wave 560ms ease-in-out;
+    animation: octocat-wave 560ms ease-in-out;
 }
 @media (max-width: 991px) {
   .github-corner >svg {
@@ -219,7 +227,8 @@ img:hover {
 /* -----------start：页面底部相关---------- */
 
 /* 页面右下角的返回顶部按钮 */
-.back-to-top {
+.footer + .back-to-top {
+    margin-right: 70px;
     line-height: 1.5;
     right: 10px;
     padding-right: 5px;
@@ -231,7 +240,17 @@ img:hover {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
 }
 .back-to-top.back-to-top-on {
-    bottom: 10px;
+}
+
+/* 拉姆蕾姆回到顶部或底部按钮 */
+.sidebar_wo{position:fixed;line-height:0;bottom:0;z-index:1000}
+#leimu{left:0;-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;-webkit-transform:translate(-7px,7px);-ms-transform:translate(-7px,7px);transform:translate(-7px,7px)}
+#lamu{-webkit-transition:all .3s ease-in-out;transition:all .3s ease-in-out;-webkit-transform:translate(7px,7px);-ms-transform:translate(7px,7px);transform:translate(7px,7px);right:0}
+#leimu:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}
+#lamu:hover{-webkit-transform:translate(0,0);-ms-transform:translate(0,0);transform:translate(0,0)}
+.sidebar_wo img{cursor:pointer;opacity: 0.8;}
+@media only screen and (max-width:1024px){
+    .sidebar_wo{display:none}
 }
 
 /* 消除Hosted by的超链底部线条 */
@@ -248,6 +267,132 @@ img:hover {
     border-top-style: solid;
     border-top-color: #a166ab;
     box-shadow: 0 -10px 10px 0 rgba(0,0,0,.15);
+}
+
+/* 页脚的爱心图形动画 */
+.with-love {
+    color: #ff71a8;
+    animation: heartAnimate 1.33s ease-in-out infinite;
+}
+@-moz-keyframes heartAnimate {
+  0%, 100% {
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1)
+  }
+  10%, 30% {
+    -webkit-transform:scale(.9);
+    -moz-transform:scale(.9);
+    -ms-transform:scale(.9);
+    -o-transform:scale(.9);
+    transform:scale(.9)
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
+  50%, 70% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
+}
+@-webkit-keyframes heartAnimate {
+  0%, 100% {
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1)
+  }
+  10%, 30% {
+    -webkit-transform:scale(.9);
+    -moz-transform:scale(.9);
+    -ms-transform:scale(.9);
+    -o-transform:scale(.9);
+    transform:scale(.9)
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
+  50%, 70% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
+}
+@-o-keyframes heartAnimate {
+  0%, 100% {
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1)
+  }
+  10%, 30% {
+    -webkit-transform:scale(.9);
+    -moz-transform:scale(.9);
+    -ms-transform:scale(.9);
+    -o-transform:scale(.9);
+    transform:scale(.9)
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
+  50%, 70% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
+}
+@keyframes heartAnimate{
+  0%, 100% {
+    -webkit-transform:scale(1);
+    -moz-transform:scale(1);
+    -ms-transform:scale(1);
+    -o-transform:scale(1);
+    transform:scale(1)
+  }
+  10%, 30% {
+    -webkit-transform:scale(.9);
+    -moz-transform:scale(.9);
+    -ms-transform:scale(.9);
+    -o-transform:scale(.9);
+    transform:scale(.9)
+  }
+  20%, 40%, 60%, 80% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
+  50%, 70% {
+    -webkit-transform:scale(1.1);
+    -moz-transform:scale(1.1);
+    -ms-transform:scale(1.1);
+    -o-transform:scale(1.1);
+    transform:scale(1.1)
+  }
 }
 
 /* -----------end：页面底部相关---------- */
@@ -323,11 +468,13 @@ a {
 
 /* 菜单栏一行两个菜单按钮 */
 .site-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 101%;
-    margin-top: -16px;
+    margin: 0;
 }
 .site-nav li {
-    float: left;
     width: 50%;
 }
 
@@ -350,13 +497,24 @@ a {
 }
 
 /* 友链样式 */
-.links-of-blogroll-list a {
+.links-of-blogroll-item {
+    padding: 0;
+    line-height: 1.5;
+}
+.links-of-blogroll-item a {
   color: #fc6423;
   border-bottom: 0;
   &:hover {
     color: #0593d3;
     text-decoration: underline;
   }
+}
+
+/* 站点运行时间 */
+#days {
+    display: block;
+    color: rgb(7, 179, 155);
+    margin-top: 15px;
 }
 
 /* -----------end：侧边栏相关---------- */
@@ -435,8 +593,13 @@ section .post-body .fancybox img {
     text-align: left;
     margin-top: 15px;
 }
+
+/* 文章摘要里的按钮 */
 .post-footer-index .post-button {
     margin-top: 25px;
+}
+.post-footer-index .post-button a:hover {
+    background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
 }
 
 /* 文章底部标签样式 */
