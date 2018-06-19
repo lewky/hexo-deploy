@@ -7,12 +7,13 @@ node_modules/
 public/
 .deploy*/
 
-# resources
+# source
 source/_posts/*
 !source/_posts/hello-world.md
 !source/_posts/siting_log.md
 source/_drafts
 source/images/posts
+source/high
 
 # scaffolds
 scaffolds/*
