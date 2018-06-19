@@ -99,10 +99,3 @@ deploy:
 markdown: redcarpet
 redcarpet:
     extensions: ["fenced_code_blocks", "autolink", "tables", "strikethrough"]
-
-# 本地站内搜索
-search:
-  path: search.xml
-  field: post
-  format: html
-  limit: 10000
