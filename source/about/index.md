@@ -1,14 +1,47 @@
 ---
 title: 关于
 date: 2018-04-24 22:01:44
-comments: false
 ---
-
 
 {% cq %}
 <!-- 站点运行时间 -->
 <div id="days"></div>
 {% endcq %}
+
+{% tabs about author %}
+<!-- tab 博主相关@user -->
+## 近况
+Some things
+
+## 技能
+Some skills
+
+## 联系
+email,qq,github and more...
+
+<!-- endtab -->
+<!-- tab 站点相关@home -->
+## 站点及插件版本
+hexo: 3.7.1
+NexT: Gemini 5.1.4
+hexo-abbrlink: 2.0.5
+hexo-generator-baidu-sitemap: 0.1.2
+hexo-generator-index-pin-top: 0.2.2
+hexo-generator-searchdb: 1.0.8
+hexo-generator-sitemap: 1.2.0
+hexo-neat: 1.0.4
+hexo-wordcount: 3.0.2
+
+## 建站日志
+
+[→ 戳我查看建站日志 ←](/posts/e62c38c4.html)
+
+<!-- endtab -->
+<!-- tab ️🌱 友情链接 -->
+暂时没有友链哟 `(ﾉ*･ω･)ﾉ～`
+想添加友链可以在下方留言~
+<!-- endtab -->
+{% endtabs %}
 
 <script>
 /* 侧边栏的站点运行时间 */
