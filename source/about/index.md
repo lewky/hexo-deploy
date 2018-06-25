@@ -22,15 +22,16 @@ email,qq,github and more...
 <!-- endtab -->
 <!-- tab 站点相关@home -->
 ## 站点及插件版本
-hexo: 3.7.1
-NexT: Gemini 5.1.4
-hexo-abbrlink: 2.0.5
-hexo-generator-baidu-sitemap: 0.1.2
-hexo-generator-index-pin-top: 0.2.2
-hexo-generator-searchdb: 1.0.8
-hexo-generator-sitemap: 1.2.0
-hexo-neat: 1.0.4
-hexo-wordcount: 3.0.2
+
+	hexo: 3.7.1
+	NexT: Gemini 5.1.4
+	hexo-abbrlink: 2.0.5
+	hexo-generator-baidu-sitemap: 0.1.2
+	hexo-generator-index-pin-top: 0.2.2
+	hexo-generator-searchdb: 1.0.8
+	hexo-generator-sitemap: 1.2.0
+	hexo-neat: 1.0.4
+	hexo-wordcount: 3.0.2
 
 ## 建站日志
 
