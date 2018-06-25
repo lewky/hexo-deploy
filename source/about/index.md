@@ -11,13 +11,19 @@ date: 2018-04-24 22:01:44
 {% tabs about author %}
 <!-- tab 博主相关@user -->
 ## 近况
-Some things
+
+目前在珠海从事Java开发，码农界萌新 (⌒▽⌒)
 
 ## 技能
-Some skills
+
+Java, JavaWeb
 
 ## 联系
-email,qq,github and more...
+
+<a href="javascript:void(0);">email: 1019175915@qq.com</a>
+<a href="https://github.com/lewky">github@lewky</a>
+<a href="https://blog.csdn.net/lewky_liu">csdn@lewky_liu</a>
+<a href="http://www.cnblogs.com/yulinlewis">cnblogs@yulinlewis</a>
 
 <!-- endtab -->
 <!-- tab 站点相关@home -->
@@ -35,7 +41,7 @@ email,qq,github and more...
 
 ## 建站日志
 
-[→ 戳我查看建站日志 ←](/posts/e62c38c4.html)
+<a href="/posts/e62c38c4.html">→ 戳我查看建站日志 ←</a>
 
 <!-- endtab -->
 <!-- tab ️🌱 友情链接 -->
