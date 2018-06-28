@@ -69,10 +69,10 @@
 
     <div class="sidebar_wo">
       <div id="leimu">
-        <img src="/images/b2t/leimuA.png" alt="雷姆" onmouseover="this.src='/images/b2t/leimuB.png'" onmouseout="this.src='/images/b2t/leimuA.png'" title="回到底部">
+        <img src="/images/b2t/leimuA.png" alt="雷姆" onmouseover="this.src='/images/b2t/leimuB.png'" onmouseout="this.src='/images/b2t/leimuA.png'" title="回到顶部">
       </div>
       <div class="sidebar_wo" id="lamu">
-        <img src="/images/b2t/lamuA.png" alt="雷姆" onmouseover="this.src='/images/b2t/lamuB.png'" onmouseout="this.src='/images/b2t/lamuA.png'" title="回到顶部">
+        <img src="/images/b2t/lamuA.png" alt="雷姆" onmouseover="this.src='/images/b2t/lamuB.png'" onmouseout="this.src='/images/b2t/lamuA.png'" title="回到底部">
       </div>
     </div>
 
@@ -106,5 +106,7 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
+
+  {% include '_custom/custom-foot.swig' %}
 </body>
 </html>
