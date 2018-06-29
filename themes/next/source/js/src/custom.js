@@ -110,7 +110,7 @@ function createCopyBtns() {
         };
         //创建 全局复制按钮，仅有一组。包含：复制按钮，复制成功响应按钮
         //值得注意的是：1.按钮默认隐藏，2.位置使用绝对位置 position: absolute; (position: fixed 也可以，需要修改代码)
-        $(".post-body").before('<div id="copyBtn" style="opacity: 0;position: absolute;display: none;line-height: 1; font-size:1.5em"><span id="imgCopy" ><i class="fa fa-paste fa-fw"></i></span><span id="imgSuccess" style="display: none;color: #6fb76f;"><i class="fa fa-check-circle fa-fw" aria-hidden="true"></i></span>');
+        $(".post-body").before('<div id="copyBtn" style="opacity: 0;position: absolute;top: 0;display: none;line-height: 1; font-size:1.5em"><span id="imgCopy" ><i class="fa fa-paste fa-fw"></i></span><span id="imgSuccess" style="display: none;color: #6fb76f;"><i class="fa fa-check-circle fa-fw" aria-hidden="true"></i></span>');
 		//创建 复制 插件，绑定事件到 指定元素，支持JQuery
         var clipboard = new Clipboard('#copyBtn', {
             target: function() {
@@ -157,6 +157,7 @@ $("figure").hover(
         $("[copyFlag]").removeAttr("copyFlag");
         //在新的（当前鼠标所在代码区）代码块插入标志：copyFlag
         $(this).find(".code").attr("copyFlag", 1);
+		$currentFigure = $(this);
         //获取复制按钮
         $copyBtn = $("#copyBtn");
         if ($copyBtn.lenght != 0) {
@@ -168,18 +169,20 @@ $("figure").hover(
             $copyBtn.stop();
             $copyBtn.css("opacity", 1);
             $copyBtn.css("display", "block");
-            $copyBtn.css("left", $(this).offset().left - $copyBtn.width() - 3);
-			
+			$figureTop = $currentFigure.offset().top;
+			$figureLeft = $currentFigure.offset().left;
+			$figureHeight = $currentFigure.outerHeight(true);
+			$btnWidth = $copyBtn.width();
+			$3btnHeight = $copyBtn.outerHeight(true) * 3;
+            $copyBtn.css("left", $figureLeft - $btnWidth - 3);
+			$copyBtn.css("top", Math.max($figureTop, Math.min($figureTop + $figureHeight - $3btnHeight, $(window).scrollTop())) + 6);
 			$(window).scroll(function(){
-				console.log($("figure").offset().top + "," + $(window).scrollTop());
-			  $copyBtn.css("top", Math.max($("figure").offset().top, $(window).scrollTop()) + 6);
-			});        
-
+				$copyBtn.css("top", Math.max($figureTop, Math.min($figureTop + $figureHeight - $3btnHeight, $(window).scrollTop())) + 6);
+			}); 
         }
     },
     function() {
-        //-------鼠标离开代码块
-        //设置复制按钮可见度 2秒内到 0
+        //鼠标离开代码块，2秒后复制按钮消失
         $("#copyBtn").animate({
             opacity: 0
         }, 2000);
