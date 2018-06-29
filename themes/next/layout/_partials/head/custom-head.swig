@@ -20,4 +20,4 @@ Custom head.
 </script>
 
 <!-- fontawesome5 -->
-<link href="/lib/font-awesome/css/fontawesome-all.css" rel="stylesheet" type="text/css" />
+<link href="/lib/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" type="text/css" />
