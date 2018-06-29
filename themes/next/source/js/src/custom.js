@@ -110,8 +110,8 @@ function createCopyBtns() {
         };
         //创建 全局复制按钮，仅有一组。包含：复制按钮，复制成功响应按钮
         //值得注意的是：1.按钮默认隐藏，2.位置使用绝对位置 position: absolute; (position: fixed 也可以，需要修改代码)
-        $(".post-body").before('<div id="copyBtn" style="opacity: 0; position: absolute;top:0px;display: none;line-height: 1; font-size:1.5em"><span id="imgCopy" ><i class="fa fa-paste fa-fw"></i></span><span id="imgSuccess" style="display: none;color: #6fb76f;"><i class="fa fa-check-circle fa-fw" aria-hidden="true"></i></span>');
-        //创建 复制 插件，绑定单机时间到 指定元素，支持JQuery
+        $(".post-body").before('<div id="copyBtn" style="opacity: 0;position: absolute;display: none;line-height: 1; font-size:1.5em"><span id="imgCopy" ><i class="fa fa-paste fa-fw"></i></span><span id="imgSuccess" style="display: none;color: #6fb76f;"><i class="fa fa-check-circle fa-fw" aria-hidden="true"></i></span>');
+		//创建 复制 插件，绑定事件到 指定元素，支持JQuery
         var clipboard = new Clipboard('#copyBtn', {
             target: function() {
                 //返回需要复制的元素内容
@@ -168,8 +168,13 @@ $("figure").hover(
             $copyBtn.stop();
             $copyBtn.css("opacity", 1);
             $copyBtn.css("display", "block");
-            $copyBtn.css("top", parseInt($copyBtn.css("top")) + $(this).offset().top - $copyBtn.offset().top + 3);
             $copyBtn.css("left", $(this).offset().left - $copyBtn.width() - 3);
+			
+			$(window).scroll(function(){
+				console.log($("figure").offset().top + "," + $(window).scrollTop());
+			  $copyBtn.css("top", Math.max($("figure").offset().top, $(window).scrollTop()) + 6);
+			});        
+
         }
     },
     function() {
