@@ -45,6 +45,8 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 
 1. `themes/next/source/css/_custom/custom.styl`
 2. `themes/next/source/js/src/custom.js`
+3. `themes/next/layout/_partials/head/custom-head.swig`
+4. `themes/next/layout/_custom/custom-foot.swig`
 
 ## Features
 
@@ -85,6 +87,7 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 添加站点背景图片轮播
 * 添加关于页面
 * 使用 `hexo-neat` 压缩博文插件，优化博客静态资源
+* 添加页面标题监听事件
 
 ### 站点标题
 
