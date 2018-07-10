@@ -118,3 +118,5 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 修改文章标签样式，并在文章摘要添加标签
 * 修改阅读全文按钮样式
 * 代码块添加复制按钮
+* 修改文本标题样式
+* 文本首行缩进两个字符
