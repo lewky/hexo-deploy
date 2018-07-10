@@ -686,5 +686,9 @@ section .post-body .fancybox img {
 .post-body p {
     text-indent: 2em;
 }
+/* 避免对文本中的font awesome图标造成影响(比如旋转效果) */
+.post-body p i {
+    text-indent: 0;
+}
 
 /* -----------end：文章相关---------- */
