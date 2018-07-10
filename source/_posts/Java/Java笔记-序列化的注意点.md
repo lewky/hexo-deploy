@@ -6,6 +6,7 @@ categories:
   - Java
 abbrlink: 71bd19d3
 date: 2018-06-28 01:18:07
+toc_number: false
 ---
 ## 1、使用serialVersionUID
 

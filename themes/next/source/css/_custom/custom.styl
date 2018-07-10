@@ -236,8 +236,6 @@ img:hover {
     border-radius: 5px;
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.35);
 }
-.back-to-top.back-to-top-on {
-}
 
 /* 拉姆蕾姆回到顶部或底部按钮 */
 .sidebar_wo{position:fixed;line-height:0;bottom:0;z-index:1000}
@@ -607,7 +605,7 @@ section .post-body .fancybox img {
 .post-tags a {
     display: inline-block;
     padding: 0 15px;
-    border-radius: 2px;
+    border-radius: 3px;
     border-bottom: none;
     text-align: center;
     color: rgba(255,255,255,0.8);
@@ -651,4 +649,42 @@ section .post-body .fancybox img {
 .post-tags a:nth-child(11n+11) {
     background:#e465a6;
 }
+
+/* 文章标题(h2,h3)样式 */
+.post-header .post-title {
+    color: #1f7e96;
+}
+.post-body h2 {
+    background: #2B6695;
+    border-radius: 6px 6px 6px 6px;
+    border: none;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    font-family:"微软雅黑", "宋体", "黑体", Arial;
+    font-weight: bold;
+    height: 30px;
+    line-height: 1;
+    margin: 18px 0 !important;
+    padding: 8px 0 5px 10px;
+    text-shadow: 2px 2px 3px #222222;
+}
+.post-body h3 {
+    background: #2B6600;
+    border-radius: 6px 6px 6px 6px;
+    box-shadow: 0 0 0 1px #5F5A4B, 1px 1px 6px 1px rgba(10, 10, 0, 0.5);
+    color: #FFFFFF;
+    font-family: "微软雅黑" , "宋体" , "黑体" ,Arial;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 23px;
+    margin: 12px 0 12px 3px !important;
+    padding: 5px 0 3px 10px;
+    text-shadow: 2px 2px 3px #222222;
+}
+
+/* 文本首行缩进 */
+.post-body p {
+    text-indent: 2em;
+}
+
 /* -----------end：文章相关---------- */

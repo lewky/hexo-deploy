@@ -6,7 +6,7 @@ comments: false
 <script src="https://lewky.cn/carnival/js/carnival.js"></script>
 
 {% cq %}
-<p style="font-size:35px; color:red;"><i class="fas fa-exclamation-triangle"></i> 前方高能!!!</p>
+<p style="font-size:35px; color:red;"><i class="fas fa-exclamation-triangle"></i> 前方高能♂</p>
 {% endcq %}
 
 ![1.gif](/images/posts/carnival/1.gif)

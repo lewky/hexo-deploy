@@ -108,3 +108,5 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 修改 `scaffolds` 目录下的 `post/draft.md` 模板
 * 修改行内代码块、超链样式
 * 修改引用块样式
+* 修改文本标题样式
+* 文本首行缩进两个字符
