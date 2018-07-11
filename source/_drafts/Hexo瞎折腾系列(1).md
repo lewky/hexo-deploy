@@ -1,6 +1,5 @@
 ---
-title: Hexo瞎折腾系列()
-date: {{ date }}
+title: Hexo瞎折腾系列(1)
 tags:
   - Hexo瞎折腾系列
   - Next主题
@@ -8,4 +7,5 @@ tags:
 categories:
   - Hexo
   - 瞎折腾系列
+date: 2018-07-11 23:37:24
 ---

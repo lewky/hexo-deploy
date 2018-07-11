@@ -3,9 +3,10 @@ title: 'Re:从零开始的Hexo搭建个人博客(一)'
 tags:
   - Hexo
   - Hexo-blog-demo
-  - Hexo教程
+  - Hexo搭建博客教程
 categories:
-  - Hexo教程
+  - Hexo
+  - 搭建博客教程
 abbrlink: 22143
 date: 2018-04-24 22:06:44
 ---
