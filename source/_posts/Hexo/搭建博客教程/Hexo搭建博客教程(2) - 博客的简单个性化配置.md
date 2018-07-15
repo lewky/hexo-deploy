@@ -1,5 +1,5 @@
 ---
-title: 'Re:从零开始的Hexo搭建个人博客(二)'
+title: 'Hexo搭建博客教程(2) - 博客的简单个性化配置'
 tags:
   - Hexo
   - Hexo-blog-demo
@@ -9,6 +9,7 @@ categories:
   - 搭建博客教程
 abbrlink: 38619
 date: 2018-04-24 22:07:44
+toc_number: false
 ---
 > 本章主要讲博客的个性化，譬如站点的基本配置（语言、头像、站点图标等）、安装新的Hexo主题（NexT主题）以及主题的配置。
 

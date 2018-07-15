@@ -1,5 +1,5 @@
 ---
-title: 'Re:从零开始的Hexo搭建个人博客(三)'
+title: 'Hexo搭建博客教程(3) - 远程部署到GitHub Pages'
 tags:
   - Hexo
   - Hexo-blog-demo
@@ -9,6 +9,7 @@ categories:
   - 搭建博客教程
 abbrlink: 1657
 date: 2018-04-24 22:08:44
+toc_number: false
 ---
 > 本章讲的是如何将本地的个人项目远程部署到 GitHub Pages，涉及到GitHub的项目仓库、Git的使用，以及Hexo的远程部署等。
 

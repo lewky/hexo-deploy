@@ -1,5 +1,5 @@
 ---
-title: 'Re:从零开始的Hexo搭建个人博客(一)'
+title: 'Hexo搭建博客教程(1) - 安装环境与本地搭建'
 tags:
   - Hexo
   - Hexo-blog-demo
@@ -9,6 +9,7 @@ categories:
   - 搭建博客教程
 abbrlink: 22143
 date: 2018-04-24 22:06:44
+toc_number: false
 ---
 > 前言
 
@@ -31,12 +32,12 @@ date: 2018-04-24 22:06:44
 
 请根据自身需要选择章节，以节省时间：
 
-* 想要自己从零开始搭建个人博客的，可以从<a href="https://lewky.github.io/2018/04/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" target="_blank">第一章</a>开始看起；
+* 想要自己从零开始搭建个人博客的，可以从<a href="https://lewky.github.io/posts/22143.html" target="_blank">第一章</a>开始看起；
 * 懒得自己搭建的，请将本项目clone到本地，本项目是一个全新的Hexo博客Demo，并且已经安装配置好了 NexT 主题。此外，还请：
-	* 根据<a href="https://lewky.github.io/2018/04/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%80)/" target="_blank">第一章</a>安装好相应的环境
-	* 根据<a href="https://lewky.github.io/2018/04/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%BA%8C)/" target="_blank">第二章</a>修改个人博客配置
-	* 根据<a href="https://lewky.github.io/2018/04/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" target="_blank">第三章</a>将博客部署到 GitHub Pages
-* 已在本地搭建好个人博客，想要了解怎么将博客部署到 GitHub Pages 的，可以从<a href="https://lewky.github.io/2018/04/24/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84Hexo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2(%E4%B8%89)/" target="_blank">第三章</a>看起
+	* 根据<a href="https://lewky.github.io/posts/22143.html" target="_blank">第一章</a>安装好相应的环境
+	* 根据<a href="https://lewky.github.io/posts/38619.html" target="_blank">第二章</a>修改个人博客配置
+	* 根据<a href="https://lewky.github.io/posts/1657.html" target="_blank">第三章</a>将博客部署到 GitHub Pages
+* 已在本地搭建好个人博客，想要了解怎么将博客部署到 GitHub Pages 的，可以从<a href="https://lewky.github.io/posts/1657.html" target="_blank">第三章</a>看起
 
 另外，由于Hexo及其主题的配置文件都是英文的，所以本项目对部分配置文件添加了中文注释，有兴趣的可以另行拷贝。
 
