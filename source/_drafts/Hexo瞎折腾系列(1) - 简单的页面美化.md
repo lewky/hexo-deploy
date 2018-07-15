@@ -26,3 +26,13 @@ next: 5.1.4
 ## 关于配置文件
 
 <div class="note info"><p>对于使用了Next主题的Hexo静态博客，存在着两个至关重要的配置文件`_config.yml`。在本系列中，统一将位于站点根目录下的该文件称为`站点配置文件`，将位于`themes\next`目录下的该文件称为`主题配置文件`。</p></div>
+
+## 添加美化博客的相关文件
+
+本系列会使用到大量的css与JavaScript的相关内容，为了更有效率与可观赏性的美化博客，我们将这些美化相关的东西都尽可能地写到一类文件中，方便日后查询与修改。譬如下边的几个文件里，就存放了博客的大部分美化内容：
+
+>themes/next/source/css/_custom/custom.styl
+themes/next/source/js/src/custom.js
+themes/next/layout/_partials/head/custom-head.swig
+themes/next/layout/_custom/custom-foot.swig
+
