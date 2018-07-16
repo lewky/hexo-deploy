@@ -547,7 +547,7 @@ code {
     color: #d500fc;
     background: rgba(78, 240, 233, 0.42);
     margin: 0 4px;
-    font-size: 1em;
+    font-size: .9em;
     border: 1px solid #d6d6d6;
 }
 
@@ -572,6 +572,9 @@ blockquote p {
 }
 .blockquote-center {
     background: white;
+}
+.blockquote-center p {
+    text-indent: 0 !important;
 }
 
 /* 缩小文章摘要里标题和正文的间距 */
@@ -678,7 +681,7 @@ section .post-body .fancybox img {
     font-family: "微软雅黑" , "宋体" , "黑体" ,Arial;
     font-size: 1em;
     font-weight: bold;
-    line-height: 23px;
+    line-height: 1.5;
     margin: 12px 0 12px 3px !important;
     padding: 5px 0 3px 10px;
     text-shadow: 2px 2px 3px #222222;
@@ -693,10 +696,6 @@ section .post-body .fancybox img {
 /* 文本首行缩进 */
 .post-body p {
     text-indent: 2em;
-}
-/* 避免对文本中的font awesome图标造成影响(比如旋转效果) */
-.post-body p i {
-    text-indent: 0;
 }
 
 /* -----------end：文章相关---------- */
