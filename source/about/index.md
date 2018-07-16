@@ -20,10 +20,10 @@ Java, JavaWeb
 
 ## 联系
 
-<a href="javascript:void(0);">email: 1019175915@qq.com</a>
-<a href="https://github.com/lewky">github@lewky</a>
-<a href="https://blog.csdn.net/lewky_liu">csdn@lewky_liu</a>
-<a href="http://www.cnblogs.com/yulinlewis">cnblogs@yulinlewis</a>
+* <a href="javascript:void(0);">email: 1019175915@qq.com</a>
+* <a href="https://github.com/lewky">github@lewky</a>
+* <a href="https://blog.csdn.net/lewky_liu">csdn@lewky_liu</a>
+* <a href="http://www.cnblogs.com/yulinlewis">cnblogs@yulinlewis</a>
 
 <!-- endtab -->
 <!-- tab 站点相关@home -->
