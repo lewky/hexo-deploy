@@ -188,10 +188,9 @@ NexT主题默认会有图片边框，不太好看，我们可以把边框去掉�
 
 其源码如下：
 
-```html
-```html
-<h2>Hello World!</h2>
-``````
+	```html
+	<h2>Hello World!</h2>
+	```
 
 由于NexT默认的语法高亮的主题比较一般，我们可以换成其他的主题，比如我所使用的就是黑色的主题。
 
@@ -220,3 +219,8 @@ redcarpet:
 <!-- more -->
 
 接下来重新执行部署三连命令，就会发现 `GitHub Pages` 上部署的页面语法高亮显示成功了。
+
+### 推荐一些写得很齐全的文章链接
+
+1. <a href="https://segmentfault.com/a/1190000009544924">hexo的next主题个性化配置教程</a>
+2. <a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a>
