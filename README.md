@@ -88,6 +88,7 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 添加关于页面
 * 使用 `hexo-neat` 压缩博文插件，优化博客静态资源
 * 添加页面标题监听事件
+* 添加404页面
 
 ### 站点标题
 
