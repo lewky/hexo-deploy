@@ -11,6 +11,10 @@ date: 2018-04-24 00:00:00
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
 
+## 2018-07-21
+
+添加了404页面
+
 ## 2018-07-10
 
 * 修改文本标题样式
