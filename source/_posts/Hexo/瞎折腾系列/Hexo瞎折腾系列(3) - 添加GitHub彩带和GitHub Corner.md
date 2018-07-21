@@ -10,7 +10,7 @@ categories:
 abbrlink: 844109c2
 date: 2018-07-19 23:09:04
 ---
-### 页面右上角添加GitHub彩带
+## 页面右上角添加GitHub彩带
 
 你可以在<a href="https://github.com/blog/273-github-ribbons" target="_blank">这里</a>找到一共12种样式的GitHub彩带，复制其中的超链代码。
 
@@ -19,8 +19,9 @@ date: 2018-07-19 23:09:04
 ```html
 <div class="headband"></div>
 ```
-
+<!-- more -->
 在这里的div标签内部添加我们刚刚复制的超链代码，并修改超链指向你的GitHub地址：
+
 ```html
 <div class="headband">
     <a href="https://github.com/lewky"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
@@ -37,7 +38,7 @@ date: 2018-07-19 23:09:04
 
 我只找到了10张彩带图片，可以直接在我的<a href="https://github.com/lewky/lewky.github.io/tree/dev/source/images/headband" target="_blank">GitHub项目</a>中找到这些图片并复制到自己的站点上。
 
-### 页面右上角添加GitHub Corner
+## 页面右上角添加GitHub Corner
 
 这是我后来在其他博客中见到的，可能是6.x.x版本的NexT主题自带的，由于我使用的主题版本较低，只能自己添加了。
 

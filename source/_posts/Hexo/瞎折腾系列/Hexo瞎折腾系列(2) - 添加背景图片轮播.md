@@ -16,7 +16,7 @@ date: 2018-07-19 23:00:36
 
 >A simple jQuery plugin that allows you to add a dynamically-resized, slideshow-capable background image to any page or element.
 
-可以直接在页面中引入该插件的cdn来调用函数，也可以直接下载下来使用，这是<a href="https://www.bootcdn.cn/jquery-backstretch/">官方地址</a>。
+可以直接在页面中引入该插件的cdn来调用函数，也可以直接下载下来使用，这是<a href="https://www.bootcdn.cn/jquery-backstretch/">官方地址</a>。<!-- more -->
 
 ## jquery-backstretch的使用方法
 
