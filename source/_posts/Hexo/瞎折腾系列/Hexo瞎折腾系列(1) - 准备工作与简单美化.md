@@ -161,6 +161,21 @@ type: categories
 
 接下来重新使用本地调试三连，就可以看到tags和categories这两个菜单的页面显示正常了。
 
+### 去掉图片边框
+
+NexT主题默认会有图片边框，不太好看，我们可以把边框去掉。打开 `themes\next\source\css\_custom\custom.styl`，添加如下CSS代码：
+
+```css
+/* 去掉图片边框 */
+.posts-expand .post-body img {
+    border: none;
+    padding: 0px;
+}
+.post-gallery .post-gallery-img img {
+    padding: 3px;
+}
+```
+
 ### 修改语法高亮的主题
 
 语法高亮就是在引入代码时让代码呈现特定的样式，而在Markdown文件中语法高亮的使用方法是在引入代码的前一行添加三个反引号加上使用的语言名字，然后在引入代码的下一行使用三个反引号结尾。
