@@ -196,7 +196,7 @@ toc:
   # If true, all words will placed on next lines if header width longer then sidebar width.
   # 如果标题长度超过侧边栏宽度则放到下一行继续显示
   # 开启后可能要在 custom.styl 里加代码
-  wrap: false
+  wrap: true
 
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
