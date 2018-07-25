@@ -5,6 +5,7 @@ tags:
   - DBeaver
 categories:
   - 数据库
+  - 可视化工具
 abbrlink: a815cce3
 date: 2018-05-15 00:17:45
 ---
