@@ -12,7 +12,7 @@ date: 2018-07-24 00:02:19
 
 最近在查项目的log时发现报了大量的NPE(NullPointerException)，诡异的是只log了Exception的类名，却没有具体的堆栈信息，以致于无法对该NPE异常进行准确定位。
 
-这是因为jvm自身存在着优化机制，但一个同样的异常重复出现并被打印到log后，jvm可以不提供具体的堆栈信息来提高性能。关于这个的具体信息我们可以从官网上查到相关的资料：
+这是因为jvm自身存在着优化机制，但一个同样的异常重复出现并被打印到log后，jvm可以不提供具体的堆栈信息来提高性能。关于这个的具体信息我们可以从官网上查到相关的资料：<!-- more -->
 
 <a href="http://www.oracle.com/technetwork/java/javase/relnotes-139183.html#vm" target="_blank">http://www.oracle.com/technetwork/java/javase/relnotes-139183.html#vm</a>
 
