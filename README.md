@@ -3,12 +3,14 @@
 
 It's a repository for my hexo blog and you can access my blog by :zap: https://lewky.github.io/
 
+![blog_display](https://raw.githubusercontent.com/lewky/markdownImages/master/resource/blog/blog_display.jpg)
+
 There are two branch in this repository :
 * master
 * dev
 
 **master** branch is deployed by github pages;  
-**dev** branch is an empty hexo blog with my own cutomed NexT theme. 
+**dev** branch is an empty hexo blog with my own custom NexT theme. 
 
 You can clone dev branch to get my hexo blog without posts except hello-world.md.
 
@@ -39,7 +41,7 @@ hexo g -d
 
 You can refer to [README.md](https://github.com/lewky/hexo-blog-demo) in my another repository to complete your hexo blog.
 
-## Customed NexT theme
+## Custom NexT theme
 
 This theme is based on `NexT-Gemini` theme, most of css/js code with comments is in: 
 

@@ -3,6 +3,8 @@
 
 这是我的hexo博客代码仓库，你可以通过 :zap: https://lewky.github.io/ 来访问我的博客。
 
+![blog_display](https://raw.githubusercontent.com/lewky/markdownImages/master/resource/blog/blog_display.jpg)
+
 本仓库存在两个分支：
 * master
 * dev
