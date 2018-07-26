@@ -7,7 +7,8 @@ tags:
   - 高并发
   - seckill
 categories:
-  - "项目笔记 - seckill"
+  - 项目笔记
+  - seckill
 abbrlink: 56225
 date: 2017-10-04 23:57:03
 toc_number: false
