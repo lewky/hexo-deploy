@@ -1,7 +1,7 @@
 ---
-title: dos笔记 - 批量重命名文件
+title: cmd - 批量重命名文件
 tags:
-  - dos
+  - cmd
   - 计算机
 categories:
   - 计算机

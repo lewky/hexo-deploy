@@ -1,7 +1,7 @@
 ---
-title: dos笔记 - 如何在bat文件中调用另一个bat文件
+title: cmd - 如何在bat文件中调用另一个bat文件
 tags:
-  - dos
+  - cmd
   - 计算机
 categories:
   - 计算机
