@@ -1,13 +1,14 @@
 ---
-title: NexT主题个性化 - 首页的文章只显示预览，不显示全文
+title: Hexo瞎折腾系列(4) - 站点首页不显示文章全文
 tags:
-  - Hexo
-  - NexT
-  - NexT主题个性化
+  - Hexo瞎折腾系列
+  - Next主题
+  - 主题个性化
 categories:
-  - NexT主题个性化
+  - Hexo
+  - 瞎折腾系列
 abbrlink: 62111
-date: 2018-05-07 23:13:55
+date: 2018-07-20 23:13:55
 ---
 ## 文章摘要设置
 
@@ -25,6 +26,8 @@ auto_excerpt:
 
 这里我们可以通过在文章使用`<!-- more -->`标志来精确控制文章的摘要预览，比如这篇文章就是在这个段落的末尾添加了该标志，所以本文在首页的预览就会显示到这个段落为止。
 <!-- more -->
+
+强烈推荐使用该`<!-- more -->`标志来控制文章的摘要预览，因为这种方式可以让摘要也按照css文件中的样式来渲染。如果使用了自动摘要的功能，你会发现文章摘要是一大团没有样式的文本，很是难看。
 
 ## 其他的文章配置
 
@@ -47,11 +50,11 @@ excerpt_description: true
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
-# 自动摘要。不推荐。
+# 不推荐使用自动摘要。
 # 请在文章中使用<!-- more -->标志来精确控制摘要长度。
 auto_excerpt:
   enable: true
-  length: 150
+  length: 200
 
 # Post meta display settings
 # 文章元数据展示设置
@@ -61,7 +64,8 @@ post_meta:
   # 创建时间
   created_at: true
   # 更新时间
-  updated_at: true
+  # 这个更新时间有点问题，因为每次重新生成文章/部署时都会刷新更新时间，不建议使用
+  updated_at: false
   # 目录分类
   categories: true
 
@@ -76,8 +80,7 @@ post_wordcount:
   # 阅读时长
   min2read: true
   # 站点总字数统计
-  totalcount: false
+  totalcount: true
   # 该post_wordcount的所有设置另起一行显示
   separated_meta: true
 ```
-
