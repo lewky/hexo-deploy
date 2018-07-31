@@ -418,6 +418,31 @@ a {
     margin-top: 15px;
 }
 
+/* categories页面的样式 */
+.posts-expand .post-body ul li:nth-child(odd) {
+    list-style: square;
+}
+.category-all-page .category-list-child {
+    padding-left: 0;
+}
+.category-list-item .category-list-count {
+    color: #a02e2e;
+}
+.category-list-child .category-list-count {
+    color: #bbb;
+}
+.category-list-child .category-list-item {
+    list-style: none !important;
+    &::before {
+	content: "▶  ";
+    }
+}
+.category-list-item a:hover {
+    &::after {
+	content: "  ☜";
+    }
+}
+
 /* -----------end：页面相关---------- */
 
 
@@ -444,6 +469,14 @@ a {
 
 
 /* -----------start：菜单栏相关---------- */
+
+
+/* 菜单栏的图标 */
+.menu-item .fas,
+.menu-item .far,
+.menu-item .fab {
+    margin-right: 5px;
+}
 
 /* 消除菜单图标的右内间距 */
 .menu .menu-item .fa {
@@ -493,7 +526,7 @@ a {
     top: 0;
 }
 
-/* 侧边栏菜单 */
+/* 侧边栏的图标 */
 .links-of-author-item .fas,
 .links-of-author-item .far,
 .links-of-author-item .fab {
