@@ -31,9 +31,10 @@ psql -h <dbserver_IP> -p<dbserver_port> -d <database_Name> -u <db user>
 ```cmd
 psql -d test -u postgres
 ```
-# 待补充
+
+如果有密码的话还需要输入密码，连接数据库后就可以直接通过sql语句来进行相关的操作了。
 
 ## 退出psql
 
-和其他的MySQL命令行工具不一样，退出时并不是使用`exit`，而是使用`\q`，接着按下回车就行了。
+和其他的命令行工具不一样，psql在退出时并不是使用`exit`，而是使用`\q`，接着按下回车就行了。
 这里的q指的是quit。
