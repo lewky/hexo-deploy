@@ -12,6 +12,10 @@ not_show: true
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
 
+## 2018-07-30
+
+修改categories page的样式
+
 ## 2018-07-26
 
 * 改善文章目录的换行问题

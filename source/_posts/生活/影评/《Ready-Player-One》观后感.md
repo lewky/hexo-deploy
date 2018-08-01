@@ -4,6 +4,7 @@ tags:
   - 生活
   - 影评
 categories:
+  - 生活
   - 影评
 abbrlink: 23475
 date: 2018-03-31 23:01:13
