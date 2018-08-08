@@ -5,6 +5,7 @@ tags:
   - 计算机
 categories:
   - 计算机
+  - cmd
 abbrlink: 39f5b6b2
 date: 2017-11-14 23:11:07
 ---
