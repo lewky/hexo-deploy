@@ -1,5 +1,5 @@
 ---
-title: Java笔记-序列化的注意点
+title: Java - 序列化的注意点
 tags:
   - Java
 categories:

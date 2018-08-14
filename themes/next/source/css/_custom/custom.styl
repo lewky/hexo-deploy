@@ -607,6 +607,8 @@ a {
 /* 文本左端对齐 */
 .post-toc .nav-item {
     text-align: inherit;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 /* 子目录字体大小 */
 .post-toc .nav .nav-child {
@@ -705,7 +707,7 @@ section .post-body .fancybox img {
     margin-top: 25px;
 }
 .post-footer-index .post-button a:hover {
-    border: none;
+    border-color: #fff;
     background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
 }
 
@@ -771,7 +773,7 @@ section .post-body .fancybox img {
     font-family:"微软雅黑", "宋体", "黑体", Arial;
     font-weight: bold;
     line-height: 1.3;
-    margin: 18px 0 !important;
+    margin: 18px 0 18px -5px !important;
     padding: 10px;
     text-shadow: 2px 2px 3px #222222;
 }
@@ -797,9 +799,12 @@ section .post-body .fancybox img {
     border: none;
 }
 
-/* 文本首行缩进 */
+/* 段落文本样式 */
 .post-body p {
-    text-indent: 2em;
+    /*text-indent: 2em;*/
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 /* -----------end：文章相关---------- */
