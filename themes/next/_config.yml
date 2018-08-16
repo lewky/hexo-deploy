@@ -186,6 +186,9 @@ avatar_plug:
   theme: bilibili
   image: /images/avatar-plug/bilibili_9.png
 
+  # 每次刷新页面随机改变头像挂件，只有启用了头像挂件才有效
+  flush: true
+
 # Table Of Contents in the Sidebar
 # 侧栏文章目录设置
 toc:

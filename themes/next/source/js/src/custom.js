@@ -59,7 +59,7 @@ jQuery(document).ready(function($) {
 	/* 点击频率，点击几次就换挂件 */
 	var frequency = 3;
 	/* 头像挂件数量 */
-	var plug_count = 38;
+	var plug_count = 44;
 	$(".site-author-image-bilibili").click(function(e) {
 		if (a_click % frequency === 0) {
 			avatar_plug ++;
@@ -75,11 +75,11 @@ jQuery(document).ready(function($) {
 
 /* 轮播背景图片 */
 $(function () {
-	$.backstretch([  
+	$.backstretch([
 		  "/images/background/saber1.jpg",
 		  "/images/background/saber2.jpg",
 		  "/images/background/bg1.jpg"
-	], { duration: 60000, fade: 1500 });  
+	], { duration: 60000, fade: 1500 });
 });
 
 /* 拉姆蕾姆回到顶部或底部按钮 */
