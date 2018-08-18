@@ -9,3 +9,12 @@ Custom foot in body, Can add script here.
 
 <!-- 自定义的js文件 -->
 <script type="text/javascript" src="/js/src/custom.js"></script>
+
+<script>
+<!-- 刷新页面时随机改变头像挂件 -->
+{% if theme.avatar_plug.theme and theme.avatar_plug.flush %}
+    $(function () {
+        $(".site-avatar-plug-bilibili").attr("src",["/images/avatar-plug/bilibili_" + (~~(44*Math.random())+1) + ".png"]);
+    });
+{% endif %}
+</script>
