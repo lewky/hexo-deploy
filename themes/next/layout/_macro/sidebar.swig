@@ -30,16 +30,10 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             {% if theme.avatar_plug.theme %}
-	      {% if theme.avatar_plug.theme === 'bilibili' %}
-	        <img class="site-avatar-plug-bilibili" src="{{ url_for( theme.avatar_plug.image ) }}" />
+	        <img class="site-avatar-plug-bilibili" />
                 <img class="site-author-image-bilibili" itemprop="image"
                   src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}" 
 		  alt="点击头像试试看~~" />
-	      {% else %}
-	        <img class="site-author-image" itemprop="image"
-                    src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"
-                    alt="{{ theme.author }}" />
-	      {% endif %}
 	    {% else %}
 	        <img class="site-author-image" itemprop="image"
                   src="{{ url_for( theme.avatar | default(theme.images + '/avatar.gif') ) }}"

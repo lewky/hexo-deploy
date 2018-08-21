@@ -181,9 +181,8 @@ links:
 avatar: /images/avatar.jpg
 # 头像挂件
 avatar_plug:
-  # false表示关闭头像挂件，允许的值有：bilibili
-  # b站头像挂件: bilibili
-  theme: bilibili
+  # true启用头像挂件(b站同款)，false关闭
+  theme: true
   image: /images/avatar-plug/bilibili_9.png
 
   # 每次刷新页面随机改变头像挂件，只有启用了头像挂件才有效
