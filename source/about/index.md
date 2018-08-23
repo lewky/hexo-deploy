@@ -45,7 +45,7 @@ email,qq,github and more...
 {% endtabs %}
 
 <script>
-/* 侧边栏的站点运行时间 */
+/* 站点运行时间 */
 function show_date_time(){
 	window.setTimeout("show_date_time()", 1000);
 	/* 请修改这里的起始时间 */
