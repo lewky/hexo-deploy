@@ -56,8 +56,9 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 
 * 圆形头像
 * 头像旋转
-* 添加头像挂件(目前只有b站主题，可关闭)
-* 头像挂件彩蛋(具体什么彩蛋可以看源码)
+* 添加b站同款头像挂件(可关闭)
+* 头像挂件自动刷新功能(可关闭)
+* 头像挂件彩蛋(你猜)
 
 ### 图片相关
 
@@ -81,6 +82,7 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 消除 `Hosted by` 的超链底部线条
 * 添加全站字数统计（会延长 `hexo g` 的时间）
 * 修改页脚样式
+* 添加拉姆蕾姆回到底部/顶部样式
 
 ### 页面相关
 
@@ -91,6 +93,7 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 使用 `hexo-neat` 压缩博文插件，优化博客静态资源
 * 添加页面标题监听事件
 * 添加404页面
+* 修改分类页面样式
 
 ### 站点标题
 
@@ -122,4 +125,6 @@ This theme is based on `NexT-Gemini` theme, most of css/js code with comments is
 * 修改阅读全文按钮样式
 * 代码块添加复制按钮
 * 修改文本标题样式
-* 文本首行缩进两个字符
+* 修改文章目录样式
+* 修改文章二级、三级标题样式
+* 修改段落文本样式
