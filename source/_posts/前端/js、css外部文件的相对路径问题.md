@@ -1,5 +1,5 @@
 ---
-title: 前端 - js、css外部文件的相对路径问题
+title: js、css外部文件的相对路径问题
 tags:
   - 前端
   - JS
