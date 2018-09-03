@@ -1,12 +1,12 @@
 ---
-title: Hexo耍花样系列(2) - 如何令文章目录显示序号
+title: Hexo玩花样系列(2) - 如何令文章目录显示序号
 tags:
-  - Hexo耍花样系列
+  - Hexo玩花样系列
   - NexT主题
   - NexT写作技巧
 categories:
   - Hexo
-  - 耍花样系列
+  - 玩花样系列
 abbrlink: 6da50a16
 date: 2018-06-05 23:14:09
 ---
