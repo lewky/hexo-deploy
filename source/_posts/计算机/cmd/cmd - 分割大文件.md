@@ -3,6 +3,7 @@ title: cmd - 分割大文件
 tags:
   - cmd
   - 计算机
+  - 工作记录
 categories:
   - 计算机
   - cmd
