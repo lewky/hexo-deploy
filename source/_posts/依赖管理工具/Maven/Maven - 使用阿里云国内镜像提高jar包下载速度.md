@@ -6,6 +6,7 @@ tags:
 categories:
   - 依赖管理工具
   - Maven
+abbrlink: 83b08349
 date: 2017-09-05 14:17:36
 ---
 转载自：[maven(八)，阿里云国内镜像，提高jar包下载速度](https://blog.csdn.net/wangb_java/article/details/55653122)
