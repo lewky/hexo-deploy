@@ -1,5 +1,5 @@
 ---
-title: Hexo瞎折腾系列() - Coding Pages申请SSL/TLS证书错误
+title: Hexo瞎折腾系列(7) - Coding Pages申请SSL/TLS证书错误
 tags:
   - Hexo瞎折腾系列
   - Next主题

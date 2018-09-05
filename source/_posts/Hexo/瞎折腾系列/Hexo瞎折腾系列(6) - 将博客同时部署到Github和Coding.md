@@ -1,18 +1,18 @@
 ---
-title: Hexo瞎折腾系列() - 将博客同时部署到Github和Coding
+title: Hexo瞎折腾系列(6) - 将博客同时部署到Github和Coding
 tags:
   - Hexo
 categories:
   - Hexo
-abbrlink: 2366
-date: 2018-04-27 23:29:21
+abbrlink: 369cf01c
+date: 2018-08-27 23:29:21
 ---
-> 前言
+## 前言
 
 由于本人只是将Hexo博客同时部署到 Github 和 Coding.net ，所以这里只介绍怎么同时部署到这两个网站的pages。  
 之所以选择这两个网站，是因为国外用户可以访问 Github，而国内用户可以访问 Coding.net。另外，Coding.net可以拥有自己的私人仓库。
 
-## 1. 修改站点配置文件
+## 修改站点配置文件
 
 在站点根目录下找到 `_config.yml`文件，将里边的deploy节点修改成下边的形式：
 <!-- more -->
@@ -40,13 +40,13 @@ https://{domain}/{username}/{repository}.git
 
 一般推荐使用SSH协议的地址，因为可以免去每次push都要输入账号密码的繁琐，而且也够安全。
 
-## 2. 在 Github 和 Coding.net 上各自创建一个仓库
+## 在 Github 和 Coding.net 上各自创建一个仓库
 
 如果我们只是将项目部署到某一个代码托管站点而已，那么该项目仓库的名字可以随便起；但是现在我们需要将项目同时部署到 Github 和 Coding.net 上，那就不能随意命名了。  
 
 我们需要采用特定的命名方式，才能正确将Hexo博客同时部署到这两个站点上；否则很可能会导致只有博客的主页能访问到，而其他的路径全部失效。
 
-### 2.1 仓库的命名
+### 仓库的命名
 
 对于 Coding.net，你可以选择建立一个私人仓库来部署自己的Hexo博客，不过和 Github 不同的地方在于：
 
@@ -91,9 +91,9 @@ permalink_defaults:
 
 如果不配置这里的url节点，会导致除了首页以外的所有页面都请求404；但是我们由于是同时部署在两个网站上，其父域名是不一样的，那么这里的url节点也就只能配置一个而牺牲另一个了；但是如果你有自己的域名，就可以解决这个问题了：直接在这里配置自己的域名就行了。
 
-## 3. 配置 SSH key
+## 配置 SSH key
 
-### 3.1 创建RSA密钥对
+### 创建RSA密钥对
 
 使用 Git Bash 生成RSA密钥对：
 
@@ -105,7 +105,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 
 接着将 ~/.ssh 目录下将里边的 id_rsa.pub 文件里的内容复制到剪切板。
 
-### 3.2 Github 配置 SSH key
+### Github 配置 SSH key
 
 登陆 Github 的账号：
 * 进入 Settings 页面
@@ -115,7 +115,7 @@ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
 * 然后在 Key 里将我们刚刚复制的公钥复制进去
 * 最后点击 Add SSH key，这时候 GitHub 会要你输入账号密码进行确认。
 
-### 3.3 Coding.net 配置 SSH key
+### Coding.net 配置 SSH key
 
 Coding.net 和 Github 有些不一样，Coding.net存在账户公钥和部署公钥；
 * 账户公钥配置后拥有账户下所有项目的读写权限
@@ -128,7 +128,7 @@ Coding.net 和 Github 有些不一样，Coding.net存在账户公钥和部署公
 * 填写公钥名称和内容
 * 添加后输入输入账号密码进行确认
 
-## 4. 验证 SSH 连接
+## 验证 SSH 连接
 
 使用 Git Bash 输入：
 
