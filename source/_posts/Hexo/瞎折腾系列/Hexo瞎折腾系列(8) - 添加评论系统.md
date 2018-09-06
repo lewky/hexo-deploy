@@ -15,6 +15,7 @@ date: 2018-09-05 22:24:05
 Hexo的NexT主题本身就集成了一些评论系统，多说啊之类的已经关闭服务的略过不提，目前比较多人用的有畅言、来必力livere、Gitment、Gitalk、Disqus等。
 
 我刚用的评论系统的时候，网易云跟贴和多说已经gg了，畅言需要备案，Disqus需要FQ，Gitment和Gitalk类似，都需要GitHub账号。经过搜集资料和考虑，我最终还是决定使用Gitment。只是在用了一段时间后，终于还是放弃了Gitment，转而使用来必力livere。
+<!-- more -->
 
 ## Gitment的优缺点
 

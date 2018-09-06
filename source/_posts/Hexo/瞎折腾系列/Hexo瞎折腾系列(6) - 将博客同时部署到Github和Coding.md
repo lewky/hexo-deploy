@@ -1,9 +1,13 @@
 ---
 title: Hexo瞎折腾系列(6) - 将博客同时部署到Github和Coding
 tags:
-  - Hexo
+  - Hexo瞎折腾系列
+  - Next主题
+  - 主题个性化
+  - Next性能优化
 categories:
   - Hexo
+  - 瞎折腾系列
 abbrlink: 369cf01c
 date: 2018-08-27 23:29:21
 ---
