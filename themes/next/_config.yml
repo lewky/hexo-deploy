@@ -704,15 +704,20 @@ local_search:
 # Alias: {% extlink text url "title" %}
 exturl: false
 
+# 主题自带的标签样式，有 note、label、tabs 三种
 # Note tag (bs-callout).
 note:
   # Note tag style values:
-  # 主题的标签样式，有 note、label、tabs 三种
   #  - simple    bs-callout old alert style. Default.
   #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
-  style: simple
+  # Note标签的样式有四种：
+  #  - simple：默认的样式，也是Bootstrap Callout旧版本的样式。
+  #  - modern：Bootstrap Callout新版本(v2-v3)的样式。
+  #  - flat：该样式会连同背景也一起渲染，如同Mozilla或者StackOverflow那样。
+  #  - disabled：禁用本Note标签。
+  style: flat
   icons: true
   border_radius: 3
   # Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).
