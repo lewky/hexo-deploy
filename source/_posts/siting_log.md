@@ -12,6 +12,11 @@ not_show: true
 <font color="red" size="4px">`o(*￣▽￣*)ブ` 持续更新中 </font><i class="fas fa-sync fa-spin"></i>
 {% endcq%}
 
+## 2018-09-18
+
+* 添加了图片懒加载插件`hexo-lazyload-image`
+* 出于强迫症，还是关闭了不蒜子的统计功能，目的是为了解决下边的问题二。
+
 ## 2018-08-21
 
 最近发现了两个问题：

@@ -69,7 +69,7 @@ footer:
   # -------------------------------------------------------------
   # Any custom text can be defined here.
   # Hosted by <a target="_blank" href="https://pages.github.com">GitHub Pages</a>
-  custom_text: Hosted by <a href="https://pages.coding.me" style="font-weight:bold">Coding Pages</a> / <a target="_blank" href="https://pages.github.com" style="font-weight:bold">GitHub Pages</a>
+  custom_text: Hosted by <a href="https://pages.coding.me" style="font-weight:bold">Coding Pages</a> & <a target="_blank" href="https://pages.github.com" style="font-weight:bold">GitHub Pages</a>
 
 # ---------------------------------------------------------------
 # SEO Settings
@@ -628,7 +628,7 @@ firestore:
 busuanzi_count:
   # count values only if the other configs are false
   # 其他统计设置为false时才能使用不蒜子统计
-  enable: true
+  enable: false
   # custom uv span for the whole site
   # 为整个站点定制uv相关的span
   site_uv: true
