@@ -21,7 +21,7 @@ toc_number: false
 
 >**在本项目中高并发发生在哪？**
 
- ![高并发发生的地方](/images/posts/seckill/高并发发生的地方.jpg)
+ ![高并发发生的地方](/images/posts/project/seckill/高并发发生的地方.jpg)
 <!-- more -->
 
 在上图中，红色的部分就表示会发生高并发的地方，绿色部分表示对于高并发没有影响。
@@ -32,11 +32,11 @@ toc_number: false
 
 我们将这个详情页放置到CDN中，这样用户在访问该页面时就不需要访问我们的服务器了，起到了降低服务器压力的作用。而CDN中存储的是静态化的详情页和一些静态资源（css，js等），这样我们就拿不到系统的时间来进行秒杀时段的控制，所以我们需要单独设计一个请求来获取我们服务器的系统时间。
 
- ![详情页](/images/posts/seckill/详情页.png)
+ ![详情页](/images/posts/project/seckill/详情页.png)
 
 >**CDN（Content Delivery Network）的理解**
 
- ![CDN](/images/posts/seckill/CDN.jpg)
+ ![CDN](/images/posts/project/seckill/CDN.jpg)
 
 >**获取系统时间不需要优化**
 
@@ -49,7 +49,7 @@ toc_number: false
 
 >**秒杀地址接口优化**
 
- ![秒杀地址接口优化](/images/posts/seckill/秒杀地址接口优化.jpg)
+ ![秒杀地址接口优化](/images/posts/project/seckill/秒杀地址接口优化.jpg)
 
 >**秒杀操作优化分析**
 
@@ -69,7 +69,7 @@ toc_number: false
 * Update后JVM -GC(垃圾回收机制)大约50ms，最高并发性是20qps。并发性越高，GC就越可能发生，虽然不一定每次都会发生，但一定会发生。
 * 异地机房，比如北京到上海之间的网络延迟，进过计算大概13~20ms。
 
- ![网络延迟计算](/images/posts/seckill/网络延迟计算.jpg)
+ ![网络延迟计算](/images/posts/project/seckill/网络延迟计算.jpg)
 
 >**如何判断update更新库存成功？**
 
@@ -91,9 +91,9 @@ toc_number: false
 
 接下来先分析第一种方案
 
- ![秒杀方案1](/images/posts/seckill/秒杀方案1.jpg)
+ ![秒杀方案1](/images/posts/project/seckill/秒杀方案1.jpg)
 
- ![秒杀方案1成本分析](/images/posts/seckill/秒杀方案1成本分析.jpg)
+ ![秒杀方案1成本分析](/images/posts/project/seckill/秒杀方案1成本分析.jpg)
 
 根据上图的成本分析，我们的秒杀系统采用第二种方案，即使用存储过程。
 
@@ -379,11 +379,11 @@ Redis有很多客户端，我们的项目是用Java语言写的，自然选择�
 
 >**回顾事务执行**
 
- ![回顾事务执行](/images/posts/seckill/回顾事务执行.jpg)
+ ![回顾事务执行](/images/posts/project/seckill/回顾事务执行.jpg)
 
 >**sql语句的简单优化**
 
- ![简单优化](/images/posts/seckill/简单优化.jpg)
+ ![简单优化](/images/posts/project/seckill/简单优化.jpg)
 
 >**优化SeckillServiceImpl的`executeSeckill()`**
 
@@ -677,7 +677,7 @@ Redis有很多客户端，我们的项目是用Java语言写的，自然选择�
 
 ### **3.3 系统部署架构**
 
- ![系统可能用到的服务](/images/posts/seckill/系统可能用到的服务.jpg)
+ ![系统可能用到的服务](/images/posts/project/seckill/系统可能用到的服务.jpg)
 
 CDN：放置一些静态化资源，或者可以将动态数据分离。一些js依赖直接用公网的CDN，自己开发的一些页面也做静态化处理推送到CDN。用户在CDN获取到的数据不需要再访问我们的服务器，动静态分离可以降低服务器请求量。比如秒杀详情页，做成HTML放在cdn上，动态数据可以通过ajax请求后台获取。
 
@@ -689,7 +689,7 @@ MySQL：保证秒杀过程的数据一致性与完整性。
 
 智能DNS解析+智能CDN加速+Nginx并发+Redis缓存+MySQL分库分表
 
- ![大型系统部署架构](/images/posts/seckill/大型系统部署架构.jpg)
+ ![大型系统部署架构](/images/posts/project/seckill/大型系统部署架构.jpg)
 
 大型系统部署架构，逻辑集群就是开发的部分。
 
@@ -699,7 +699,7 @@ MySQL：保证秒杀过程的数据一致性与完整性。
 
 在这样一个架构中，可能参与的角色如下：
 
- ![项目角色](/images/posts/seckill/项目角色.jpg)
+ ![项目角色](/images/posts/project/seckill/项目角色.jpg)
 
 >**本节结语**
 

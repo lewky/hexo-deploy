@@ -20,36 +20,36 @@ date: 2017-10-03 13:25:43
 
 ### 秒杀列表
 
-![秒杀列表](/images/posts/seckill/秒杀列表.jpg)
+![秒杀列表](/images/posts/project/seckill/秒杀列表.jpg)
 <!-- more -->
 
 ### 秒杀详情页
 
-![秒杀详情页](/images/posts/seckill/秒杀详情页.jpg)
+![秒杀详情页](/images/posts/project/seckill/秒杀详情页.jpg)
 
 ### 错误提示
 
-![错误提示](/images/posts/seckill/错误提示.jpg)
+![错误提示](/images/posts/project/seckill/错误提示.jpg)
 
 ### 开始秒杀
 
-![开始秒杀](/images/posts/seckill/开始秒杀.jpg)
+![开始秒杀](/images/posts/project/seckill/开始秒杀.jpg)
 
 ### 秒杀成功
 
-![秒杀成功](/images/posts/seckill/秒杀成功.jpg)
+![秒杀成功](/images/posts/project/seckill/秒杀成功.jpg)
 
 ### 重复秒杀
 
-![重复秒杀](/images/posts/seckill/重复秒杀.jpg)
+![重复秒杀](/images/posts/project/seckill/重复秒杀.jpg)
 
 ### 秒杀倒计时
 
-![秒杀倒计时](/images/posts/seckill/秒杀倒计时.jpg)
+![秒杀倒计时](/images/posts/project/seckill/秒杀倒计时.jpg)
 
 ### 秒杀结束
 
-![秒杀结束](/images/posts/seckill/秒杀结束.jpg)
+![秒杀结束](/images/posts/project/seckill/秒杀结束.jpg)
 
 ## 项目介绍
 

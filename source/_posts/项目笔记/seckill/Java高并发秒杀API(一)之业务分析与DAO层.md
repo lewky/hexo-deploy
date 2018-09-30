@@ -45,11 +45,11 @@ mvn archetype:generate -DgroupId=com.lewis.seckill -DartifactId=seckill -Dpackag
 	* 已经安装了Maven插件的请走下一个步骤
 * `File`→`New`→`Other...`→`Maven Project`→`Next`,进入如下界面
 
- ![Maven1](/images/posts/seckill/Maven1.jpg)
+ ![Maven1](/images/posts/project/seckill/Maven1.jpg)
 
 * 点击`Next`，选择要构建的骨架`maven-archetype-webapp`，如下图
 
- ![Maven2](/images/posts/seckill/Maven2.jpg)
+ ![Maven2](/images/posts/project/seckill/Maven2.jpg)
 
 * 点击`Next`，填写`groupId=com.lewis.seckill`，`DartifactId=seckill`，`package=com.lewis.seckill`（根据实际情况填写），然后`Finish`
 
@@ -244,7 +244,7 @@ mvn archetype:generate -DgroupId=com.lewis.seckill -DartifactId=seckill -Dpackag
 
 >秒杀业务的核心是对库存的处理，其业务流程如下图
 
- ![1.png](/images/posts/seckill/1.png)
+ ![1.png](/images/posts/project/seckill/1.png)
 
 > 用户针对库存业务分析
 
@@ -282,7 +282,7 @@ mvn archetype:generate -DgroupId=com.lewis.seckill -DartifactId=seckill -Dpackag
 
 当一个用户在执行秒杀某件商品时，其他也想要秒杀该商品的用户就只能等待，直到上一个用户提交或回滚了事务，他才能够得到该商品的锁执行秒杀操作。这里就涉及到了锁的竞争。
 
- ![2.jpg](/images/posts/seckill/2.jpg)
+ ![2.jpg](/images/posts/project/seckill/2.jpg)
 
 对于MySQL来说，竞争反应到背后的技术是就是事务+行级锁：
 
@@ -294,7 +294,7 @@ start transaction（开启事务）→ update库存数量 → insert购买明细
 
 下面先以天猫的秒杀库存系统为例，如下图
 
- ![3.jpg](/images/posts/seckill/2.jpg)
+ ![3.jpg](/images/posts/project/seckill/2.jpg)
 
 可以看到，天猫的秒杀库存系统是很复杂的，需要很多工程师共同开发。在这里，我们只实现秒杀相关的功能
 

@@ -40,7 +40,7 @@ date: 2018-08-08 23:16:35
 
 ### 获取最新的hosts文件
 
-可以自己百度`Google hosts`寻找最新的hosts文件，获取前往GitHub上游大佬们维护的项目获取：https://github.com/googlehosts/hosts
+可以自己百度`Google hosts`寻找最新的hosts文件，获取前往GitHub上由大佬们维护的项目获取：https://github.com/googlehosts/hosts
 
 附上项目的镜像地址，访问不了GitHub的同学可以访问这个：https://coding.net/u/scaffrey/p/hosts/git
 
