@@ -78,7 +78,7 @@ $(function () {
 	$.backstretch([
 		  "/images/background/saber1.jpg",
 		  "/images/background/saber2.jpg",
-		  "/images/background/bg1.jpg"
+		  "/images/background/wlop.jpg"
 	], { duration: 60000, fade: 1500 });
 });
 
@@ -213,12 +213,12 @@ window.onload = function() {
     if(document.hidden) {
       $('[rel="icon"]').attr('href', "/failure.ico");
       $('[rel="shortcut icon"]').attr('href', "/failure.ico");
-      document.title = '(●—●)糟糕，页面崩溃啦！';
+      document.title = '喔唷，崩溃啦！';
       clearTimeout(titleTime);
     } else {
       $('[rel="icon"]').attr('href', "/favicon-32x32.ico");
       $('[rel="shortcut icon"]').attr('href', "/favicon-32x32.ico");
-      document.title = '(/≧▽≦/)咦！页面又好了！';
+      document.title = '咦，页面又好了！';
       titleTime = setTimeout(function() {
         document.title = OriginTitile;
       }, 2000);
