@@ -19,7 +19,7 @@ SELECT
      information_schema.table_constraints AS tc 
      JOIN information_schema.key_column_usage AS kcu ON tc.constraint_name = kcu.constraint_name
      JOIN information_schema.constraint_column_usage AS ccu ON ccu.constraint_name = tc.constraint_name
- WHERE constraint_type = 'FOREIGN KEY' AND tc.table_name like 'your table name';
+ WHERE constraint_type = 'FOREIGN KEY' AND tc.table_name = 'your table name';
 ```
 <!-- more -->
 constraint_type有四种：UNIQUE、PRIMARY KEY、CHECK、FOREIGN KEY
