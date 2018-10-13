@@ -63,7 +63,7 @@ date: 2018-08-08 23:16:35
 #### Windows
 
 1. `win+R`组合键启动运行，输入`cmd`
-2. 在cmd界面输入`ipcong /flushdns`，然后回车
+2. 在cmd界面输入`ipconfig /flushdns`，然后回车
 3. 接下来你会看到`已成功刷新 DNS 解析缓存。`
 
 #### Linux
