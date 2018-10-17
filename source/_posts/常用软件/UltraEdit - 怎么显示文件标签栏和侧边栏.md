@@ -1,11 +1,12 @@
 ---
 title: UltraEdit - 怎么显示文件标签栏和侧边栏
 tags:
+  - 常用软件
   - 文本编辑器
   - UltraEdit
 categories:
+  - 常用软件
   - 文本编辑器
-  - UltraEdit
 abbrlink: a39d8a42
 date: 2018-09-02 22:27:41
 ---
