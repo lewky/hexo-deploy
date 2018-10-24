@@ -127,7 +127,9 @@ menu_icons:
 #scheme: Muse
 #scheme: Mist
 #scheme: Pisces
-scheme: Gemini
+#scheme: Gemini
+# Beep主题基于Gemini,所以所有适用于Gemini的配置均对Beep主题有效 
+scheme: Beep
 
 
 # ---------------------------------------------------------------
