@@ -1,6 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[StringUtils.split()和string.split()的区别]]></title>
+    <url>%2Fposts%2F44d23f55.html</url>
+    <content type="text"><![CDATA[场景出于业务考虑，将多个字符串拼接起来时，使用的分隔符是;,;。如果要将这样一个拼接来的字符串分割成原本的多个字符串时，就需要使用到jdk自带的split()方法。不过因为公司的编程规范，改为使用了Apache工具类的StringUtils.split()。之后就发现，当被拼接的字符串里含有;或,时，就会出现分割不正确的问题。具体例子下面的代码，使用了上述的两种split方法，猜猜结果是什么。12345678910111213141516171819public class Test &#123; public static void main(final String[] args) &#123; final String str = "老肥,老肥;是个,逗比"; final String seperator = ";,;"; //Apache工具类的split方法 final String[] result1 = StringUtils.split(str, seperator); for (final String string : result1) &#123; System.out.println(string); &#125; System.out.println("############分割线###########"); //jdk的split方法 final String[] result2 = str.split(seperator); for (final String string : result2) &#123; System.out.println(string); &#125; &#125;&#125;分割的结果如下：123456老肥老肥是个逗比############分割线###########老肥,老肥;是个,逗比StringUtils.split()和string.split()的区别StringUtils.split()是把分隔符拆成一个个单独的字符，再用这些字符去把字符串进行分割的。只要匹配到了分隔符中的任意一个字符，就会进行分割。而string.split()是把分隔符作为一个整体来对字符串进行分割。比如分隔符是;,;，那么在用StringUtils.split()时，只要被分割的字符串里遇到;或,，就会被分割。而在用string.split()时，必须被分割的字符串里遇到;,;时才会被分割。另外string.split()的分隔符参数其实是正则表达式，而StringUtils.split()的分隔符参数就只是个普通的字符串。此外，StringUtils.split()是null-safe的，已经帮你判空了，这也是公司规范要我们使用Apache工具类的原因。不过由于这里的业务要求，最终还是选择使用string.split()。最后附上StringUtils.split()的部分底层实现：12345678910111213141516171819//standard casewhile (i &lt; len) &#123; if (separatorChars.indexOf(str.charAt(i)) &gt;= 0) &#123; if (match || preserveAllTokens) &#123; lastMatch = true; if (sizePlus1++ == max) &#123; i = len; lastMatch = false; &#125; list.add(str.substring(start, i)); match = false; &#125; start = ++i; continue; &#125; lastMatch = false; match = true; i++;&#125;]]></content>
+      <categories>
+        <category>Java</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>split</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据库的标识符可以有多长]]></title>
+    <url>%2Fposts%2Fd68d7e3a.html</url>
+    <content type="text"><![CDATA[前言今天在查看项目代码时发现有这样一个逻辑：在查询数据库时通过代码去拼接一个SQL，这个SQL的某个字段的别名是由多个变量名拼接而成的，于是在拼接该别名时特地限制了其长度为30，如果超过30就只截取前30个字符来作为列别名。一时间很好奇为什么要限制列别名的长度，查阅过资料才明白，原来数据库的名字、表名、表别名、列名、列别名和函数名等，这些都属于标识符，不同数据库对于标识符会限定各种的长度最大值。关键字和标识符关键字：Key Words，就是那些在 SQL 语言里有固定含义的单词。比如很常用的select、update、delete等。标识符：Identifiers，就是一个用于标识的名字，比如数据库名、表名、表别名、列名、列别名和函数名等。SQL 标识符和关键字必须以一个字母开头 （a-z 以及带可区别标记的字母以及非拉丁字母 ）或下划线开头 （_）开头。标识符和关键字里随后的字符可以是字母，数字（0-9）， 或者下划线，但 SQL 标准不会定义包含数字或者以下划线开头或结尾的关键字。不同数据库的标识符的最大长度数据库类型表名字段名PostgreSQL63个字符63个字符SQL SERVER128个字符，临时表116个字符128个字符Oracle30个字符30个字符MySQL64个字符64个字符Access64个字符64个字符DB2128个字符128个字符PostgreSQL中的标识符PostgreSQL比较特殊，唯独它的标识符最大长度是63个字符，官方文档中是这样描述的：The system uses no more than NAMEDATALEN-1 bytes of an identifier; longer names can be written in commands, but they will be truncated. By default, NAMEDATALEN is 64 so the maximum identifier length is 63 bytes. If this limit is problematic, it can be raised by changing the NAMEDATALEN constant in src/include/pg_config_manual.h.Key words and unquoted identifiers are case insensitive.简单来说，PostgreSQL使用NAMEDATALEN - 1的值来限定标识符的最大长度，NAMEDATALEN默认是64，可以在PosrgreSQL的安装目录下的include/pg_config_manual.h去修改其值，在该shell文件中其注释如下：12345678/* * Maximum length for identifiers (e.g. table names, column names, * function names). Names actually are limited to one less byte than this, * because the length must include a trailing zero byte. * * Changing this requires an initdb. */#define NAMEDATALEN 64PostgreSQL关于标识符简单的例子如果我们把标识符命名超过了最大长度，那么会被自动截取掉超出的部分，只留下最大长度的标识符。1alter table tb_student add "哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈" varchar(400);如上SQL，由于数据库使用的是UTF-8编码，一个中文对应3个字符，也就是说，标识符最多只能有21个中文。上述SQL执行成功后，tb_student多出来一个新的字段哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈哈，正好只有21个字符，多出来的字符被丢弃了。另外，标识符是不区分大小写的，但是如果用双引号把标识符包括起来，这时候就会区分大小写。参考链接PostgreSQL官方文档PostgreSQL中文文档各个数据库表名和字段名长度限制]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[PostgreSQL - 模糊查询]]></title>
+    <url>%2Fposts%2F8fd6368.html</url>
+    <content type="text"><![CDATA[前言like、not like在SQL中用于模糊查询，%表示任意个字符，_表示单个任意字符，如果需要在模糊查询中查询这两个通配符，需要用ESCAPE进行转义，如下：1select * from table where name like '张/_小%' escape '/';这里表明/作为转义符，所以就可以在模糊查询中将通配符作为普通字符来搜索。另外，因为左模糊查询效率低下，一般不推荐在应用中去使用。除了以上通用的like和not like，在PostgreSQL中还有特殊的操作符用于模糊查询。ilike和not ilikeilike表示在模糊匹配字符串时不区分大小写，i即是ignore的意思。not ilike表示不模糊匹配字符串且不区分大小写。~和~*，!~和!~*~表示匹配正则表达式，且区分大小写。~*表示匹配正则表达式，且不区分大小写。可以通过这两个操作符来实现like和ilike一样的效果，如下：12345671.匹配以“张”开头的字符串select * from table where name ~ '^张';2.匹配以“小”结尾的字符串select * from table where name ~ '小$';其实这里的^和$就是正则表达式里的用法。!~是~的否定用法，表示不匹配正则表达式，且区分大小写。!~*是~*的否定用法，表示不匹配正则表达式，且不区分大小写。~~和~~*，!~~和!~~*~~等效于like，~~*等效于ilike。!~~等效于not like，!~~*等效于not ilike。参考链接postgresql数据库中~和like和ilike的区别postgreSQL sql语句中的~~符号是什么意思]]></content>
+      <categories>
+        <category>数据库</category>
+        <category>PostgreSQL</category>
+      </categories>
+      <tags>
+        <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[快速删除node_modules文件夹]]></title>
+    <url>%2Fposts%2Fe873a12.html</url>
+    <content type="text"><![CDATA[前言当安装了较多模块后，node_modules目录下的文件会很多，直接删除整个目录会很慢，下面介绍些快速删除node_modules目录的方法。方法一：使用rimraf模块的命令在全局安装rimraf模块，然后通过其命令来快速删除node_modules目录：12npm install rimraf -grimraf node_modules方法二：使用命令来删除目录Windows下使用rmdir命令首先在cmd窗口中进入到node_modules文件夹所在的路径，接着执行命令：1rmdir /s/q node_modulesLinux下使用rm命令1rm -f /node_modules参考链接删除node_modules文件夹]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>node_modules</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Windows下完全卸载node.js并安装node.js的多版本管理工具nvm-windows]]></title>
+    <url>%2Fposts%2F1908545a.html</url>
+    <content type="text"><![CDATA[前言由于高版本的node.js导致gulp执行build命令失败，我需要在Windows下卸载掉已有的node.js并安装一个多版本管理工具nvm-windows，方便切换不同版本的node.js。nvm是Linux下常用的一个node.js多版本管理工具，但是nvm不能在Windows下使用，在GitHub上有个项目叫nvm-windows，可以让我们在Windows下对node.js进行多版本管理。nvm-windows的下载地址：https://github.com/coreybutler/nvm-windows/releases根据官方说明：123It comes with an installer (and uninstaller), because getting it should be easy. Please note, you need to uninstall any existing versions of node.js before installing NVM for Windows. Also delete any existing nodejs installation directories (e.g., &quot;C:\Program Files\nodejs&quot;) that might remain. NVM&apos;s generated symlink will not overwrite an existing (even empty) installation directory.You should also delete the existing npm install location (e.g. &quot;C:\Users&lt;user&gt;\AppData\Roaming\npm&quot;) so that the nvm install location will be correctly used instead. After install, reinstalling global utilities (e.g. gulp) will have to be done for each installed version of node:在安装nvm-windows前，如果以前安装过node，需要先卸载，并且要把目录清理干净。在Windows下完全卸载已安装的node.js从卸载程序卸载程序和功能，也可以直接右键node.js的安装包并选择卸载。重新启动（或者重新启动任务管理器杀死所有与节点相关的进程）。从下列的目录中找到相关的内容并删除掉：C:\Program Files (x86)\nodejsC:\Program Files\nodejsC:\Users\{User}\AppData\Roaming\npm（或%appdata%\npm）C:\Users\{User}\AppData\Roaming\npm-cache（或%appdata%\npm-cache）检查%PATH%环境变量以确保没有引用Nodejs或npm存在。重新启动电脑。安装nvm-windows并使用到GitHub的项目下载地址，选择下载nvm-setup.zip，解压后双击使用安装程序即可。查看已安装的nodejs版本1nvm list如果是第一次安装，使用该命令结果如下：123C:\Users\Lewis&gt;nvm listNo installations recognized.查看可安装的nodejs版本1nvm list available输入该命令结果如下：1234567891011121314151617181920212223242526C:\Users\Lewis&gt;nvm list available| CURRENT | LTS | OLD STABLE | OLD UNSTABLE ||--------------|--------------|--------------|--------------|| 11.10.0 | 10.15.1 | 0.12.18 | 0.11.16 || 11.9.0 | 10.15.0 | 0.12.17 | 0.11.15 || 11.8.0 | 10.14.2 | 0.12.16 | 0.11.14 || 11.7.0 | 10.14.1 | 0.12.15 | 0.11.13 || 11.6.0 | 10.14.0 | 0.12.14 | 0.11.12 || 11.5.0 | 10.13.0 | 0.12.13 | 0.11.11 || 11.4.0 | 8.15.0 | 0.12.12 | 0.11.10 || 11.3.0 | 8.14.1 | 0.12.11 | 0.11.9 || 11.2.0 | 8.14.0 | 0.12.10 | 0.11.8 || 11.1.0 | 8.13.0 | 0.12.9 | 0.11.7 || 11.0.0 | 8.12.0 | 0.12.8 | 0.11.6 || 10.12.0 | 8.11.4 | 0.12.7 | 0.11.5 || 10.11.0 | 8.11.3 | 0.12.6 | 0.11.4 || 10.10.0 | 8.11.2 | 0.12.5 | 0.11.3 || 10.9.0 | 8.11.1 | 0.12.4 | 0.11.2 || 10.8.0 | 8.11.0 | 0.12.3 | 0.11.1 || 10.7.0 | 8.10.0 | 0.12.2 | 0.11.0 || 10.6.0 | 8.9.4 | 0.12.1 | 0.9.12 || 10.5.0 | 8.9.3 | 0.12.0 | 0.9.11 || 10.4.1 | 8.9.2 | 0.10.48 | 0.9.10 |This is a partial list. For a complete list, visit https://nodejs.org/download/release安装指定版本的nodejs1nvm install 8.11.2 64-bit安装成功后可以查询看看已安装的nodejs版本：123C:\Users\Lewis&gt;nvm list 8.11.2有需要的话，可以继续安装其他版本的nodejs。使用指定版本的nodejs1nvm use 8.11.2安装成功后可以验证下版本：123456C:\Users\Lewis&gt;nvm list * 8.11.2 (Currently using 64-bit executable)C:\Users\Lewis&gt;node -vv8.11.2删除指定版本的nodejs1nvm uninstall 8.11.2参考链接Window下完全卸载删除NodejsWindows上node.js的多版本管理工具]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[执行gulp build报错]]></title>
+    <url>%2Fposts%2F9af9bb6b.html</url>
+    <content type="text"><![CDATA[问题与分析在执行gulp build报错如下：123456D:\coding\Resume\Resumes&gt;gulp buildgulp build[5628]: src\node_contextify.cc:628: Assertion `args[1]-&gt;IsString()&apos; failed.D:\coding\Resume\Resumes&gt;gulp -v[22:00:13] CLI version 2.0.1[22:00:13] Local version 3.9.1网上有很多人也遇到这个问题，到GitHub上的nodejs项目的issue里也可以找到该问题，地址在这。根据查阅的资料来看，这个问题是由于node升级到10.0.0后出现的，回退版本即可，按照GitHub上的答案选择使用8.11.2版本的node。解决方法不要使用改成10.0.0及以上版本的node，可以选择使用8.11.2版本的node。如果确实有需要去使用高版本的node，可以选择nodejs的多版本管理工具，方便切换不停版本的node。参考链接gulp 报错Github issue #20325]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>node.js</tag>
+        <tag>gulp</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Eclipse - 怎么设置在启动时提示选择工作空间]]></title>
     <url>%2Fposts%2F3671826f.html</url>
     <content type="text"><![CDATA[方法Window -&gt; Preferences -&gt; General -&gt; Startup and Shutdown -&gt; Workspaces勾选Prompt for workspace on startup参考链接怎样设置Eclipse在启动时提示选择工作空间]]></content>
@@ -251,7 +324,7 @@
   <entry>
     <title><![CDATA[PostgreSQL - 怎么转换数据类型]]></title>
     <url>%2Fposts%2Ff20deee6.html</url>
-    <content type="text"><![CDATA[前言对于select 233;这个sql，得到的结果是int4类型，如果我们希望将结果转换成其他的数据类型，有两种方法：方法一：使用::数据类型1select 233::text;上边的sql通过::text将结果转换成了text类型。方法二：使用数据类型&#39;&#39;12select text '233';select text'233';上边的sql通过text&#39;&#39;将结果转换成了text类型。这里的两种写法是一样的，加不加空格没有影响。另外提一句，对于select N&#39;233&#39;;这个句子中的N&#39;&#39;，会将结果转换成bpchar类型。]]></content>
+    <content type="text"><![CDATA[前言对于select 233;这个sql，得到的结果是int4类型，如果我们希望将结果转换成其他的数据类型，有以下方法(下边的{数据类型}表示占位符，要替换成数据库中的某一种数据类型)：方法一：使用::{数据类型}1select 233::text;上边的sql通过::text将结果转换成了text类型。方法二：使用{数据类型}&#39;&#39;12select text '233';select text'233';上边的sql通过text&#39;&#39;将结果转换成了text类型。这里的两种写法是一样的，加不加空格没有影响。另外提一句，对于select N&#39;233&#39;;这个句子中的N&#39;&#39;，会将结果转换成bpchar类型。方法三：使用cast()函数这个函数不是PostgreSQL独有的，其他数据库也有类似的用法，在PostgreSQL中用法如下：1select cast(233 as numeric);cast其实就是转型的意思，该sql将233转换成numeric类型并输出到结果集。]]></content>
       <categories>
         <category>数据库</category>
       </categories>
@@ -914,17 +987,15 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[cmd - 分割大文件]]></title>
+    <title><![CDATA[通过split命令分割大文件]]></title>
     <url>%2Fposts%2F54434588.html</url>
-    <content type="text"><![CDATA[场景线上出了问题，我需要去查找log来定位问题，但是由于线上数据量庞大，这些log文件每过一个小时就会自动回滚一次，尽管如此，有的log文件依然达到了五六g以上的大小。对于这种巨大的log文件，常用的一些文本编辑器诸如EditPlus、Notepad++就不用说了，打开几百m的文件都会很卡，上g的直接程序崩溃。虽然UltraEdit对于大文件的读取会友好一些，但打开这种五六g的文件时也会陷入长时间的无响应状态。后来我又得知了一个看log神器——glogg，打开五六g的大文件速度很快，但是有个问题，就是只能读取文件，不能编辑文件。毕竟我不只是要查看log，有时候还要对这些有用的log信息进行编辑。最后还是决定先把大文件分割成数个小文件，再用UltraEdit来查看这些文件。使用cmd命令分割大文件在cmd中分割文件的命令是split，在cmd窗口中输入split --help可以查询帮助信息。假设现在有个6GB大小的文件test.log，这里简单介绍下几种分割的方式：按大小分割文件1split -b 1000000000 test.log-b参数表示按字节大小进行分割，在数字后边要指定被分割的文件名。这里在输入文件名时有个小技巧，可以直接把该文件拖动到cmd窗口中，会自动输入该文件的具体目录。这里的文件还可以使用通配符，比如split -b 1000000000 *。这个命令表示按1000000000byte的大小进行分割，近似于1GB，大概是953MB的大小。对于这个6GB大小的文件test.log，会被分割成6个小文件。这些小文件的命名是有规律的：xaa、xab、xac、xad、xae、xaf。如果你分割了非常多的小文件，当文件名到了xyz之后，会变成xzaaa、xzaab、xzaac、xzaad……所以不用担心小文件过多而导致文件重名什么的。当然，上边的这种写法不够人性化，我们可以使用其他的单位来指定分割的大小：k、m。k表示KB，m表示MB。split -b 100k test.log表示将test.log按照100KB的大小进行分割。split -b 100m test.log表示将test.log按照100MB的大小进行分割。按照所有行数加起来的最大字节数进行分割1split -C 100k test.log-C参数表示按照所有行数加起来的最大字节数进行分割，同样可以使用k或者m作为单位，其实效果和上边的-b差不多，只是在切割时将尽量维持每行的完整性。按照行数进行分割12split -l 1000 test.logsplit -1000 test.log-l参数表示按照行数进行分割，即一个小文件中最多有多少行，-l number可以缩写成-number，上边的命令表示按照1000行一个小文件进行分割。注意点这三种分割的方式不能混合使用，如下：1split -l 3000 -C 100k *会报错split: cannot split in more than one way。]]></content>
+    <content type="text"><![CDATA[场景线上出了问题，我需要去查找log来定位问题，但是由于线上数据量庞大，这些log文件每过一个小时就会自动回滚一次，尽管如此，有的log文件依然达到了五六g以上的大小。对于这种巨大的log文件，常用的一些文本编辑器诸如EditPlus、Notepad++就不用说了，打开几百m的文件都会很卡，上g的直接程序崩溃。虽然UltraEdit对于大文件的读取会友好一些，但打开这种五六g的文件时也会陷入长时间的无响应状态。后来我又得知了一个看log神器——glogg，打开五六g的大文件速度很快，但是有个问题，就是只能读取文件，不能编辑文件。毕竟我不只是要查看log，有时候还要对这些有用的log信息进行编辑。最后还是决定先把大文件分割成数个小文件，再用UltraEdit来查看这些文件。使用split命令分割大文件在Linux下，切割和合并文件可以使用split和cat命令来实现。在Windows下，安装Git Bash也可以使用split和cat命令。分割文件的命令是split，通过输入split --help可以查询帮助信息。假设现在有个6GB大小的文件test.log，这里简单介绍下几种分割的方式：按大小分割文件1split -b 1000000000 test.log-b参数表示按字节大小进行分割，在数字后边要指定被分割的文件名。这里在输入文件名时有个小技巧，可以直接把该文件拖动到cmd窗口中，会自动输入该文件的具体目录。这里的文件还可以使用通配符，比如split -b 1000000000 *。这个命令表示按1000000000byte的大小进行分割，近似于1GB，大概是953MB的大小。对于这个6GB大小的文件test.log，会被分割成6个小文件。这些小文件的命名是有规律的：xaa、xab、xac、xad、xae、xaf。如果你分割了非常多的小文件，当文件名到了xyz之后，会变成xzaaa、xzaab、xzaac、xzaad……所以不用担心小文件过多而导致文件重名什么的。当然，上边的这种写法不够人性化，我们可以使用其他的单位来指定分割的大小：k、m。k表示KB，m表示MB。split -b 100k test.log表示将test.log按照100KB的大小进行分割。split -b 100m test.log表示将test.log按照100MB的大小进行分割。按照所有行数加起来的最大字节数进行分割1split -C 100k test.log-C参数表示按照所有行数加起来的最大字节数进行分割，同样可以使用k或者m作为单位，其实效果和上边的-b差不多，只是在切割时将尽量维持每行的完整性。按照行数进行分割12split -l 1000 test.logsplit -1000 test.log-l参数表示按照行数进行分割，即一个小文件中最多有多少行，-l number可以缩写成-number，上边的命令表示按照1000行一个小文件进行分割。注意点这三种分割的方式不能混合使用，如下：1split -l 3000 -C 100k *会报错split: cannot split in more than one way。]]></content>
       <categories>
         <category>计算机</category>
-        <category>cmd</category>
       </categories>
       <tags>
         <tag>工作记录</tag>
         <tag>计算机</tag>
-        <tag>cmd</tag>
       </tags>
   </entry>
   <entry>
@@ -1449,7 +1520,7 @@
   <entry>
     <title><![CDATA[Hexo搭建博客教程(1) - 安装环境与本地搭建]]></title>
     <url>%2Fposts%2F22143.html</url>
-    <content type="text"><![CDATA[前言搭建个人博客一般有两种选择，一个是使用WordPress，但是需要将博客搭建在服务器上，不过搭建好后写文章方便，适合没有程序基础的人使用。另一个是使用Hexo，相对简洁高效，不需要服务器，既可以部署在本地，也可以将博客部署到GitHub Pages上，支持Markdown语法，缺点是需要有Git基础，写文章比WordPress麻烦点。初次使用Hexo来搭建个人博客，确实比较手忙脚乱，这里记录一下流程，希望对大家能有所帮助。（注：本文是只针对Windows平台的搭建教程）可以点击这里查看该Hexo博客Demo的样子；有兴趣的也可以戳下这里看看我的个人博客。How to play本教程一共分为3章：第一章是安装环境和本地搭建第二章是博客的个性化配置第三章是将博客部署到 GitHub Pages请根据自身需要选择章节，以节省时间：想要自己从零开始搭建个人博客的，可以从第一章开始看起；懒得自己搭建的，请将本项目clone到本地，本项目是一个全新的Hexo博客Demo，并且已经安装配置好了 NexT 主题。此外，还请：根据第一章安装好相应的环境根据第二章修改个人博客配置根据第三章将博客部署到 GitHub Pages已在本地搭建好个人博客，想要了解怎么将博客部署到 GitHub Pages 的，可以从第三章看起另外，由于Hexo及其主题的配置文件都是英文的，所以本项目对部分配置文件添加了中文注释，有兴趣的可以另行拷贝。一、安装环境安装Node.js安装Git安装Hexo1.1 安装Node.jsHexo是一个基于Node.js的快速、简洁且高效的静态站点生成框架，想要安装Hexo，需要先安装Node.js，官网的安装包有两种，一种是安装程序.msi文件，一种是.zip压缩包，这里选择.msi文件，安装后会自动配置好环境变量。下载链接1.2 安装GitGit就不多说了，作为开发者或多或少都会接触过吧，直接前往官网下载安装包即可。操作教程网上也是一堆，这里就不赘述了。下载链接如果Git和Node.js的环境变量都配置好了，可以通过在cmd中确认安装结果。12git --versionnode -v1.3 安装Hexo安装好Node.js，就可以使用npm来安装Hexo1npm install -g hexo-cli安装完毕后，可以通过hexo version来确认是否安装成功。二、开始搭建个人博客千里之行，始于足下，在安装好所有的环境之后，我们终于可以开始搭建博客的第一步了。2.1 初始化Hexo项目首先是选择一个文件夹，用来给我们我们的个人博客的存放各种文件。接着进入该文件夹的路径，打开cmd命令窗口，这里有两种打开方式：按住Shift，同时点击鼠标右键，选择在此处打开命令窗口。在上方的地址栏里输入cmd，接着回车即可快速打开命令窗口。当然，你也可以直接Win+R然后输入cmd来打开命令窗口，不过需要再通过cd命令将路径切换到你指定的文件夹。接着输入指令来初始化你的博客1hexo init初始化成功后，你会看到Start blogging with Hexo!2.2 生成静态页面文件接下来，执行命令1hexo g该命令用来生成静态页面文件到public目录，Hexo会将 source 文件夹中除 posts 文件夹之外，以下划线_开头命名的文件或文件夹、以及隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件夹会被拷贝过去。最后，我们只要启动Hexo服务器就行了。2.3 本地启动Hexo服务器1hexo s --debugHexo启动服务器的速度非常快，很快你就可以看到Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.恭喜你，你的个人博客已经搭建成功了，接下来只要在浏览器输入http://localhost:4000/就可以在本地访问你的博客了。这里使用hexo s也可以启动服务器，只不过加上--debug参数，如果运行中出错可以看到错误信息。2.4 关闭Hexo服务器要想关闭服务器，只需要在命令窗口按下Ctrl+C就可以了，这个组合键不仅仅用于关闭服务器，事实上你在cmd窗口中任何执行中的命令都可以用这个组合键来结束命令，只要连按两次该组合键就可以连输入Y或者N都不用。三、常用的命令12345678hexo new "postName" #新建文章hexo new page "pageName" # 新建页面hexo generate # 生成静态页面至public目录hexo server # 启动服务器(默认端口4000，'ctrl+c'关闭server)hexo deploy # 项目部署hexo help # 查看帮助hexo version # 查看Hexo的版本hexo clean # 清除Hexo的缓存上边的一些命令可以使用简写1234hexo nhexo ghexo dhexo s3.1 本地调试三连123hexo cleanhexo ghexo s --debug3.2 远程部署三连123hexo cleanhexo ghexo d注：在使用部署命令时，需要先用npm安装 hexo-deployer-git 插件：npm install hexo-deployer-git --save 四、撰写第一篇博文Hexo撰写博文也不难，分为 post 和 draft 两种，其中 post 存放在 source/_posts 目录下，draft 存放在 source/_drafts 目录下。post 和 draft 的区别在于前者会被发布到博客，而后者不会被发布。4.1 第一篇文章1hexo n post "my-first-post"Hexo会自动在 source/_posts 目录下新建一个名为 my-first-post 的 .md 文件；打开该文件，可以看到：12345---title: my-first-postdate: 2018-04-21 23:11:30tags:---这是 post 模板自动生成的 YAML 文件头，title 是这篇 post 的标题，可以将其改为 My First Post；date 是创建的日期；tags 是该 post 的标签，可以添加自定义的标签：1234567---title: My First Postdate: 2018-04-21 23:11:30tags: - demo - first-post---接着再进行本地调试三连，就可以看到刚刚写好的博文了。123hexo cleanhexo ghexo s --debug4.1 第一篇草稿创建命令和前边类似：1hexo n draft "my-first-draft"另外草稿的头文件是没有日期的：1234---title: my-first-drafttags:---草稿文件是不会被 hexo g 命令生成到public目录下的。]]></content>
+    <content type="text"><![CDATA[前言搭建个人博客一般有两种选择，一个是使用WordPress，但是需要将博客搭建在服务器上，不过搭建好后写文章方便，适合没有程序基础的人使用。另一个是使用Hexo，相对简洁高效，不需要服务器，既可以部署在本地，也可以将博客部署到GitHub Pages上，支持Markdown语法，缺点是需要有Git基础，写文章比WordPress麻烦点。初次使用Hexo来搭建个人博客，确实比较手忙脚乱，这里记录一下流程，希望对大家能有所帮助。（注：本文是只针对Windows平台的搭建教程）有兴趣的可以戳下这里看看我的个人博客。How to play本教程一共分为3章：第一章是安装环境和本地搭建第二章是博客的个性化配置第三章是将博客部署到 GitHub Pages请根据自身需要选择章节，以节省时间。一、安装环境安装Node.js安装Git安装Hexo1.1 安装Node.jsHexo是一个基于Node.js的快速、简洁且高效的静态站点生成框架，想要安装Hexo，需要先安装Node.js，官网的安装包有两种，一种是安装程序.msi文件，一种是.zip压缩包，这里选择.msi文件，安装后会自动配置好环境变量。下载链接1.2 安装GitGit就不多说了，作为开发者或多或少都会接触过吧，直接前往官网下载安装包即可。操作教程网上也是一堆，这里就不赘述了。下载链接如果Git和Node.js的环境变量都配置好了，可以通过在cmd中确认安装结果。12git --versionnode -v1.3 安装Hexo安装好Node.js，就可以使用npm来安装Hexo1npm install -g hexo-cli安装完毕后，可以通过hexo version来确认是否安装成功。二、开始搭建个人博客千里之行，始于足下，在安装好所有的环境之后，我们终于可以开始搭建博客的第一步了。2.1 初始化Hexo项目首先是选择一个文件夹，用来给我们我们的个人博客的存放各种文件。接着进入该文件夹的路径，打开cmd命令窗口，这里有两种打开方式：按住Shift，同时点击鼠标右键，选择在此处打开命令窗口。在上方的地址栏里输入cmd，接着回车即可快速打开命令窗口。当然，你也可以直接Win+R然后输入cmd来打开命令窗口，不过需要再通过cd命令将路径切换到你指定的文件夹。接着输入指令来初始化你的博客1hexo init初始化成功后，你会看到Start blogging with Hexo!2.2 生成静态页面文件接下来，执行命令1hexo g该命令用来生成静态页面文件到public目录，Hexo会将 source 文件夹中除 posts 文件夹之外，以下划线_开头命名的文件或文件夹、以及隐藏的文件将会被忽略。Markdown 和 HTML 文件会被解析并放到 public 文件夹，而其他文件夹会被拷贝过去。最后，我们只要启动Hexo服务器就行了。2.3 本地启动Hexo服务器1hexo s --debugHexo启动服务器的速度非常快，很快你就可以看到Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.恭喜你，你的个人博客已经搭建成功了，接下来只要在浏览器输入http://localhost:4000/就可以在本地访问你的博客了。这里使用hexo s也可以启动服务器，只不过加上--debug参数，如果运行中出错可以看到错误信息。2.4 关闭Hexo服务器要想关闭服务器，只需要在命令窗口按下Ctrl+C就可以了，这个组合键不仅仅用于关闭服务器，事实上你在cmd窗口中任何执行中的命令都可以用这个组合键来结束命令，只要连按两次该组合键就可以连输入Y或者N都不用。三、常用的命令12345678hexo new "postName" #新建文章hexo new page "pageName" # 新建页面hexo generate # 生成静态页面至public目录hexo server # 启动服务器(默认端口4000，'ctrl+c'关闭server)hexo deploy # 项目部署hexo help # 查看帮助hexo version # 查看Hexo的版本hexo clean # 清除Hexo的缓存上边的一些命令可以使用简写1234hexo nhexo ghexo dhexo s3.1 本地调试三连123hexo cleanhexo ghexo s --debug3.2 远程部署三连123hexo cleanhexo ghexo d注：在使用部署命令时，需要先用npm安装 hexo-deployer-git 插件：npm install hexo-deployer-git --save 四、撰写第一篇博文Hexo撰写博文也不难，分为 post 和 draft 两种，其中 post 存放在 source/_posts 目录下，draft 存放在 source/_drafts 目录下。post 和 draft 的区别在于前者会被发布到博客，而后者不会被发布。4.1 第一篇文章1hexo n post "my-first-post"Hexo会自动在 source/_posts 目录下新建一个名为 my-first-post 的 .md 文件；打开该文件，可以看到：12345---title: my-first-postdate: 2018-04-21 23:11:30tags:---这是 post 模板自动生成的 YAML 文件头，title 是这篇 post 的标题，可以将其改为 My First Post；date 是创建的日期；tags 是该 post 的标签，可以添加自定义的标签：1234567---title: My First Postdate: 2018-04-21 23:11:30tags: - demo - first-post---接着再进行本地调试三连，就可以看到刚刚写好的博文了。123hexo cleanhexo ghexo s --debug4.1 第一篇草稿创建命令和前边类似：1hexo n draft "my-first-draft"另外草稿的头文件是没有日期的：1234---title: my-first-drafttags:---草稿文件是不会被 hexo g 命令生成到public目录下的。]]></content>
       <categories>
         <category>Hexo</category>
         <category>搭建博客教程</category>
@@ -1463,14 +1534,15 @@
   <entry>
     <title><![CDATA[随笔]]></title>
     <url>%2Fposts%2Fd65a1577.html</url>
-    <content type="text"><![CDATA[2019-02-19猿宵节猿宵节：通常指程序猿通宵写代码的节日2019-02-18建站300天纪念！！2019-02-17下午看到附近的狗子躺在地上不停往空中踢腿，跟踩单车一样，百度了下也找不到类似的状况，emmm，这狗不会是在瘦腿吧……2019-02-14今天是情人节，公司刚好在这天进行开工拜神活动，收到个开工红包，顺带吃了波烤乳猪和烧鸡。这烤乳猪比去年的好吃不少！不沾酱料吃最好，咸咸的脆脆的，沾了白糖后反而很腻。2019-01-27时间过得真快，转眼就要回家过春节了，新的一年里也快过去头个月了。发现自己是真的越发懒散怠惰了，想想去年的这个时候，还心怀高远，精神焕发，再看看如今，去年定下的目标是越发地遥不可及了。应该怎么有效地调节情绪呢，总觉得自己是个有自知之明却没有自制之力的废材呀。。2019-01-08第一次吃牛奶草莓，闻起来确实很香，不过吃起来倒是和普通草莓差不多。2018-12-19不知道写点啥，最近一直状态不好，记录下之前写的几句诗歌吧~纵心猿，驰意马。秋风秋雨织秋意，春花春水鉴春光。2018-11-14双十一买的戴尔和三只松鼠终于都到了，开心！！2018-11-04这个周末看了整整两天的《乌龙闯情关》，还是以前的电视剧好看。剧中的刘病已、霍水仙、许平君、大牛、鸠摩空都让人印象深刻，也知道了故剑情深的典故。现在各种快餐文化，人心浮躁，还是以前的影视、小说作品让人回味无穷，我不是个怀旧的人，却对过去的一些回忆很有感怀。这些都是宝贵的精神食粮，可能是一首歌，也可能是荧幕中、笔墨下的一个人物，每每带给我鼓舞与勇气。我也要努力，冲鸭！2018-10-24今天是程序员节，在这个日子里，我终于将自己定制的hexo主题正式起名为Beep了~1024节日快乐~2018-10-18又看了一遍JOJO第四部的boss战，真是百看不厌，爱死JOJO了！2018-10-14每周都是等待JOJO新一集的煎熬和畅享JOJO新一集的舒爽……2018-10-08《逍遥游》完结了，又追完了一本小说，现在能看的书真的不多了。。2018-10-07好久没更新随笔了，这阵子人懒散了好多，肚子也多了几圈，国庆回到家里人人都说我胖了，确实，上班一年我竟然重了二十斤左右。要知道当初大一那会还不到一百斤，瘦的跟猴子似的，现在却已经一百二十多了。马上就要新的一年了，距离三十大关又进了一步，我时间不多啦，得加把劲践行自己的目标，顺便把肥给减了。。2018-09-18今天竟然被老大叫进去开了波会，会议中对我上半年的表现和绩效表示肯定，加薪之余望我能再接再厉。哈哈，还是挺开心的，感觉自己一直以来的努力没有白费，果然单身能促进生产力啊_(:з」∠)_2018-09-12今天早上看到唐家三少妻子去世的消息，有些震惊，心情不知道怎么形容，难受又复杂。高中最早接触的网络小说之一就是三少写的光之子，里边男主女主就是化用的他们夫妻两人的名字，到现在还记忆深刻。曾经受到三少的影响，很想去写书，只是时间无情，人很脆弱。。只能说句，三少，节哀。2018-09-01妈蛋啊！！昨晚买的榴莲千层蛋糕，本来是作为第二天早餐的，结果起床一看整个蛋糕都化水了，还发出腐烂的臭味！！我的心在滴血，八块钱的蛋糕就这么没了……2018-08-27卧槽，下了一天一夜的雨，第二天下班收衣服时发现上衣有半边被雨水打湿而发霉了……2018-08-27加班到九点半下班，赶上下大雨，然后雨伞又开始漏雨，好气哦。都买了三把雨伞了，怎么还是漏雨的货！伞外下大雨，伞内下小雨。2018-08-17今天是七夕，emmm单身汪岁2018-08-13自律真的很重要，我要培养自己的自律能力，毕竟已经是叔叔辈了……2018-08-06今晚一口气看了《刺客伍六七》这部国产动画，简直爽到！上一部让我看得这么酣畅淋漓的国产动画是《凸变英雄》，之前就经常瞥见刺客伍六七的消息，只是一直都听不起兴趣去看，直到今天无意间点开了第一集，之后就一发不可收拾了，还好没错过。2018-08-02建站100天！！！2018-07-29趁着这个月还没结束，赶紧开始撸品优购，还是敲完整的一个项目爽快~2018-07-28今天去看了《西虹市首富》，挺有趣的，沈腾还是那么好玩，开心麻花街的作品还是让人看得好开心。当初那个春晚小品《扶不扶》真的惊为天人，已经看过十几遍了，O(∩_∩)O哈哈~2018-07-15最近发现吃了香蕉后就会胃酸过多，也就是俗称的烧心。百度了下：香蕉性寒，脾胃虚寒、便溏腹泻者不能多食、生食，胃酸过的多者也不要吃香蕉，香蕉会增加胃酸分泌。所以最好不要空腹吃香蕉。明明以前吃香蕉都没什么事情，而且还是特地在饭后吃的，看来身体是真的越来越差了，要多锻炼才行。2018-06-13喝了这么多年的牛奶才尴尬地发现，原来我的肠胃会对牛奶过敏，一喝牛奶就会拉肚子，以前一直以为是其他原因，没想到是对牛奶过敏，看来以后只能喝酸奶了……2018-04-24在CSDN也写了一年的博客了，现在终于有了专属的个人博客了，用来记录自己平日里的感悟和积累~]]></content>
+    <content type="text"><![CDATA[2019-04-24好久没更新博客了，这阵子确实忙了很多，人也颓唐了不少，是时候改变了，不能继续丧下去了……2019-04-23已经连续三天在食堂拿到半价的绿盘子了，可能预示着这阵子会运势上升？晚上买了半个榴莲吃，花了68块大洋，一斤18.8，虽然贵了点，但美味程度确实不错，好吃！2019-03-07今天是个神奇的日子。早上煮的鸡蛋是双黄蛋；上午同事报喜生了龙凤胎；中午食堂破天荒给了一对鸡翅；怎么形容今天呢？简直是JOJO的奇妙冒险级别的日子~2019-02-19猿宵节猿宵节：通常指程序猿通宵写代码的节日2019-02-18建站300天纪念！！2019-02-17下午看到附近的狗子躺在地上不停往空中踢腿，跟踩单车一样，百度了下也找不到类似的状况，emmm，这狗不会是在瘦腿吧……2019-02-14今天是情人节，公司刚好在这天进行开工拜神活动，收到个开工红包，顺带吃了波烤乳猪和烧鸡。这烤乳猪比去年的好吃不少！不沾酱料吃最好，咸咸的脆脆的，沾了白糖后反而很腻。2019-01-27时间过得真快，转眼就要回家过春节了，新的一年里也快过去头个月了。发现自己是真的越发懒散怠惰了，想想去年的这个时候，还心怀高远，精神焕发，再看看如今，去年定下的目标是越发地遥不可及了。应该怎么有效地调节情绪呢，总觉得自己是个有自知之明却没有自制之力的废材呀。。2019-01-08第一次吃牛奶草莓，闻起来确实很香，不过吃起来倒是和普通草莓差不多。2018-12-19不知道写点啥，最近一直状态不好，记录下之前写的几句诗歌吧~纵心猿，驰意马。秋风秋雨织秋意，春花春水鉴春光。2018-11-14双十一买的戴尔和三只松鼠终于都到了，开心！！2018-11-04这个周末看了整整两天的《乌龙闯情关》，还是以前的电视剧好看。剧中的刘病已、霍水仙、许平君、大牛、鸠摩空都让人印象深刻，也知道了故剑情深的典故。现在各种快餐文化，人心浮躁，还是以前的影视、小说作品让人回味无穷，我不是个怀旧的人，却对过去的一些回忆很有感怀。这些都是宝贵的精神食粮，可能是一首歌，也可能是荧幕中、笔墨下的一个人物，每每带给我鼓舞与勇气。我也要努力，冲鸭！2018-10-24今天是程序员节，在这个日子里，我终于将自己定制的hexo主题正式起名为Beep了~1024节日快乐~2018-10-18又看了一遍JOJO第四部的boss战，真是百看不厌，爱死JOJO了！2018-10-14每周都是等待JOJO新一集的煎熬和畅享JOJO新一集的舒爽……2018-10-08《逍遥游》完结了，又追完了一本小说，现在能看的书真的不多了。。2018-10-07好久没更新随笔了，这阵子人懒散了好多，肚子也多了几圈，国庆回到家里人人都说我胖了，确实，上班一年我竟然重了二十斤左右。要知道当初大一那会还不到一百斤，瘦的跟猴子似的，现在却已经一百二十多了。马上就要新的一年了，距离三十大关又进了一步，我时间不多啦，得加把劲践行自己的目标，顺便把肥给减了。。2018-09-18今天竟然被老大叫进去开了波会，会议中对我上半年的表现和绩效表示肯定，加薪之余望我能再接再厉。哈哈，还是挺开心的，感觉自己一直以来的努力没有白费，果然单身能促进生产力啊_(:з」∠)_2018-09-12今天早上看到唐家三少妻子去世的消息，有些震惊，心情不知道怎么形容，难受又复杂。高中最早接触的网络小说之一就是三少写的光之子，里边男主女主就是化用的他们夫妻两人的名字，到现在还记忆深刻。曾经受到三少的影响，很想去写书，只是时间无情，人很脆弱。。只能说句，三少，节哀。2018-09-01妈蛋啊！！昨晚买的榴莲千层蛋糕，本来是作为第二天早餐的，结果起床一看整个蛋糕都化水了，还发出腐烂的臭味！！我的心在滴血，八块钱的蛋糕就这么没了……2018-08-27卧槽，下了一天一夜的雨，第二天下班收衣服时发现上衣有半边被雨水打湿而发霉了……2018-08-27加班到九点半下班，赶上下大雨，然后雨伞又开始漏雨，好气哦。都买了三把雨伞了，怎么还是漏雨的货！伞外下大雨，伞内下小雨。2018-08-17今天是七夕，emmm单身汪岁2018-08-13自律真的很重要，我要培养自己的自律能力，毕竟已经是叔叔辈了……2018-08-06今晚一口气看了《刺客伍六七》这部国产动画，简直爽到！上一部让我看得这么酣畅淋漓的国产动画是《凸变英雄》，之前就经常瞥见刺客伍六七的消息，只是一直都听不起兴趣去看，直到今天无意间点开了第一集，之后就一发不可收拾了，还好没错过。2018-08-02建站100天！！！2018-07-29趁着这个月还没结束，赶紧开始撸品优购，还是敲完整的一个项目爽快~2018-07-28今天去看了《西虹市首富》，挺有趣的，沈腾还是那么好玩，开心麻花街的作品还是让人看得好开心。当初那个春晚小品《扶不扶》真的惊为天人，已经看过十几遍了，O(∩_∩)O哈哈~2018-07-15最近发现吃了香蕉后就会胃酸过多，也就是俗称的烧心。百度了下：香蕉性寒，脾胃虚寒、便溏腹泻者不能多食、生食，胃酸过的多者也不要吃香蕉，香蕉会增加胃酸分泌。所以最好不要空腹吃香蕉。明明以前吃香蕉都没什么事情，而且还是特地在饭后吃的，看来身体是真的越来越差了，要多锻炼才行。2018-06-13喝了这么多年的牛奶才尴尬地发现，原来我的肠胃会对牛奶过敏，一喝牛奶就会拉肚子，以前一直以为是其他原因，没想到是对牛奶过敏，看来以后只能喝酸奶了……2018-04-24在CSDN也写了一年的博客了，现在终于有了专属的个人博客了，用来记录自己平日里的感悟和积累~]]></content>
       <categories>
-        <category>生活</category>
-        <category>随笔</category>
+        <category>文心雕龙</category>
+        <category>影评</category>
       </categories>
       <tags>
+        <tag>文心雕龙</tag>
+        <tag>影评</tag>
         <tag>生活</tag>
-        <tag>随笔</tag>
       </tags>
   </entry>
   <entry>
@@ -1515,12 +1587,13 @@
     <url>%2Fposts%2F23475.html</url>
     <content type="text"><![CDATA[这部电影国内译名又叫头号玩家、玩家一号，讲述的是在未来人们为了躲避一团糟的现实而沉迷于一个名为绿洲的现实虚拟游戏。虽然这部电影并没有直接传达什么正能量的道理之类的，但是这部3D电影所展现出来的绿洲的奇妙与各种彩蛋却是令人看得目不暇接、直呼过瘾。这绝对是一部值得去电影院大饱眼福的爽快作品！]]></content>
       <categories>
-        <category>生活</category>
+        <category>文心雕龙</category>
         <category>影评</category>
       </categories>
       <tags>
-        <tag>生活</tag>
+        <tag>文心雕龙</tag>
         <tag>影评</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
@@ -1528,12 +1601,13 @@
     <url>%2Fposts%2F73.html</url>
     <content type="text"><![CDATA[今天去看了这部评分高达9.6分的印度电影，确实是挺好看的。这是讲述一个印度摩罗神信徒在没有护照和签证的情况下，不惜越过边境也要坚持将一个异国走失的哑巴小女孩送回巴基斯坦的父母家里的故事。印巴两国之间的仇恨，迥异的宗教信仰、森严的种姓制度都令我印象深刻。就算是宗教信仰不同，也不应当局限于各自的神明教义，神明传播于世间的是爱，而不是仇恨，不同的宗教信仰，也是有着共通的点。而上一代人的仇恨，也不应归结到下一代的孩子身上。仇恨的故事固然吸引眼球，但是爱的故事更应该被关注传颂。对于印巴两国的大人来说，对方即是邪恶，但是战争本就如此，不存在绝对的正义与邪恶，只有恪守信仰、遵从心中那杆爱与公正的天秤的一方，才是真正无愧于心的正义者。]]></content>
       <categories>
-        <category>生活</category>
+        <category>文心雕龙</category>
         <category>影评</category>
       </categories>
       <tags>
-        <tag>生活</tag>
+        <tag>文心雕龙</tag>
         <tag>影评</tag>
+        <tag>生活</tag>
       </tags>
   </entry>
   <entry>
