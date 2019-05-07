@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Kibana - 怎么修改日期格式Date format]]></title>
+    <url>%2Fposts%2Fc85bbf4e.html</url>
+    <content type="text"><![CDATA[问题Kibana在创建Index Patterns的时候，可以选择某个date类型的field作为排序字段。之后在Discover里打开对应的index，会发现这个date类型的field的格式显示如下：1April 10th 2019, 17:40:32.359这是Kibana默认的日期格式，有两种修改的方式。方式一：全局修改登录http://localhost:5601/，会进入Kibana的页面，选择Management -&gt; Index Patterns -&gt; Advanced Settings，找到Date format，如何修改这里的值，默认是MMMM Do YYYY, HH:mm:ss.SSS。可以改成YYYY-MM-DD HH:mm:ss.SSS，这样页面的所有日期就会显示成2019-04-23 16:30:39.139这种格式了。方式二：局部修改可以只针对某个时间字段进行修改，这样就不会影响到其它的时间字段，允许不同字段用不同的日期格式。登录http://localhost:5601/，会进入Kibana的页面，选择Management -&gt; Index Patterns，选择某个已经创建好的index pattern，接着在Fields这个tab里找到对应的日期字段，点击那个字段最后的铅笔图标（Edit）进行编辑。对于date类型的字段，其Format默认是选择了- Default -，将其改为选择Date，然后将下面的format改成YYYY-MM-DD HH:mm:ss.SSS，最后再点击下方的Save field。]]></content>
+      <categories>
+        <category>Java相关框架</category>
+        <category>ELK</category>
+      </categories>
+      <tags>
+        <tag>Java相关框架</tag>
+        <tag>Kibana</tag>
+        <tag>ELK</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hexo写作系列(3) - 文章标题含有双引号&#34;导致页面渲染失败无法打开]]></title>
+    <url>%2Fposts%2F31deca5f.html</url>
+    <content type="text"><![CDATA[问题在用Hexo写文章时，如果文章标题含有双引号&quot;，也就是说如果在文件头里的title出现双引号，如下：123---title: Hexo - 文章标题含有双引号"导致页面渲染失败无法打开---由于这里的写法属于yml语法，双引号属于特殊符号，上述的title的写法就会在执行hexo g时报错，当我们在浏览器里打开这篇文章的页面时就会渲染失败无法打开。解决方法我们需要对这里的双引号进行转义，对于这些特殊字符，可以用对应的HTML字符实体来替换。对于双引号，其字符实体是&amp;#34;或者&amp;quot;。最终我们在hexo文章的文件头里，应该这样写：123---title: Hexo - 文章标题含有双引号&amp;#34;导致页面渲染失败无法打开---补充当然，对于文件头之外的部分，则是属于markdown语法的部分，此外由于我们的文章会被swig渲染，同样有一些特殊字符，比如 &#123;&#123;&#125;&#125;，如果在代码块之外的地方使用到这些特殊字符，就会报错！对于不同的语言，各自的特殊字符是不一样的。这里补充下各种常用到的特殊字符的字符实体：1234567891011121314151617181920212223! &amp;#33; — 惊叹号 Exclamation mark" &amp;#34; &amp;quot; — 双引号 Quotation mark# &amp;#35; — 数字标志 Number sign$ &amp;#36; — 美元标志 Dollar sign% &amp;#37; — 百分号 Percent sign&amp; &amp;#38; &amp;amp; — 与符号(&amp;) Ampersand' &amp;#39; — 单引号 Apostrophe( &amp;#40; — 小括号左边部分 Left parenthesis) &amp;#41; — 小括号右边部分 Right parenthesis* &amp;#42; — 星号 Asterisk+ &amp;#43; — 加号 Plus sign&lt; &amp;#60; &amp;lt; 小于号 Less than= &amp;#61; — 等于符号 Equals sign- &amp;#45; &amp;minus; — 减号&gt; &amp;#62; &amp;gt; — 大于号 Greater than? &amp;#63; — 问号 Question mark@ &amp;#64; — Commercial at[ &amp;#91; — 中括号左边部分 Left square bracket\ &amp;#92; — 反斜杠 Reverse solidus (backslash)] &amp;#93; — 中括号右边部分 Right square bracket&#123; &amp;#123; — 大括号左边部分 Left curly brace| &amp;#124; — 竖线Vertical bar&#125; &amp;#125; — 大括号右边部分 Right curly brace如果想要在文章中使用空格，直接输入空格是没用的，同样可以使用字符实体来代替，即&amp;nbsp;。这个代表不间断空格：non-breaking space。参考链接Hexo 特殊符号的转义问题HTML 字符实体常用特殊符号的HTML代码(HTML字符实体)]]></content>
+      <categories>
+        <category>Hexo</category>
+        <category>写作系列</category>
+      </categories>
+      <tags>
+        <tag>Hexo写作系列</tag>
+        <tag>NexT主题</tag>
+        <tag>NexT写作技巧</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[$(&#34;body&#34;).animate({&#34;scrollTop&#34;:top})无效的问题]]></title>
     <url>%2Fposts%2Ffb7443fc.html</url>
     <content type="text"><![CDATA[问题我在个人站点的左下角和右下角各自使用了如下代码来将页面滚动到顶部和底部：123$("body").animate(&#123;scrollTop:0&#125;,800);$("body").animate(&#123;scrollTop:$(document).height()&#125;,800);最近才忽然发现在Chrome浏览器下，上面的代码没有问题，而在Firefox下却是无效的。百度后才知道，原来这是因为这两个浏览器自身的问题导致的。对于Chrome而言，支持的是这种写法：1$("body"）.animate(&#123;"scrollTop":top&#125;);而对于Firefox，则是支持如下写法：1$("html").animate(&#123;"scrollTop":top&#125;);之前就一直耳闻前端开发需要兼容不同浏览器，非常地麻烦，今天算是见识到了冰山一角。解决方法既然这两个浏览器各自支持一种标签选择器，那么只要把两者统合起来即可实现兼容：1$("html,body"）.animate(&#123;"scrollTop":top&#125;);最终，将我的代码改成如下形式便没问题了：123$("html,body").animate(&#123;scrollTop:0&#125;,800);$("html,body").animate(&#123;scrollTop:$(document).height()&#125;,800);参考链接jQuery中animate()方法以及$(‘body’).animate({“scrollTop”:top})不被Firefox支持问题的解决]]></content>
@@ -21,8 +49,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -30,12 +58,11 @@
     <url>%2Fposts%2F7784288c.html</url>
     <content type="text"><![CDATA[问题与分析在使用Elasticsearch进行index数据时，发现报错如下：12345678910111213141516171819java.lang.IllegalArgumentException: cannot write xcontent for unknown value of type class java.math.BigDecimal at org.elasticsearch.common.xcontent.XContentBuilder.unknownValue(XContentBuilder.java:755) at org.elasticsearch.common.xcontent.XContentBuilder.value(XContentBuilder.java:726) at org.elasticsearch.common.xcontent.XContentBuilder.field(XContentBuilder.java:711) at org.elasticsearch.index.query.BaseTermQueryBuilder.doXContent(BaseTermQueryBuilder.java:154) at org.elasticsearch.index.query.AbstractQueryBuilder.toXContent(AbstractQueryBuilder.java:82) at org.elasticsearch.index.query.BoolQueryBuilder.doXArrayContent(BoolQueryBuilder.java:275) at org.elasticsearch.index.query.BoolQueryBuilder.doXContent(BoolQueryBuilder.java:256) at org.elasticsearch.index.query.AbstractQueryBuilder.toXContent(AbstractQueryBuilder.java:82) at org.elasticsearch.common.xcontent.XContentBuilder.value(XContentBuilder.java:779) at org.elasticsearch.common.xcontent.XContentBuilder.value(XContentBuilder.java:772) at org.elasticsearch.common.xcontent.XContentBuilder.field(XContentBuilder.java:764) at org.elasticsearch.search.builder.SearchSourceBuilder.toXContent(SearchSourceBuilder.java:1184) at org.elasticsearch.common.xcontent.XContentHelper.toXContent(XContentHelper.java:349) at org.elasticsearch.search.builder.SearchSourceBuilder.toString(SearchSourceBuilder.java:1558) at org.elasticsearch.search.builder.SearchSourceBuilder.toString(SearchSourceBuilder.java:1553) at java.lang.String.valueOf(String.java:2994) at java.lang.StringBuilder.append(StringBuilder.java:131) at org.elasticsearch.action.search.SearchRequest.toString(SearchRequest.java:516)从异常信息看，显然ES无法接受BigDecimal类型，经过百度，也确实如此。在一篇博文评论中解释如下：应该是客户端代码里将查询的数值定义成了java.math.BigDecimal，而ES不支持这个类型。之所以2.2没有问题，是因为之前的transport client发送数据之前将其序列化成了json，而在5.x以后，使用的内部的transport protocol，数据类型如果不匹配会抛错误。所以数据类型的定义上，需要使用ES支持的类型。解决方案方案一：转变成其他ES支持的数据类型我使用的是6.4.2版本的Elasticsearch，该版本尚不支持BigDecimal或者BigInteger的数据类型，所以在index到Elasticsearch之前，需要转换成其他数据类型，这里要注意不要数据溢出了:BigDecimal要转变成Double类型BigInteger要转变成Long类型方案二：使用更高版本的ES我在看6.7.1版本的Elasticsearch源码时发现已经可以支持BigDecimal或者BigInteger的数据类型了，所以直接使用该版本或更高版本的就行了。下面附上两个版本的支持的数据类型的源码：6.4.2版本的Elasticsearch相关源码12345678910111213141516171819202122Map&lt;Class&lt;?&gt;, Writer&gt; writers = new HashMap&lt;&gt;();writers.put(Boolean.class, (b, v) -&gt; b.value((Boolean) v));writers.put(Byte.class, (b, v) -&gt; b.value((Byte) v));writers.put(byte[].class, (b, v) -&gt; b.value((byte[]) v));writers.put(Date.class, XContentBuilder::timeValue);writers.put(Double.class, (b, v) -&gt; b.value((Double) v));writers.put(double[].class, (b, v) -&gt; b.values((double[]) v));writers.put(Float.class, (b, v) -&gt; b.value((Float) v));writers.put(float[].class, (b, v) -&gt; b.values((float[]) v));writers.put(Integer.class, (b, v) -&gt; b.value((Integer) v));writers.put(int[].class, (b, v) -&gt; b.values((int[]) v));writers.put(Long.class, (b, v) -&gt; b.value((Long) v));writers.put(long[].class, (b, v) -&gt; b.values((long[]) v));writers.put(Short.class, (b, v) -&gt; b.value((Short) v));writers.put(short[].class, (b, v) -&gt; b.values((short[]) v));writers.put(String.class, (b, v) -&gt; b.value((String) v));writers.put(String[].class, (b, v) -&gt; b.values((String[]) v));writers.put(Locale.class, (b, v) -&gt; b.value(v.toString()));writers.put(Class.class, (b, v) -&gt; b.value(v.toString()));writers.put(ZonedDateTime.class, (b, v) -&gt; b.value(v.toString()));writers.put(Calendar.class, XContentBuilder::timeValue);writers.put(GregorianCalendar.class, XContentBuilder::timeValue);6.7.1版本的Elasticsearch相关源码123456789101112131415161718192021222324Map&lt;Class&lt;?&gt;, Writer&gt; writers = new HashMap&lt;&gt;();writers.put(Boolean.class, (b, v) -&gt; b.value((Boolean) v));writers.put(Byte.class, (b, v) -&gt; b.value((Byte) v));writers.put(byte[].class, (b, v) -&gt; b.value((byte[]) v));writers.put(Date.class, XContentBuilder::timeValue);writers.put(Double.class, (b, v) -&gt; b.value((Double) v));writers.put(double[].class, (b, v) -&gt; b.values((double[]) v));writers.put(Float.class, (b, v) -&gt; b.value((Float) v));writers.put(float[].class, (b, v) -&gt; b.values((float[]) v));writers.put(Integer.class, (b, v) -&gt; b.value((Integer) v));writers.put(int[].class, (b, v) -&gt; b.values((int[]) v));writers.put(Long.class, (b, v) -&gt; b.value((Long) v));writers.put(long[].class, (b, v) -&gt; b.values((long[]) v));writers.put(Short.class, (b, v) -&gt; b.value((Short) v));writers.put(short[].class, (b, v) -&gt; b.values((short[]) v));writers.put(String.class, (b, v) -&gt; b.value((String) v));writers.put(String[].class, (b, v) -&gt; b.values((String[]) v));writers.put(Locale.class, (b, v) -&gt; b.value(v.toString()));writers.put(Class.class, (b, v) -&gt; b.value(v.toString()));writers.put(ZonedDateTime.class, (b, v) -&gt; b.value(v.toString()));writers.put(Calendar.class, XContentBuilder::timeValue);writers.put(GregorianCalendar.class, XContentBuilder::timeValue);writers.put(BigInteger.class, (b, v) -&gt; b.value((BigInteger) v));writers.put(BigDecimal.class, (b, v) -&gt; b.value((BigDecimal) v));可以发现，在6.7.1版本的源码里，多出了最后的两种数据类型的支持：BigInteger和BigDecimal。参考链接elastic search 5.4.版本，java api 调用出现：can not write type [class java.math.BigDecimal]]]></content>
       <categories>
-        <category>Java</category>
-        <category>搜索引擎框架</category>
+        <category>Java相关框架</category>
+        <category>Elasticsearch</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>搜索引擎框架</tag>
+        <tag>Java相关框架</tag>
         <tag>Elasticsearch</tag>
       </tags>
   </entry>
@@ -85,8 +112,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -121,8 +148,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -268,14 +295,13 @@
     <url>%2Fposts%2F8dc44b45.html</url>
     <content type="text"><![CDATA[功能需求项目里将User分成了各个区域(domain)，这些domain有个标志domainId，现在要求在打印日志的时候，不仅将所有User的日志都打印到日志文件logs/CNTCore.log中，还需要另外再打印到对应domain的日志文件logs/{domainId}/CNTCore.log。比如User A的domainId是RD2，那么除了logs/CNTCore.log外，还需要将该User A的日志额外打印到logs/RD2/CNTCore.log中。实现思路将所有User的日志都打印到日志文件logs/CNTCore.log中，这个可以直接使用配置文件log4j2.xml来解决，一个简单的配置如下：123456789101112131415161718192021222324252627282930&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;configuration monitorInterval="30"&gt; &lt;Appenders&gt; &lt;Console name="stdout" target="SYSTEM_OUT"&gt; &lt;PatternLayout pattern="%-5p %m%n" /&gt; &lt;ThresholdFilter level="debug" onMatch="ACCEPT" onMismatch="DENY" /&gt; &lt;/Console&gt; &lt;RollingFile name="cntCorelog" immediateFlush="true" fileName="logs/CNTCore.log" filePattern="logs/CNTCore.log.%d&#123;yyyy-MM-dd-a&#125;.gz" append="true"&gt; &lt;PatternLayout&gt; &lt;pattern&gt;%d&#123;yyyy-MM-dd HH:mm:ss.SSS&#125;:%p %t %X&#123;TracingMsg&#125; %c - %m%n&lt;/pattern&gt; &lt;/PatternLayout&gt; &lt;Policies&gt; &lt;TimeBasedTriggeringPolicy modulate="true" interval="1" /&gt; &lt;/Policies&gt; &lt;/RollingFile&gt; &lt;/Appenders&gt; &lt;Loggers&gt; &lt;Logger name="com.lewis" level="debug" additivity="true"&gt; &lt;AppenderRef ref="cntCorelog" /&gt; &lt;/Logger&gt; &lt;Root level="error"&gt; &lt;AppenderRef ref="stdout" /&gt; &lt;/Root&gt; &lt;/Loggers&gt;&lt;/configuration&gt;在上边的配置中，配置了cntCorelog这个appender来生成对应的回滚日志文件，具体由com.lewis这个logger来使用该appender进行拼接日志信息。至于另外再打印到对应domain的日志文件logs/{domainId}/CNTCore.log，这个可以通过代码来动态生成各个domain的appender，并交由com.lewis这个logger来进行拼接日志。代码的具体实现项目的Log4j2依赖12345&lt;dependency&gt; &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt; &lt;artifactId&gt;log4j-core&lt;/artifactId&gt; &lt;version&gt;2.11.1&lt;/version&gt;&lt;/dependency&gt;动态生成appender123456789101112131415161718192021222324252627282930public static void createDomainAppender(final String domainId)&#123; final LoggerContext ctx = (LoggerContext) LogManager.getContext(false); final org.apache.logging.log4j.core.config.Configuration config = ctx.getConfiguration(); if (config.getAppender(domainId + "DomainCntCoreLog") != null) &#123; return; &#125; final PatternLayout layout = PatternLayout.newBuilder() .withCharset(Charset.forName("UTF-8")) .withConfiguration(config) .withPattern("%d %t %p %X&#123;TracingMsg&#125; %c - %m%n") .build(); final TriggeringPolicy policy = TimeBasedTriggeringPolicy.newBuilder() .withModulate(true) .withInterval(1) .build(); final Appender appender = RollingFileAppender.newBuilder() .withName(domainId + "DomainCntCoreLog") .withImmediateFlush(true) .withFileName("logs/" + domainId + "/CNTCore.log") .withFilePattern("logs/" + domainId + "/CNTCore.log.%d&#123;yyyy-MM-dd-a&#125;.gz") .withLayout(layout) .withPolicy(policy) .build(); appender.start(); config.addAppender(appender); final KeyValuePair[] pairs = &#123;KeyValuePair.newBuilder().setKey("domainId").setValue(domainId).build()&#125;; final Filter filter = ThreadContextMapFilter.createFilter(pairs, null, Result.ACCEPT, Result.DENY); config.getLoggerConfig("com.lewis").addAppender(appender, Level.DEBUG, filter); ctx.updateLoggers(config);&#125;这段代码动态生成一个名为omainCntCoreLog的RollingFileAppender，该appender交由com.lewis这个logger来使用，并将日志信息输入到logs/{domainId}/CNTCore.log。该logger在使用omainCntCoreLog这个RollingFileAppender时还设置了一个过滤器ThreadContextMapFilter，这个Filter用来控制logger只能对指定了domainId的进行打印日志。ThreadContext是Log4j2用来存放线程信息的，相当于Log4j 1.X中的MDC和NDC，MDC是map，NDC是stack。当每个User登录时，就将该User的domainId存放到ThreadContext中，当退出登录时就将该domainId从ThreadContext中移除。假如有10个User登录了，一个User对应一个线程，每个线程都存放了User对应的domainId。在用户登录时，调用上边的方法来动态生成domain appender；假如有10个domainId，就会生成10个domain appender。由于这10个domain appender都被add到同一个logger里了，如果不通过ThreadContextMapFilter来控制，就会造成每个User的日志信息都会被输入到所有domain appender里去。在加载配置文件后拼接domain appender需要注意的是，必须在读取配置文件后才能去动态生成appender或者其他的日志对象，否则会被原本的配置文件覆盖掉。12345678910111213public static void main(final String[] args) &#123; ThreadContext.put("domainId", "RD2"); final String domainId = "RD2"; final LoggerContext context1 = (org.apache.logging.log4j.core.LoggerContext) LogManager.getContext(false); try &#123; context1.setConfigLocation(Loader.getResource("log4j2.xml", null).toURI()); createDomainAppender(domainId); &#125; catch (final Exception e) &#123; LogManager.getRootLogger().error("load log4j2 configuration error", e); ThreadContext.remove("domainId"); &#125;&#125;上边的代码简单地动态生成了RD2 domain的appender，需要注意的是，如果启用了Log4j2的动态加载配置文件功能，那么当配置文件被改动后并被重新加载时，会导致原本动态生成的domain appender无效。因为重新加载配置文件会生成新的LoggerContext对象，这时候可能会丢失一部分日志信息到对应的domain日志文件里。对于这个暂时没找到很好的解决方法，目前只能是在每个User登录时去创建domain appender对象，如果已存在就不创建。对ThreadContextMapFilter的补充上边通过代码动态生成了RollingFileAppender和ThreadContextMapFilter，下边记录下配置文件里的写法：12345678910&lt;RollingFile name="domainCntCoreLog" immediateFlush="true" fileName="logs/RD2/CNTCore.log" filePattern="logs/RD2/CNTCore.log.%d&#123;yyyy-MM-dd-a&#125;.gz" append="true"&gt; &lt;ThreadContextMapFilter onMatch="ACCEPT" onMismatch="DENY"&gt; &lt;KeyValuePair key="domainId" value="RD2" /&gt; &lt;/ThreadContextMapFilter&gt; &lt;PatternLayout pattern="%d %t %p %X&#123;TracingMsg&#125; %c - %m%n" /&gt; &lt;Policies&gt; &lt;TimeBasedTriggeringPolicy modulate="true" interval="1" /&gt; &lt;/Policies&gt;&lt;/RollingFile&gt;从上边的配置就可以看出来短板了，只能配置死某个domainId的RollingFileAppender以及ThreadContextMapFilter，假如有10个domainId，就要手动配置十个对应的appender和Filter，很是繁琐。就算通过占位符${ctx:domainId}的写法来避免写死，也只能生成某个domainId的appender：12345678910&lt;RollingFile name="domainCntCoreLog" immediateFlush="true" fileName="logs/$&#123;ctx:domainId&#125;/CNTCore.log" filePattern="logs/$&#123;ctx:domainId&#125;/CNTCore.log.%d&#123;yyyy-MM-dd-a&#125;.gz" append="true"&gt; &lt;ThreadContextMapFilter onMatch="ACCEPT" onMismatch="DENY"&gt; &lt;KeyValuePair key="domainId" value="$&#123;ctx:domainId&#125;" /&gt; &lt;/ThreadContextMapFilter&gt; &lt;PatternLayout pattern="%d %t %p %X&#123;TracingMsg&#125; %c - %m%n" /&gt; &lt;Policies&gt; &lt;TimeBasedTriggeringPolicy modulate="true" interval="1" /&gt; &lt;/Policies&gt;&lt;/RollingFile&gt;这种方法只能生成一个domain appender，此外如果启用了动态加载配置文件的功能，在扫描配置文件是否改动时，还会报错，原因是在RollingFileAppender的FileName和filePattern里使用了占位符。在另起线程扫描配置文件时，该占位符时取不到值的，于是就会报错。参考链接运行时添加log4j2的appenderlog4j2如何动态的创建logger和appenderlog4j2 不使用配置文件，动态生成logger对象log4j2的MDC应用配置]]></content>
       <categories>
-        <category>Java</category>
+        <category>Java相关框架</category>
         <category>日志框架</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>Log4j2</tag>
-        <tag>框架</tag>
-        <tag>动态</tag>
+        <tag>Java相关框架</tag>
+        <tag>log4j2</tag>
+        <tag>log4j</tag>
       </tags>
   </entry>
   <entry>
@@ -283,13 +309,12 @@
     <url>%2Fposts%2Fd8320ac8.html</url>
     <content type="text"><![CDATA[问题与分析在使用Log4j2时，虽然可以正确读取配置文件并生成log文件，但偶然发现控制台打印了异常信息如下：123456789101112132018-12-31 17:28:14,282 Log4j2-TF-19-ConfiguratonFileWatcher-6 ERROR Unable to invoke factory method in class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFile: java.lang.IllegalStateException: No factory method found for class org.apache.logging.log4j.core.appender.RollingFileAppender java.lang.IllegalStateException: No factory method found for class org.apache.logging.log4j.core.appender.RollingFileAppender at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.findFactoryMethod(PluginBuilder.java:235) at org.apache.logging.log4j.core.config.plugins.util.PluginBuilder.build(PluginBuilder.java:135) at org.apache.logging.log4j.core.config.AbstractConfiguration.createPluginObject(AbstractConfiguration.java:959) at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:899) at org.apache.logging.log4j.core.config.AbstractConfiguration.createConfiguration(AbstractConfiguration.java:891) at org.apache.logging.log4j.core.config.AbstractConfiguration.doConfigure(AbstractConfiguration.java:514) at org.apache.logging.log4j.core.config.AbstractConfiguration.initialize(AbstractConfiguration.java:238) at org.apache.logging.log4j.core.config.AbstractConfiguration.start(AbstractConfiguration.java:250) at org.apache.logging.log4j.core.LoggerContext.setConfiguration(LoggerContext.java:547) at org.apache.logging.log4j.core.LoggerContext.onChange(LoggerContext.java:670) at org.apache.logging.log4j.core.config.ConfiguratonFileWatcher$ReconfigurationRunnable.run(ConfiguratonFileWatcher.java:68) at java.lang.Thread.run(Thread.java:748)将控制台的所有信息都复制出来，仔细查找，又发现了相关的异常信息：1234567891011122018-12-31 17:28:14,241 Log4j2-TF-19-ConfiguratonFileWatcher-6 ERROR Unable to create file logs/$&#123;ctx:domainId&#125;/CNTCore.log java.io.IOException: The filename, directory name, or volume label syntax is incorrect at java.io.WinNTFileSystem.canonicalize0(Native Method) at java.io.WinNTFileSystem.canonicalize(WinNTFileSystem.java:428) at java.io.File.getCanonicalPath(File.java:618) at ....2018-12-31 17:28:14,280 Log4j2-TF-19-ConfiguratonFileWatcher-6 ERROR Could not create plugin of type class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFile: java.lang.IllegalStateException: ManagerFactory [...] unable to create manager for [logs/$&#123;ctx:domainId&#125;/CNTCore.log] with data [...] java.lang.IllegalStateException: ManagerFactory [...] unable to create manager for [logs/$&#123;ctx:domainId&#125;/CNTCore.log] with data [...] at org.apache.logging.log4j.core.appender.AbstractManager.getManager(AbstractManager.java:115) at org.apache.logging.log4j.core.appender.OutputStreamManager.getManager(OutputStreamManager.java:114) at org.apache.logging.log4j.core.appender.rolling.RollingFileManager.getFileManager(RollingFileManager.java:188) at ....看起来是因为配置文件里的RollingFile使用到了${ctx:domainId}导致了这个问题。百度了下，发现了log4j2的jira issue：Unable to invoke factory method in class class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFile该问题和我遇到的一样，而在jira里有comment如下：1Question: Does system property logfile have a value?结合项目的配置文件log4j2.xml:123456789&lt;RollingFile name="logfile" immediateFlush="true" fileName="logs/$&#123;ctx:domainId&#125;/CNTCore.log" filePattern="logs/$&#123;ctx:domainId&#125;/CNTCore.log.%d&#123;yyyy-MM-dd-a&#125;.gz" append="true"&gt; &lt;PatternLayout&gt; &lt;pattern&gt;%d %t %p %X&#123;TracingMsg&#125; %c - %m%n&lt;/pattern&gt; &lt;/PatternLayout&gt; &lt;Policies&gt; &lt;TimeBasedTriggeringPolicy modulate="true" interval="1" /&gt; &lt;/Policies&gt;&lt;/RollingFile&gt;可以看出，这个异常是由于RollingFile使用到了${ctx:domainId}，而该变量值是null，导致无法创建对应的RollingFile文件到磁盘。但是这个domainId是通过ThreadContext把值put进去的，不可能是null，从最终的效果来看，这个变量其实也是拿到了值的，因为对应的日志文件以及存在于磁盘上了。既然如此，为什么还会出现这个异常呢？通过观察控制台可以发现，每过一段时间就会出现一次该异常。从异常中可以看到ConfiguratonFileWatcher，好像有些明白为什么了。ConfiguratonFileWatcher是用来扫描配置文件是否被改动过的，在配置文件中设置的扫描间隔是30s：123&lt;configuration monitorInterval="30"&gt; ....&lt;/configuration&gt;由于扫描文件时另外起一个线程去扫描的，而${ctx:domainId}的值是存放于ThreadContext中的，ThreadContext是线程安全的，同一个key对应的value在不同线程中是不一定相同的。而对于新启动的线程来说，并没有将domainId的值存放进去，于是新线程在扫描配置文件的RollingFile时，自然是无法获取到${ctx:domainId}的值，故而每隔一段时间就会报上边的异常。解决方法方案一既然问题是因为扫描配置文件是否改动造成的，那么只要将动态加载的功能关闭就行了，如下：123&lt;configuration monitorInterval="0"&gt; ....&lt;/configuration&gt;方案二如果希望不关闭动态加载配置文件的功能，可以将domainId的值存放到System.properties里：1System.setProperty("domainId", "xxx");然后通过${sys:xxx}的方式来获取该properties的值：123456789&lt;RollingFile name="logfile" immediateFlush="true" fileName="logs/$&#123;sys:domainId&#125;/CNTCore.log" filePattern="logs/$&#123;sys:domainId&#125;/CNTCore.log.%d&#123;yyyy-MM-dd-a&#125;.gz" append="true"&gt; &lt;PatternLayout&gt; &lt;pattern&gt;%d %t %p %X&#123;TracingMsg&#125; %c - %m%n&lt;/pattern&gt; &lt;/PatternLayout&gt; &lt;Policies&gt; &lt;TimeBasedTriggeringPolicy modulate="true" interval="1" /&gt; &lt;/Policies&gt;&lt;/RollingFile&gt;在log4j2中关于这些变量取值有以下这些种类：PrefixContextbundleResource bundle. The format is ${bundle:BundleName:BundleKey}. The bundle name follows package naming conventions, for example: ${bundle:com.domain.Messages:MyKey}.ctxThread Context Map (MDC)dateInserts the current date and/or time using the specified formatenvSystem environment variables. The formats are ${env:ENV_NAME} and ${env:ENV_NAME:-default_value}.jndiA value set in the default JNDI Context.jvmrunargsA JVM input argument accessed through JMX, but not a main argument; see RuntimeMXBean.getInputArguments(). Not available on Android.log4jLog4j configuration properties. The expressions ${log4j:configLocation} and ${log4j:configParentLocation} respectively provide the absolute path to the log4j configuration file and its parent folder.mainA value set with MapLookup.setMainArguments(String[])mapA value from a MapMessagesdA value from a StructuredDataMessage. The key “id” will return the name of the StructuredDataId without the enterprise number. The key “type” will return the message type. Other keys will retrieve individual elements from the Map.sysSystem properties. The formats are ${sys:some.property} and ${sys:some.property:-default_value}.方案三不要在RollingFile的fileName和filePattern属性里使用到${ctx:domainId}等cdn或者mdn的写法，这样会导致在log4j2异步扫描重加载配置文件的时候报错。可以使用另一种Appender来实现这种把日志分别打印到不同文件的效果，那就是RoutingAppender。有兴趣的可以去了解下这个RoutingAppender，还是挺有意思的。参考链接Unable to invoke factory method in class class org.apache.logging.log4j.core.appender.RollingFileAppender for element RollingFileProperty Substitution]]></content>
       <categories>
-        <category>Java</category>
+        <category>Java相关框架</category>
         <category>日志框架</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>Log4j2</tag>
-        <tag>框架</tag>
+        <tag>Java相关框架</tag>
+        <tag>log4j2</tag>
       </tags>
   </entry>
   <entry>
@@ -297,13 +322,12 @@
     <url>%2Fposts%2Fa5cad454.html</url>
     <content type="text"><![CDATA[问题项目使用了log4j2，由于使用了全局异步打印日志的方式，还需要引入disruptor的依赖，最后使用的log4j2和disruptor的版本依赖如下：1234567891011&lt;dependency&gt; &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt; &lt;artifactId&gt;log4j-core&lt;/artifactId&gt; &lt;version&gt;2.11.1&lt;/version&gt;&lt;/dependency&gt;&lt;!-- log4j2 AsyncLogger need disruptor--&gt;&lt;dependency&gt; &lt;groupId&gt;com.lmax&lt;/groupId&gt; &lt;artifactId&gt;disruptor&lt;/artifactId&gt; &lt;version&gt;3.2.0&lt;/version&gt;&lt;/dependency&gt;在项目最开始的地方(第一次使用到log4j2的logger之前)，通过代码来启用全局异步打印日志：12// use asyncLogger for log4j2 frameworkSystem.setProperty("Log4jContextSelector", "org.apache.logging.log4j.core.async.AsyncLoggerContextSelector");然而在启动项目后报错如下：1234java.lang.NoSuchMethodError: com.lmax.disruptor.dsl.Disruptor.&lt;init&gt;(Lcom/lmax/disruptor/EventFactory;ILjava/util/concurrent/ThreadFactory;Lcom/lmax/disruptor/dsl/ProducerType;Lcom/lmax/disruptor/WaitStrategy;)V at org.apache.logging.log4j.core.async.AsyncLoggerDisruptor.start(AsyncLoggerDisruptor.java:97) at org.apache.logging.log4j.core.async.AsyncLoggerContext.start(AsyncLoggerContext.java:75) at .......解决方法该问题是因为Disruptor的版本较低导致，将版本改用较新版本的即可：12345&lt;dependency&gt; &lt;groupId&gt;com.lmax&lt;/groupId&gt; &lt;artifactId&gt;disruptor&lt;/artifactId&gt; &lt;version&gt;3.4.2&lt;/version&gt;&lt;/dependency&gt;]]></content>
       <categories>
-        <category>Java</category>
+        <category>Java相关框架</category>
         <category>日志框架</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>Log4j2</tag>
-        <tag>框架</tag>
+        <tag>Java相关框架</tag>
+        <tag>log4j2</tag>
       </tags>
   </entry>
   <entry>
@@ -324,13 +348,12 @@
     <url>%2Fposts%2F2c65baa3.html</url>
     <content type="text"><![CDATA[应用场景与问题当项目在运行时，我们如果需要修改log4j 1.X或者log4j2的配置文件，一般来说我们是不能直接将项目停止运行再来修改文件重新部署的。于是就有这样一个问题：如何在不停止当前项目的运行的情况下，让系统能够自动地监控配置文件的修改状况，从而实现动态加载配置文件的功能？而log4j 1.X和log4j2的差别略大，各自应该怎么实现这个功能？log4j 1.X动态加载配置文件log4j 1.X提供了动态加载配置文件的方法：12DOMConfigurator.configureAndWatch()PropertyConfigurator.onfigureAndWatch()DOMConfigurator对应的是xml配置文件，PropertyConfigurator对应的是properties配置文件。这两个类都有configureAndWatch这个方法，该方法有个重载方法，如下：12configureAndWatch(String configFilename)configureAndWatch(String configFilename, long delay)configureAndWatch方法用来监控配置文件是否被改动，监控的时间间隔是delay参数来决定，如果不传入该参数则使用默认的时间间隔1分钟(60000L)。configureAndWatch(String configFilename)实际上还是调用的configureAndWatch(String configFilename, long delay)。log4j2动态加载配置文件和log4j 1.X比起来，log4j2的动态加载配置很简单就能实现，不需要另外在代码中调用api，方法如下：123&lt;configuration monitorInterval="30"&gt; ...&lt;/configuration&gt;在log4j2.xml配置文件中的configuration节点添加monitorInterval的值，单位是秒，如果配置的值大于0，则会按照时间间隔来自动扫描配置文件是否被修改，并在修改后重新加载最新的配置文件。如果不配置该值，默认为0，即不扫描配置文件是否被修改。Log4j 1.X动态加载配置文件的底层实现原理DOMConfigurator#configureAndWatch源码解析org.apache.log4j.xml.DOMConfigurator#configureAndWatch源码如下：12345static public void configureAndWatch(String configFilename, long delay) &#123; XMLWatchdog xdog = new XMLWatchdog(configFilename); xdog.setDelay(delay); xdog.start();&#125;这里new了一个XMLWatchdog对象，接着设置了delay参数，最后调用了start()方法。watchdog是看门狗、检查者的意思，XMLWatchdog继承了FileWatchdog这个类，在XMLWatchdog中仅仅重写了doOnChange方法：123public void doOnChange() &#123; new DOMConfigurator().doConfigure(filename, LogManager.getLoggerRepository());&#125;从方法名就可以看出来，如果XMLWatchdog监控到配置文件被改动了，就会调用这个doOnChange方法，用来重新加载配置文件。那么它又是怎么知道配置文件被改动过了呢？接着看其父类FileWatchdog的源码：123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475public abstract class FileWatchdog extends Thread &#123; /** The default delay between every file modification check, set to 60 seconds. */ static final public long DEFAULT_DELAY = 60000; /** The name of the file to observe for changes. */ protected String filename; /** The delay to observe between every check. By default set &#123;@link #DEFAULT_DELAY&#125;. */ protected long delay = DEFAULT_DELAY; File file; long lastModif = 0; boolean warnedAlready = false; boolean interrupted = false; protected FileWatchdog(String filename) &#123; super("FileWatchdog"); this.filename = filename; file = new File(filename); setDaemon(true); checkAndConfigure(); &#125; /** Set the delay to observe between each check of the file changes. */ public void setDelay(long delay) &#123; this.delay = delay; &#125; abstract protected void doOnChange(); protected void checkAndConfigure() &#123; boolean fileExists; try &#123; fileExists = file.exists(); &#125; catch(SecurityException e) &#123; LogLog.warn("Was not allowed to read check file existance, file:["+ filename+"]."); interrupted = true; // there is no point in continuing return; &#125; if(fileExists) &#123; long l = file.lastModified(); // this can also throw a SecurityException if(l &gt; lastModif) &#123; // however, if we reached this point this lastModif = l; // is very unlikely. doOnChange(); warnedAlready = false; &#125; &#125; else &#123; if(!warnedAlready) &#123; LogLog.debug("["+filename+"] does not exist."); warnedAlready = true; &#125; &#125; &#125; public void run() &#123; while(!interrupted) &#123; try &#123; Thread.sleep(delay); &#125; catch(InterruptedException e) &#123; // no interruption expected &#125; checkAndConfigure(); &#125; &#125;&#125;可以看到，FileWatchdog继承了Thread类，类里定义了几个成员变量，比如默认的监控时间间隔等。而在该类的构造方法中可以看到，首先该线程类将名字设定成FileWatchdog，接着根据传入的配置文件的路径new了一个File对象，然后该线程类又设置成了守护线程(daemon thread)，最后调用了checkAndConfigure()。在checkAndConfigure()中，则是对new出来的配置文件File对象进行检查是否存在该文件，若不存在该文件则会设置成员变量的值，这样就不会去监控不存在的配置文件了。如果该配置文件存在，则通过lastModified()来获取文件的最后更新时间，和上次的更新时间作对比，如果比上次更新时间大则会调用doOnChange()来重新加载配置文件。而在FileWatchdog的run方法中，则是在无限循环中先让线程睡眠设置好的监控时间间隔，然后调用checkAndConfigure()。总结可以看出，在log4j 1.X的DOMConfigurator中，是通过创建一个守护线程来不停地扫描配置文件的最后更新时间，并和上次的更新时间进行对比，如果最后更新时间大于上次更新时间则会重新加载配置文件。PropertyConfigurator#configureAndWatch源码解析PropertyConfigurator的configureAndWatch()其实和DOMConfigurator差不多，区别是PropertyConfigurator在方法里new了一个PropertyWatchdog对象，PropertyWatchdog和XMLWatchdog一样继承了FileWatchdog，一样重写了doOnChange()方法。只是PropertyWatchdog是通过new PropertyConfigurator().doConfigure()来加载配置文件的。从源码实现来看，无论是使用xml配置文件，还是使用properties配置文件，其动态加载配置文件的底层实现是基本一样的。可以通过解析配置文件的文件后缀来判断是xml还是properties文件，然后调用对应的方法即可，大概的思路如下：1234567891011121314151617boolean flag = true;boolean isXml = StringUtils.equalsIgnoreCase("xml", StringUtils.substringAfterLast(filepath, "."));ling delay = 30000;if (isXml) &#123; if (flag) &#123; DOMConfigurator.configureAndWatch(filepath, delay); &#125; else &#123; DOMConfigurator.configure(filepath); &#125;&#125; else &#123; if (flag) &#123; PropertyConfigurator.configureAndWatch(filepath, delay); &#125; else &#123; PropertyConfigurator.configure(filepath); &#125;&#125;log4j2底层实现动态加载配置文件的简单解析虽然log4j2的动态加载配置很简单，但其底层实现比起log4j 1.X却要复杂很多，使用到了很多并发包下的类，具体也不是很了解，这里简单解释下流程。对于log4j2.xml文件，对应的是org.apache.logging.log4j.core.config.xml.XmlConfiguration这个类。如果在log4j2.xml里配置了monitorInterval，在构建XmlConfiguration时会根据该值来走一段特定的逻辑：12345678910111213141516171819202122232425262728293031323334for (final Map.Entry&lt;String, String&gt; entry : attrs.entrySet()) &#123; final String key = entry.getKey(); final String value = getStrSubstitutor().replace(entry.getValue()); if ("status".equalsIgnoreCase(key)) &#123; statusConfig.withStatus(value); &#125; else if ("dest".equalsIgnoreCase(key)) &#123; statusConfig.withDestination(value); &#125; else if ("shutdownHook".equalsIgnoreCase(key)) &#123; isShutdownHookEnabled = !"disable".equalsIgnoreCase(value); &#125; else if ("shutdownTimeout".equalsIgnoreCase(key)) &#123; shutdownTimeoutMillis = Long.parseLong(value); &#125; else if ("verbose".equalsIgnoreCase(key)) &#123; statusConfig.withVerbosity(value); &#125; else if ("packages".equalsIgnoreCase(key)) &#123; pluginPackages.addAll(Arrays.asList(value.split(Patterns.COMMA_SEPARATOR))); &#125; else if ("name".equalsIgnoreCase(key)) &#123; setName(value); &#125; else if ("strict".equalsIgnoreCase(key)) &#123; strict = Boolean.parseBoolean(value); &#125; else if ("schema".equalsIgnoreCase(key)) &#123; schemaResource = value; &#125; else if ("monitorInterval".equalsIgnoreCase(key)) &#123; final int intervalSeconds = Integer.parseInt(value); if (intervalSeconds &gt; 0) &#123; getWatchManager().setIntervalSeconds(intervalSeconds); if (configFile != null) &#123; final FileWatcher watcher = new ConfiguratonFileWatcher(this, listeners); getWatchManager().watchFile(configFile, watcher); &#125; &#125; &#125; else if ("advertiser".equalsIgnoreCase(key)) &#123; createAdvertiser(value, configSource, buffer, "text/xml"); &#125;&#125;可以看到，如果monitorInterval的值大于0，则会拿到WatchManager并设置扫描配置文件的时间间隔，如果配置文件存在，则会new一个ConfiguratonFileWatcher对象，并将配置文件和该对象一起传递给WatchManager的watchFile方法。这两个方法的底层实现很绕，比起log4j 1.X要复杂得多，不容易看懂。不过最终实现的效果还是一样的，依然会开启一个守护线程来监控配置文件是否被改动。区别在于，log4j2使用线程池来启动线程，在WatchManager#start()里实现的：12345678@Overridepublic void start() &#123; super.start(); if (intervalSeconds &gt; 0) &#123; future = scheduler.scheduleWithFixedDelay(new WatchRunnable(), intervalSeconds, intervalSeconds, TimeUnit.SECONDS); &#125;&#125;而该方法则是在启动配置文件时被调用的，AbstractConfiguration#start()：12345678910111213141516/** * Start the configuration. */@Overridepublic void start() &#123; // Preserve the prior behavior of initializing during start if not initialized. if (getState().equals(State.INITIALIZING)) &#123; initialize(); &#125; LOGGER.debug("Starting configuration &#123;&#125;", this); this.setStarting(); if (watchManager.getIntervalSeconds() &gt; 0) &#123; watchManager.start(); &#125; ...&#125;这里只是简单解析了下主要的流程，具体的实现细节目前还看不太懂，有兴趣的可以自己去看看log4j2的源码。另外我在官方文档里看到说monitorInterval的最小值是5，但是在源码里也没看到这个，我觉得只要配置值大于0应该就是可以的。有不对之处，欢迎指出。这是官方原文：###Automatic ReconfigurationWhen configured from a File, Log4j has the ability to automatically detect changes to the configuration file and reconfigure itself. If the monitorInterval attribute is specified on the configuration element and is set to a non-zero value then the file will be checked the next time a log event is evaluated and/or logged and the monitorInterval has elapsed since the last check. The example below shows how to configure the attribute so that the configuration file will be checked for changes only after at least 30 seconds have elapsed. The minimum interval is 5 seconds.参考链接Log4j 2.0 的新特性Log4j – Configuring Log4j 2 - Apache Log4j 2]]></content>
       <categories>
-        <category>Java</category>
+        <category>Java相关框架</category>
         <category>日志框架</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>Java相关框架</tag>
         <tag>log4j2</tag>
-        <tag>框架</tag>
         <tag>log4j</tag>
       </tags>
   </entry>
@@ -339,14 +362,12 @@
     <url>%2Fposts%2Ff53d27da.html</url>
     <content type="text"><![CDATA[LevelRangeFilter的注意点在log4j2中，LevelRangeFilter的minLevel，maxLevel的配置是和log4j 1.x相反的；minLevel需要配置的是高级别，maxLevel配置的是低级别，如下：1&lt;LevelRangeFilter minLevel="fatal" maxLevel="info" onMatch="ACCEPT" onMismatch="DENY"/&gt;如上边的配置，是打印info到fatal级别的log，如果配置反过来，则不会输出任何log。如果不配置minLevel、maxLevel、onMatch和onMismatch的值，则会为其设置默认值，在LevelRangeFilter中的源码实现如下：1234567891011121314@PluginFactorypublic static LevelRangeFilter createFilter( // @formatter:off @PluginAttribute("minLevel") final Level minLevel, @PluginAttribute("maxLevel") final Level maxLevel, @PluginAttribute("onMatch") final Result match, @PluginAttribute("onMismatch") final Result mismatch) &#123; // @formatter:on final Level actualMinLevel = minLevel == null ? Level.ERROR : minLevel; final Level actualMaxLevel = maxLevel == null ? Level.ERROR : maxLevel; final Result onMatch = match == null ? Result.NEUTRAL : match; final Result onMismatch = mismatch == null ? Result.DENY : mismatch; return new LevelRangeFilter(actualMinLevel, actualMaxLevel, onMatch, onMismatch);&#125;至于为什么把最大最小level的值配置反了就会无法输出，是因为在LevelRangeFilter中的源码实现如下：123private Result filter(final Level level) &#123; return level.isInRange(this.minLevel, this.maxLevel) ? onMatch : onMismatch;&#125;可以看到，在调用filter方法进行过滤时，是调用了level#isInRange()来判断是否匹配该filter的。而在该方法中，实现如下：123public boolean isInRange(final Level minLevel, final Level maxLevel) &#123; return this.intLevel &gt;= minLevel.intLevel &amp;&amp; this.intLevel &lt;= maxLevel.intLevel;&#125;这里通过对比Level对象的intLevel值(int)来判断是否匹配，而这些Level对象也在Level这个类里进行里实例化：12345678910static &#123; OFF = new Level("OFF", StandardLevel.OFF.intLevel()); FATAL = new Level("FATAL", StandardLevel.FATAL.intLevel()); ERROR = new Level("ERROR", StandardLevel.ERROR.intLevel()); WARN = new Level("WARN", StandardLevel.WARN.intLevel()); INFO = new Level("INFO", StandardLevel.INFO.intLevel()); DEBUG = new Level("DEBUG", StandardLevel.DEBUG.intLevel()); TRACE = new Level("TRACE", StandardLevel.TRACE.intLevel()); ALL = new Level("ALL", StandardLevel.ALL.intLevel());&#125;可以看到，这些Level对象的intLevel值是由另一个枚举类StandardLevel来提供的：123456789101112131415161718192021222324252627282930313233343536373839/*** No events will be logged.*/OFF(0),/*** A severe error that will prevent the application from continuing.*/FATAL(100),/*** An error in the application, possibly recoverable.*/ERROR(200),/*** An event that might possible lead to an error.*/WARN(300),/*** An event for informational purposes.*/INFO(400),/*** A general debugging event.*/DEBUG(500),/*** A fine-grained debug message, typically capturing the flow through the application.*/TRACE(600),/*** All events should be logged.*/ALL(Integer.MAX_VALUE);可以看到，Level级别越高，其对应的intLevel值越小，可以这样理解：级别越高，能打印出来的日志信息就越少，所以其intLevel值就越小。如果我们把LevelRangeFilter的minLevel、maxLevel配置反了，会导致level#isInRange()返回false，最终也就没有任何日志得以输出了。]]></content>
       <categories>
-        <category>Java</category>
+        <category>Java相关框架</category>
         <category>日志框架</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>Java相关框架</tag>
         <tag>log4j2</tag>
-        <tag>框架</tag>
-        <tag>LevelRangeFilter</tag>
       </tags>
   </entry>
   <entry>
@@ -366,14 +387,12 @@
     <url>%2Fposts%2Fec168d9b.html</url>
     <content type="text"><![CDATA[前言log4j中常用的Filter分为四种：DenyAllFilter、LevelMatchFilter、LevelRangeFilter、StringMatchFilter。当appender匹配了某个Filter的时候，就不会继续匹配下一个filter，所以当需要配置多个filter时需要注意先后顺序，这样才能实现需要的效果。这些filter有个共同的属性AcceptOnMatch，用来控制匹配到的appender是否打印日志。只打印指定level的日志假如现在只希望打印INFO和ERROR级别的日志，可以这样配置：123456789101112&lt;appender name="cntCorelog" class="org.apache.log4j.rolling.RollingFileAppender"&gt; ...... &lt;filter class="org.apache.log4j.varia.LevelMatchFilter"&gt; &lt;param name="LevelToMatch" value="INFO" /&gt; &lt;param name="AcceptOnMatch" value="true"/&gt; &lt;/filter&gt; &lt;filter class="org.apache.log4j.varia.LevelMatchFilter"&gt; &lt;param name="LevelToMatch" value="ERROR" /&gt; &lt;param name="AcceptOnMatch" value="true"/&gt; &lt;/filter&gt; &lt;filter class="org.apache.log4j.varia.DenyAllFilter" /&gt;&lt;/appender&gt;这里如果不配置最后一个filter，则会放行所有日志输出。不打印指定level的日志假如不希望打印DEBUG级别的日志，可以这样配置：1234&lt;filter class="org.apache.log4j.varia.LevelMatchFilter"&gt; &lt;param name="LevelToMatch" value="ERROR" /&gt; &lt;param name="AcceptOnMatch" value="false" /&gt;&lt;/filter&gt;AcceptOnMatch表示是否输出日志，这里需要注意的是，一旦匹配了某个filter，就无法再匹配后续的filter了，如下：12345678&lt;filter class="org.apache.log4j.varia.LevelMatchFilter"&gt; &lt;param name="LevelToMatch" value="ERROR" /&gt; &lt;param name="AcceptOnMatch" value="false" /&gt;&lt;/filter&gt;&lt;filter class="org.apache.log4j.varia.LevelMatchFilter"&gt; &lt;param name="LevelToMatch" value="ERROR" /&gt; &lt;param name="AcceptOnMatch" value="true" /&gt;&lt;/filter&gt;对于上面的配置，ERROR级别的日志匹配了第一个filter后，结果是被过滤掉不被输出，于是第二个filter就不生效了。如果将上边的配置颠倒过来，如下：12345678&lt;filter class="org.apache.log4j.varia.LevelMatchFilter"&gt; &lt;param name="LevelToMatch" value="ERROR" /&gt; &lt;param name="AcceptOnMatch" value="true" /&gt;&lt;/filter&gt;&lt;filter class="org.apache.log4j.varia.LevelMatchFilter"&gt; &lt;param name="LevelToMatch" value="ERROR" /&gt; &lt;param name="AcceptOnMatch" value="false" /&gt;&lt;/filter&gt;这时候ERROR级别的日志就依然能正常被打印出来。只打印从level A到B之间的所有日志假如现在只想要打印INFO到ERROR级别之间的日志，可以这样配置：12345&lt;filter class="org.apache.log4j.varia.LevelRangeFilter"&gt; &lt;param name="LevelMin" value="INFO"/&gt; &lt;param name="LevelMax" value="ERROR"/&gt; &lt;param name="AcceptOnMatch" value="true" /&gt;&lt;/filter&gt;需要注意的是，对于LevelRangeFilter，会匹配所有的appender，如果将该filter置于其他filter的前面，则会导致后续的filter无效。只打印包含某些字符串的日志假如只希望打印某些字符串的日志，可以这样配置：1234&lt;filter class="org.apache.log4j.varia.StringMatchFilter"&gt; &lt;param name="StringToMatch" value="test" /&gt; &lt;param name="AcceptOnMatch" value="true" /&gt;&lt;/filter&gt;如上配置，如果日志里包含了test这个字符串就会被输出到日志了，如果是包含某些字符串就不打印出来，直接将AcceptOnMatch设成false就行。如果不配置StringToMatch的value，该filter无效；如果将其value配置为&quot;&quot;空字符串，该filter则会匹配所有日志。在StringMatchFilter的源码实现里，是通过indexOf()来判断是否包含指定字符串的。]]></content>
       <categories>
-        <category>Java</category>
+        <category>Java相关框架</category>
         <category>日志框架</category>
       </categories>
       <tags>
-        <tag>Java</tag>
-        <tag>框架</tag>
+        <tag>Java相关框架</tag>
         <tag>log4j</tag>
-        <tag>Filter</tag>
       </tags>
   </entry>
   <entry>
@@ -571,8 +590,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -611,8 +630,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -749,8 +768,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -975,8 +994,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1178,8 +1197,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1204,8 +1223,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1242,8 +1261,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1268,8 +1287,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
         <tag>远程访问</tag>
       </tags>
   </entry>
@@ -1282,8 +1301,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
         <tag>psql</tag>
       </tags>
   </entry>
@@ -1708,8 +1727,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1734,8 +1753,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
@@ -1760,8 +1779,8 @@
         <category>PostgreSQL</category>
       </categories>
       <tags>
-        <tag>数据库</tag>
         <tag>PostgreSQL</tag>
+        <tag>数据库</tag>
       </tags>
   </entry>
   <entry>
