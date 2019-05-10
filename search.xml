@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Java - 一道关于整型和字符类型的题目]]></title>
+    <url>%2Fposts%2Fa34ffc44.html</url>
+    <content type="text"><![CDATA[题目12345678public class Test &#123; public static void main(final String[] args) &#123; final int a = 10; final int b = 20; System.out.println(a + '+' + b + '=' + (a + b)); &#125;&#125;乍一看，可能有的同学会觉得很简单，直接给出如下答案：110+20=30其实这是道陷进题，很容易就看混了，正确的答案是：1164分析为什么答案会是164？这是因为这里并不是字符串拼接，而是整型与字符类型的加法运算。用一对单引号&#39;包括起来的是字符，用一对双引号&quot;包括起来的是字符串。对于字符串来说，用+拼接起来的结果还是字符串。但这道题中，用+拼接起来的是整型和字符类型，就变成了单纯的加法运算。在加法运算中，数据类型会从低位自动转换成高位，因为高位转低位会有数据溢出导致丢失精度的风险。当整型与字符类型相加时，字符类型会转换成整型，也就是转换成对应的ASCII码值。于是乎，a + &#39;+&#39; + b + &#39;=&#39; + (a + b)就变成了10 + 43 + 20 + 61 + (10 + 20)，其运算结果就是164。题目变形其一12345678public class Test &#123; public static void main(final String[] args) &#123; final int a = 10; final int b = 20; System.out.println(a + "+" + b + "=" + (a + b)); &#125;&#125;这道题的答案就是10+20=30了。其二1234567public class Test &#123; public static void main(final String[] args) &#123; System.out.println('A'); System.out.println((int)'A'); &#125;&#125;这道题的答案是：12A65如果我们想知道某个字符对应的ASCII码是多少，可以将其转换成整型，这个值就是其ASCII码值。]]></content>
+      <categories>
+        <category>三天两题</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔试面试算法题</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Kibana - 怎么修改日期格式Date format]]></title>
     <url>%2Fposts%2Fc85bbf4e.html</url>
     <content type="text"><![CDATA[问题Kibana在创建Index Patterns的时候，可以选择某个date类型的field作为排序字段。之后在Discover里打开对应的index，会发现这个date类型的field的格式显示如下：1April 10th 2019, 17:40:32.359这是Kibana默认的日期格式，有两种修改的方式。方式一：全局修改登录http://localhost:5601/，会进入Kibana的页面，选择Management -&gt; Index Patterns -&gt; Advanced Settings，找到Date format，如何修改这里的值，默认是MMMM Do YYYY, HH:mm:ss.SSS。可以改成YYYY-MM-DD HH:mm:ss.SSS，这样页面的所有日期就会显示成2019-04-23 16:30:39.139这种格式了。方式二：局部修改可以只针对某个时间字段进行修改，这样就不会影响到其它的时间字段，允许不同字段用不同的日期格式。登录http://localhost:5601/，会进入Kibana的页面，选择Management -&gt; Index Patterns，选择某个已经创建好的index pattern，接着在Fields这个tab里找到对应的日期字段，点击那个字段最后的铅笔图标（Edit）进行编辑。对于date类型的字段，其Format默认是选择了- Default -，将其改为选择Date，然后将下面的format改成YYYY-MM-DD HH:mm:ss.SSS，最后再点击下方的Save field。]]></content>
@@ -64,6 +76,7 @@
       <tags>
         <tag>Java相关框架</tag>
         <tag>Elasticsearch</tag>
+        <tag>ELK</tag>
       </tags>
   </entry>
   <entry>
@@ -616,9 +629,9 @@
       </categories>
       <tags>
         <tag>工作记录</tag>
-        <tag>正则表达式</tag>
         <tag>PostgreSQL</tag>
         <tag>java</tag>
+        <tag>正则表达式</tag>
       </tags>
   </entry>
   <entry>
