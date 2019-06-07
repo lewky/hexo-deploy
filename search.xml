@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[LeetCode - 412. Fizz Buzz]]></title>
+    <url>%2Fposts%2F37034d37.html</url>
+    <content type="text"><![CDATA[题目Write a program that outputs the string representation of numbers from 1 to n.But for multiples of three it should output “Fizz” instead of the number and for the multiples of five output “Buzz”. For numbers which are multiples of both three and five output “FizzBuzz”.Example:1234567891011121314151617181920n = 15,Return:[ &quot;1&quot;, &quot;2&quot;, &quot;Fizz&quot;, &quot;4&quot;, &quot;Buzz&quot;, &quot;Fizz&quot;, &quot;7&quot;, &quot;8&quot;, &quot;Fizz&quot;, &quot;Buzz&quot;, &quot;11&quot;, &quot;Fizz&quot;, &quot;13&quot;, &quot;14&quot;, &quot;FizzBuzz&quot;]常规思路题目很简单，就是n为3倍数时输出Fizz，n为5倍数时输出Buzz，n同时为3或5倍数时输出FizzBuzz。也就是说，在判断条件时，应该先判断n是否为15的倍数，接着再判断是否为3或者5的倍数来决定输出什么。代码如下：1234567891011121314151617class Solution &#123; public List&lt;String&gt; fizzBuzz(int n) &#123; List&lt;String&gt; list = new ArrayList&lt;&gt;(n); for (int i = 1; i &lt;= n; i++) &#123; if (i % 15 == 0) &#123; list.add("FizzBuzz"); &#125; else if (i % 3 == 0) &#123; list.add("Fizz"); &#125; else if (i % 5 == 0) &#123; list.add("Buzz"); &#125; else &#123; list.add(i + ""); &#125; &#125; return list; &#125;&#125;这里说一句，好像LeetCode在代码中使用了List时是不需要导包的，我试了下不管在第一行加不加import java.util.*;都没问题。下面是时间与内存的消耗：Runtime: 1 msMemory Usage: 37.2 MB特殊思路上边是通过%进行了取模运算来实现的，看了评论区有人认为：一般来说，对于CPU取余数的运算相对来说效率很低，如果可以避免使用大量的求余数操作，可以提升程序的性能。于是就有了不使用%的写法：1234567891011121314151617181920212223public class Solution &#123; public List&lt;String&gt; fizzBuzz(int n) &#123; List&lt;String&gt; ret = new ArrayList&lt;String&gt;(n); for(int i=1,fizz=0,buzz=0;i&lt;=n ;i++)&#123; fizz++; buzz++; if(fizz==3 &amp;&amp; buzz==5)&#123; ret.add("FizzBuzz"); fizz=0; buzz=0; &#125;else if(fizz==3)&#123; ret.add("Fizz"); fizz=0; &#125;else if(buzz==5)&#123; ret.add("Buzz"); buzz=0; &#125;else&#123; ret.add(String.valueOf(i)); &#125; &#125; return ret; &#125;&#125;下面是时间与内存的消耗：Runtime: 1 msMemory Usage: 37.3 MB这个方案里需要对两个变量进行重复的自增和重新赋值为0，可以用下边的方案来减少这些操作：123456789101112131415161718192021222324252627282930public class Solution &#123; public List&lt;String&gt; fizzBuzz(int n) &#123; List&lt;String&gt; result = new ArrayList&lt;&gt;(); if(n &lt; 1) return result; for(int i = 1, fizz = 3, buzz = 5; i &lt;= n; i++) &#123; String addVal = null; if(i == fizz &amp;&amp; i == buzz) &#123; addVal = "FizzBuzz"; fizz += 3; buzz += 5; &#125; else if(i == fizz) &#123; addVal = "Fizz"; fizz += 3; &#125; else if(i == buzz) &#123; addVal ="Buzz"; buzz += 5; &#125; else addVal = String.valueOf(i); result.add(addVal); &#125; return result; &#125;&#125;下面是时间与内存的消耗：Runtime: 1 msMemory Usage: 37.1 MB补充：i+&quot;&quot;和String.valueOf(i)在评论区里有人问到：which is better betweenlist.add( “” + i );andaddStr = String.valueOf(i); list.add(addStr)？我认为后者的写法更好，因为i+&quot;&quot;实际上会new一个StringBuilder去拼接i和&quot;&quot;，然后再调用toString()来得到字符串。而String.valueOf(i)在底层是调用了Integer.toString(i)来得到字符串。相关链接412. Fizz BuzzJava 4ms solution , Not using “%” operation]]></content>
+      <categories>
+        <category>三天两题</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔试面试算法题</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode - 136. Single Number]]></title>
+    <url>%2Fposts%2Fa517d260.html</url>
+    <content type="text"><![CDATA[题目Given a non-empty array of integers, every element appears twice except for one. Find that single one.Note:Your algorithm should have a linear runtime complexity. Could you implement it without using extra memory?Example 1:12Input: [2,2,1]Output: 1Example 2:12Input: [4,1,2,1,2]Output: 4解题思路这道题要求我们使用线性的时间复杂度O(n)来解决，并且还不能申请额外的内存空间，一般看到这种要求，脑海里一下子就冒出来异或位运算，事实也是如此，这里可以利用异或位运算的性质来得出一个整型数组里单独的数字。异或有以下性质：相同的两个数异或结果为0任何数与0异或结果还是其自身异或运算满足交换律和结合律解决方案如下：123456789class Solution &#123; public int singleNumber(int[] nums) &#123; int result = 0; for (int a : nums) &#123; result ^= a; &#125; return result; &#125;&#125;下面是时间与内存的消耗：Runtime: 0 msMemory Usage: 37.8 MB相关链接136. Single Number]]></content>
+      <categories>
+        <category>三天两题</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔试面试算法题</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode - 344. Reverse String]]></title>
+    <url>%2Fposts%2F7901a0f.html</url>
+    <content type="text"><![CDATA[题目Write a function that reverses a string. The input string is given as an array of characters char[].Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.You may assume all the characters consist of printable ascii characters.Example 1:12Input: [&quot;h&quot;,&quot;e&quot;,&quot;l&quot;,&quot;l&quot;,&quot;o&quot;]Output: [&quot;o&quot;,&quot;l&quot;,&quot;l&quot;,&quot;e&quot;,&quot;h&quot;]Example 2:12Input: [&quot;H&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;h&quot;]Output: [&quot;h&quot;,&quot;a&quot;,&quot;n&quot;,&quot;n&quot;,&quot;a&quot;,&quot;H&quot;]解题思路这是一道经典的反转字符串题目，难点在于要求不能申请额外的内存空间，并且要求时间复杂度为O(1)。第一次接触过这种类型的同学大概会懵逼，这道题其实可以转变成另一道题：如何在不占用任何额外空间的情况下交换x、y两个数的值？这里可以利用到异或运算来解决，异或有以下性质：相同的两个数异或结果为0任何数与0异或结果还是其自身异或运算满足交换律和结合律于是就有了这样一种思路：将字符串的首尾字符通过异或运算来相互调换位置，比如第一个和最后一个字符互换位置，第二个和最后第二个互换位置，一共循环字符串长度/2的次数，这样就可以实现题目想要的效果。代码如下：12345678910111213class Solution &#123; public void reverseString(char[] s) &#123; int size = s.length; int a = size / 2; int last; for (int i = 0; i &lt; a; i++) &#123; last = size - 1 - i; s[i] ^= s[last]; s[last] ^= s[i]; s[i] ^= s[last]; &#125; &#125;&#125;下面是时间与内存的消耗：Runtime: 1 msMemory Usage: 51.6 MB相关链接344. Reverse String]]></content>
+      <categories>
+        <category>三天两题</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔试面试算法题</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode - 709. To Lower Case]]></title>
+    <url>%2Fposts%2F985dba49.html</url>
+    <content type="text"><![CDATA[题目Implement function ToLowerCase() that has a string parameter str, and returns the same string in lowercase.Example 1:12Input: &quot;Hello&quot;Output: &quot;hello&quot;Example 2:12Input: &quot;here&quot;Output: &quot;here&quot;Example 3:12Input: &quot;LOVELY&quot;Output: &quot;lovely&quot;解题思路这道题很简单，就是单纯遍历字符串的每个字符，如果是大写字母就变成小写字母，每个小写字母都比对应的大写字母的ASCII码大32。代码如下：123456789101112131415class Solution &#123; public String toLowerCase(String str) &#123; if (str == null || "".equals(str)) &#123; return ""; &#125; StringBuilder sb = new StringBuilder(); for (char c : str.toCharArray()) &#123; if (c &gt;= 65 &amp;&amp; c &lt;= 90) &#123; c += 32; &#125; sb.append(c); &#125; return sb.toString(); &#125;&#125;如果不记得A或者Z的ASCII码是多少，也可以直接写成下面这样：12345678910111213141516class Solution &#123; public String toLowerCase(String str) &#123; if (str == null || "".equals(str)) &#123; return ""; &#125; int n = 'a' - 'A'; StringBuilder sb = new StringBuilder(); for (char c : str.toCharArray()) &#123; if (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') &#123; c += n; &#125; sb.append(c); &#125; return sb.toString(); &#125;&#125;下面是时间与内存的消耗：Runtime: 0 msMemory Usage: 33.1 MB相关链接709. To Lower Case]]></content>
+      <categories>
+        <category>三天两题</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔试面试算法题</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[LeetCode - 771. Jewels and Stones]]></title>
+    <url>%2Fposts%2Fa6737c60.html</url>
+    <content type="text"><![CDATA[题目You’re given strings J representing the types of stones that are jewels, and S representing the stones you have. Each character in S is a type of stone you have. You want to know how many of the stones you have are also jewels.The letters in J are guaranteed distinct, and all characters in J and S are letters. Letters are case sensitive, so &quot;a&quot; is considered a different type of stone from &quot;A&quot;.Example 1:12Input: J = &quot;aA&quot;, S = &quot;aAAbbbb&quot;Output: 3Example 2:12Input: J = &quot;z&quot;, S = &quot;ZZ&quot;Output: 0Note:S and J will consist of letters and have length at most 50.The characters in J are distinct.常规思路题目可能有点绕，其实简化一下，就是说有两个字符串J和S，两个字符串都是由字母构成的，并且区分大小写，而J里的字母是不重复的，S则是有可能重复的。请找出在S里有多少个字母是与J的字母相同的。思路很简单，就是遍历S里的每一个字符是否存在于J中，每存在一个就累计一次。代码如下：12345678910class Solution &#123; public int numJewelsInStones(String J, String S) &#123; int count = 0; for (int i = 0; i &lt; S.length(); i++) &#123; if (J.indexOf(S.charAt(i)) &gt;= 0) count++; &#125; return count; &#125;&#125;另辟蹊径在讨论区里见到了一个很骚的做法，只有一行代码就可以得到想要的结果，如下：12345class Solution &#123; public int numJewelsInStones(String J, String S) &#123; return S.replaceAll("[^" + J + "]", "").length(); &#125;&#125;这种思路是利用了正则表达式，把S里凡是不属于J的字符全部替换成空字符串&quot;&quot;，然后剩下的字符串的长度就是最终的答案。至于这两种思路哪个更好就见仁见智了，下面是两个思路各自花费的时间和内存：常规思路：Runtime: 1 msMemory Usage: 33.7 MB特殊思路：Runtime: 7 msMemory Usage: 34.9 MB相关链接771. Jewels and Stones]]></content>
+      <categories>
+        <category>三天两题</category>
+        <category>LeetCode</category>
+      </categories>
+      <tags>
+        <tag>Java</tag>
+        <tag>笔试面试算法题</tag>
+        <tag>LeetCode</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Hexo瞎折腾系列(9) - 网页标题崩溃特效]]></title>
     <url>%2Fposts%2Fbdceb0a1.html</url>
     <content type="text"><![CDATA[前言本系列的所有修改均基于本系列第一篇中的新增文件(譬如custom.js)，请先自行阅读Hexo瞎折腾系列(1) - 准备工作与简单美化；并按照文章所说自行修改代码或文件。为网页添加标题崩溃特效该特效为：当用户离开站点相关的页面时，网页的标题会变成“已崩溃”，网站图标也会改变；当用户重新回到站点页面时才会恢复正常。实现方式如下：请在themes/next/source/js/src/custom.js里加入如下代码：1234567891011121314151617181920/* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */window.onload = function() &#123; var OriginTitile = document.title; var titleTime; document.addEventListener('visibilitychange', function() &#123; if(document.hidden) &#123; $('[rel="icon"]').attr('href', "/failure.ico"); $('[rel="shortcut icon"]').attr('href', "/failure.ico"); document.title = '喔唷，崩溃啦！'; clearTimeout(titleTime); &#125; else &#123; $('[rel="icon"]').attr('href', "/favicon-32x32.ico"); $('[rel="shortcut icon"]').attr('href', "/favicon-32x32.ico"); document.title = '咦，页面又好了！'; titleTime = setTimeout(function() &#123; document.title = OriginTitile; &#125;, 2000); &#125; &#125;);&#125;然后在站点根目录的/source目录下添加failure.ico，作为网站崩溃时显示的图标；如下：这里的favicon-32x32.ico是你个人站点的图标，改成你自己的图标就好。]]></content>
@@ -272,8 +342,8 @@
       </categories>
       <tags>
         <tag>前端</tag>
-        <tag>node.js</tag>
         <tag>gulp</tag>
+        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
