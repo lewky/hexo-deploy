@@ -48,4 +48,10 @@ next: 5.1.4
 </html>
 ```
 
+这里的`custom.styl`，`custom-head.swig`是原本的NexT主题自带的，另外两个是我自己添加的，之所以又添加了另外两个js文件，是因为在页面的不同地方引入js文件会对页面产生不一样的效果与影响。
+
+### 添加 custom-foot.swig 文件
+
+在`themes/next/layout/_custom/`目录下添加`custom-foot.swig`文件，该文件内容如下：
+
 
