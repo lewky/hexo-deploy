@@ -80,7 +80,27 @@ Template render error: unexpected token: }}
 <figure><a class="lightgallery" href="/images/posts/hexo/error.jpg" title="error.jpg" data-thumbnail="/images/posts/hexo/error.jpg" data-sub-html="<h2> </h2><p>error.jpg</p>">
         
     </a><figcaption class="image-caption">error.jpg</figcaption>
-    </figure></p>]]></description></item><item><title>Hexo - 修改永久链接的默认格式</title><link>https://lewky.cn/posts/ff4321d8.html/</link><pubDate>Sun, 13 May 2018 17:08:50 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/ff4321d8.html/</guid><description><![CDATA[<p>Hexo的永久链接的默认格式是 <code>:year/:month/:day/:title/</code>，比如访问站点下某一篇文章时，其路径是 <code>2018/04/12/xxxx/</code>，如果我们的文章标题是中文的，那么该路径就会出现中文字符。在路径中出现了中文字符很容易引发各种问题，而且也不利于seo，因为路径包含了年月日三个层级，层级太深不利于百度蜘蛛抓取。</p>
-<p>解决办法就是利用其它的插件来生成唯一的路径，这样就算我们的文件标题随意修改，而不会导致原本的链接失效而造成站点下存在大量的死链。</p>]]></description></item><item><title>Hexo - 修改默认的post和draft的模板</title><link>https://lewky.cn/posts/1369.html/</link><pubDate>Thu, 10 May 2018 00:29:26 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/1369.html/</guid><description><![CDATA[<h2 id="修改默认的post和draft的模板">修改默认的post和draft的模板</h2>
-<p>通过<code>hexo n post XXX</code>或者<code>hexo n draft XXX</code>所生成的文章或草稿是根据默认的模板来生成的，我们可以自己来定制想要的模板。</p>
-<p>在站点根目录下的 scaffolds 文件夹下，存放着 <code>draft.md</code>， <code>page.md</code> 和 <code>post.md</code>这三个文件夹，一般我们只需要修改draft和post这两个模板就行了。</p>]]></description></item></channel></rss>
+    </figure></p>]]></description></item><item><title>NexT主题个性化 - 添加文章置顶功能</title><link>https://lewky.cn/posts/6ed0d627.html/</link><pubDate>Sun, 13 May 2018 23:33:05 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/6ed0d627.html/</guid><description><![CDATA[<h2 id="安装插件及其使用方法">安装插件及其使用方法</h2>
+<p>在站点根目录执行命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm uninstall hexo-generator-index --save
+npm install hexo-generator-index-pin-top --save
+</code></pre></td></tr></table>
+</div>
+</div><p>接下来在需要置顶的文章头部添加 <code>top: true</code> 或者 <code>top: n</code>，这里的n是数字，数字越大表示置顶等级越高。</p>]]></description></item><item><title>NexT主题个性化 - 启用搜索功能</title><link>https://lewky.cn/posts/3e5e6b79.html/</link><pubDate>Sun, 13 May 2018 21:59:57 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/3e5e6b79.html/</guid><description><![CDATA[<h2 id="安装搜索插件">安装搜索插件</h2>
+<p>在站点根目录使用 <code>git bash</code> 执行命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">npm install hexo-generator-searchdb --save
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="启用搜索功能">启用搜索功能</h2>
+<p>打开主题配置文件 <code>_config.yml</code>，修改如下配置：</p>]]></description></item></channel></rss>
