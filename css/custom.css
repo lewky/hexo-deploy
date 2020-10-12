@@ -6,11 +6,13 @@
     height: .5rem;
 }
 
+
 /* 首页头部 */
 .home-profile {
     background: white;
 	opacity: .85;
 }
+
 
 /* 首页文章摘要 */
 .home[posts] .summary {
@@ -18,13 +20,28 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
     background: white;
-	opacity: .92;
+	opacity: .95;
 }
 
-/* 字体颜色 */
+
+/* 首页的分页页码 */
+.pagination {
+    margin-top: .1rem;
+    margin-bottom: .3rem;
+	padding: 1rem 0 .5rem 0;
+    background: white;
+	opacity: .95;
+}
+
+/* 字体 */
 .home[posts] .summary .content {
     color: #161209;
 }
+
+.single .single-title {
+	font-size: 1.8rem;
+}
+
 
 /* 文章正文 */
 .page.single {
@@ -32,8 +49,9 @@
 	padding-left: 2rem;
 	padding-right: 2rem;
     background: white;
-	opacity: .92;
+	opacity: .95;
 }
+
 
 /* 脚部 */
 .footer {
@@ -46,7 +64,7 @@
     width: 60%;
     margin: .1rem auto 0 auto;
     background: white;
-	opacity: .90;
+	opacity: .95;
 }
 
 @media only screen and (max-width: 1440px) {
@@ -73,11 +91,13 @@
     }
 }
 
+
 /* 目录 */
 .toc {
     background: white;
-	opacity: .90;
+	opacity: .95;
 }
+
 
 /* 标题 */
 .page.single h2 {
@@ -97,7 +117,57 @@
     margin: 18px 0px 18px -10px !important;
 }
 
+
 /* 评论 */
 .v[data-class=v] .vcards .vcard .vh {
     border-bottom: 1px dashed #ccb5b5 !important;
+}
+
+.single #comments {
+    padding: 4rem 0 2rem 0;
+}
+
+/* 归档、标签、分类页面 */
+.page.archive {
+    padding-bottom: 1rem;
+    background: white;	
+	opacity: .95;
+}
+
+.archive .single-title {
+    padding-right: 1rem;
+}
+
+.archive .group-title {
+    padding-left: 1rem;
+}
+
+.archive .archive-item {
+    padding-right: 1rem;
+}
+
+.archive .tag-cloud-tags {
+    padding: 0 .5rem;
+}
+
+/* 行内代码块 */
+code {
+    margin: 0 .2rem;
+    font-size: .9em;
+    border: 1px solid #d6d6d6;
+    border-radius: .2rem;
+}
+
+/* 预格式代码块(用tab键插入的代码块) */
+pre code {
+    margin: 0;
+    border: none;
+    font-size: .875rem;
+}
+
+/* 标题里的代码块样式 */
+.single .content>h2 code {
+    color: #f7ab01;
+    background: transparent;
+    border: none;
 }
