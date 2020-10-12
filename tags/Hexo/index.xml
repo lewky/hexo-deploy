@@ -45,42 +45,7 @@ Fail to build jekyll site.
 Template render error: unexpected token: }}
 </code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>Hexo瞎折腾系列(4) - 站点首页不显示文章全文</title><link>https://lewky.cn/posts/62111.html/</link><pubDate>Fri, 20 Jul 2018 23:13:55 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/62111.html/</guid><description><![CDATA[<h2 id="文章摘要设置">文章摘要设置</h2>
-<p>打开主题配置文件 _config.yml 文件，找到如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"># Automatically Excerpt. Not recommend.
-# Please use <span class="c">&lt;!-- more --&gt;</span> in the post to control excerpt accurately.
-auto_excerpt:
-  enable: false
-  length: 150
-</code></pre></td></tr></table>
-</div>
-</div><p>把这里的false改为true就可以了在首页启动显示文章预览了，length是显示预览的长度。</p>
-<p>这里我们可以通过在文章使用<code>&lt;!-- more --&gt;</code>标志来精确控制文章的摘要预览，比如这篇文章就是在这个段落的末尾添加了该标志，所以本文在首页的预览就会显示到这个段落为止。</p>]]></description></item><item><title>Hexo瞎折腾系列(3) - 添加GitHub彩带和GitHub Corner</title><link>https://lewky.cn/posts/844109c2.html/</link><pubDate>Thu, 19 Jul 2018 23:09:04 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/844109c2.html/</guid><description><![CDATA[<h2 id="页面右上角添加github彩带">页面右上角添加GitHub彩带</h2>
-<p>你可以在<a href="https://github.com/blog/273-github-ribbons" target="_blank">这里</a>找到一共12种样式的GitHub彩带，复制其中的超链代码。</p>
-<p>在<code>themes\next\layout\_layout.swig</code>目录下找到头部彩带相关的代码：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;headband&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description></item><item><title>Hexo瞎折腾系列(2) - 添加背景图片轮播</title><link>https://lewky.cn/posts/576ee548.html/</link><pubDate>Thu, 19 Jul 2018 23:00:36 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/576ee548.html/</guid><description><![CDATA[<h2 id="动态背景图片插件jquery-backstretch">动态背景图片插件<code>jquery-backstretch</code></h2>
-<p><code>jquery-backstretch</code>是一款简单的jQuery插件，可以用来设置动态的背景图片，以下是官方网站的介绍。</p>
-<blockquote>
-<p>A simple jQuery plugin that allows you to add a dynamically-resized, slideshow-capable background image to any page or element.</p>
-</blockquote>
-<p>可以直接在页面中引入该插件的cdn来调用函数，也可以直接下载下来使用，这是<a href="https://www.bootcdn.cn/jquery-backstretch/">官方地址</a>。</p>]]></description></item><item><title>Hexo瞎折腾系列(1) - 准备工作与简单美化</title><link>https://lewky.cn/posts/ef301a4d.html/</link><pubDate>Wed, 11 Jul 2018 23:37:24 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/ef301a4d.html/</guid><description><![CDATA[<h2 id="前言">前言</h2>
+</div>]]></description></item><item><title>Hexo瞎折腾系列(1) - 准备工作与简单美化</title><link>https://lewky.cn/posts/ef301a4d.html/</link><pubDate>Wed, 11 Jul 2018 23:37:24 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/ef301a4d.html/</guid><description><![CDATA[<h2 id="前言">前言</h2>
 <p>网上有不少相关的帖子，不过版本会比较旧，而不同版本可能存在代码不同的问题，不过大部分还是大同小异，本系列就不啰嗦重复了，基本只会按照本人所使用的版本以及个人所使用到的内容来进行介绍。</p>
 <p>该系列是对我所使用的Next主题进行个性化定制，涉及到js和css等的修改，还有各种插件的使用；另一个系列是针对Next主题进行一些写作技巧的介绍与运用，希望能对大家有所帮助。有疑问的朋友可以给我留言，我会尽可能回复<code>O(∩_∩)O</code>。</p>]]></description></item><item><title>Hexo - 3.X.X版本无法生成baidusitemap</title><link>https://lewky.cn/posts/49fbb32a.html/</link><pubDate>Tue, 12 Jun 2018 00:52:52 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/49fbb32a.html/</guid><description><![CDATA[<p>今天安装了<code>hexo-generator-baidu-sitemap</code>后，运行<code>hexo g</code>报错如下：</p>
 <p>
@@ -90,4 +55,52 @@ auto_excerpt:
     </figure></p>]]></description></item><item><title>Hexo - 修改永久链接的默认格式</title><link>https://lewky.cn/posts/ff4321d8.html/</link><pubDate>Sun, 13 May 2018 17:08:50 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/ff4321d8.html/</guid><description><![CDATA[<p>Hexo的永久链接的默认格式是 <code>:year/:month/:day/:title/</code>，比如访问站点下某一篇文章时，其路径是 <code>2018/04/12/xxxx/</code>，如果我们的文章标题是中文的，那么该路径就会出现中文字符。在路径中出现了中文字符很容易引发各种问题，而且也不利于seo，因为路径包含了年月日三个层级，层级太深不利于百度蜘蛛抓取。</p>
 <p>解决办法就是利用其它的插件来生成唯一的路径，这样就算我们的文件标题随意修改，而不会导致原本的链接失效而造成站点下存在大量的死链。</p>]]></description></item><item><title>Hexo - 修改默认的post和draft的模板</title><link>https://lewky.cn/posts/1369.html/</link><pubDate>Thu, 10 May 2018 00:29:26 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/1369.html/</guid><description><![CDATA[<h2 id="修改默认的post和draft的模板">修改默认的post和draft的模板</h2>
 <p>通过<code>hexo n post XXX</code>或者<code>hexo n draft XXX</code>所生成的文章或草稿是根据默认的模板来生成的，我们可以自己来定制想要的模板。</p>
-<p>在站点根目录下的 scaffolds 文件夹下，存放着 <code>draft.md</code>， <code>page.md</code> 和 <code>post.md</code>这三个文件夹，一般我们只需要修改draft和post这两个模板就行了。</p>]]></description></item></channel></rss>
+<p>在站点根目录下的 scaffolds 文件夹下，存放着 <code>draft.md</code>， <code>page.md</code> 和 <code>post.md</code>这三个文件夹，一般我们只需要修改draft和post这两个模板就行了。</p>]]></description></item><item><title>Hexo - 如何在文章中插入图片</title><link>https://lewky.cn/posts/12046.html/</link><pubDate>Wed, 09 May 2018 00:41:16 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/12046.html/</guid><description><![CDATA[<p>网上有不少办法，有的是启用配置文件中的属性，有的则是安装插件，这里只介绍最简单的一种方法。</p>
+<ul>
+<li>在 source/ 目录下新建一个文件夹，比如 images；在该文件夹下存放各种图片资源，比如 test.jpg；</li>
+<li>新建一篇文章，在文章中使用markdown的插入图片语法：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html">![test](/images/test.jpg)
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>这里使用的是绝对路径，如果使用相对路径比如<code>images/test.jpg</code>可能会无法访问到该图片资源。建议在博客或者配置中都使用绝对路径。</li>
+</ul>]]></description></item><item><title>Hexo搭建博客教程(3) - 远程部署到GitHub Pages</title><link>https://lewky.cn/posts/1657.html/</link><pubDate>Tue, 24 Apr 2018 22:08:44 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/1657.html/</guid><description><![CDATA[<blockquote>
+<p>本章讲的是如何将本地的个人项目远程部署到 GitHub Pages，涉及到GitHub的项目仓库、Git的使用，以及Hexo的远程部署等。</p>
+</blockquote>
+<h2 id="一安装-hexo-deployer-git-插件">一、安装 <code>hexo-deployer-git</code> 插件</h2>
+<p>想要将Hexo项目部署到 GitHub上，需要先安装一个插件。在Hexo项目的根目录打开命令窗口，输入：</p>
+<pre><code>npm install hexo-deployer-git --save
+</code></pre>]]></description></item><item><title>Hexo搭建博客教程(2) - 博客的简单个性化配置</title><link>https://lewky.cn/posts/38619.html/</link><pubDate>Tue, 24 Apr 2018 22:07:44 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/38619.html/</guid><description><![CDATA[<blockquote>
+<p>本章主要讲博客的个性化，譬如站点的基本配置（语言、头像、站点图标等）、安装新的Hexo主题（NexT主题）以及主题的配置。</p>
+</blockquote>
+<h2 id="一修改站点配置">一、修改站点配置</h2>
+<p>打开站点配置文件 ，找到：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-html" data-lang="html"># Site
+title: Hexo
+subtitle:
+description:
+keywords:
+author: John Doe
+language:
+timezone:
+</code></pre></td></tr></table>
+</div>
+</div>]]></description></item></channel></rss>
