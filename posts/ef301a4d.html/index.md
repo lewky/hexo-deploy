@@ -213,5 +213,5 @@ redcarpet:
 
 ### 推荐一些写得很齐全的文章链接
 
-1. <a href="https://segmentfault.com/a/1190000009544924">hexo的next主题个性化配置教程</a>
-2. <a href="https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html">打造个性超赞博客Hexo+NexT+GithubPages的超深度优化</a>
+* [hexo的next主题个性化配置教程](https://segmentfault.com/a/1190000009544924)
+* [打造个性超赞博客Hexo+NexT+GithubPages的超深度优化](https://reuixiy.github.io/technology/computer/computer-aided-art/2017/06/09/hexo-next-optimization.html)
