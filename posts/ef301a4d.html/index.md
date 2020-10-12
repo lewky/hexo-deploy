@@ -48,42 +48,4 @@ next: 5.1.4
 </html>
 ```
 
-这里的`custom.styl`，`custom-head.swig`是原本的NexT主题自带的，另外两个是我自己添加的，之所以又添加了另外两个js文件，是因为在页面的不同地方引入js文件会对页面产生不一样的效果与影响。
-
-### 添加 custom-foot.swig 文件
-
-在`themes/next/layout/_custom/`目录下添加`custom-foot.swig`文件，该文件内容如下：
-
-```html
-{#
-Custom foot in body, Can add script here.
-#}
-<!-- 自定义的js文件 -->
-<script type="text/javascript" src="/js/src/custom.js"></script>
-```
-
-接着修改`themes\next\layout\_layout.swig`，在body标签的闭合标签前添加一行代码，表示将我们新添加的`custom-foot.swig`文件包括进去：
-
-```html
-<body>
-  ....
-
-  {% include '_custom/custom-foot.swig' %}
-</body>
-</html>
-```
-
-这个文件的作用是负责引入我们想要的js文件，比如其他第三方js的cdn等等。因为页面在引入js文件时是阻塞式的，如果我们在页面的最开始就引入这些js文件，而这些文件又比较大，会造成页面在渲染时长时间处于白屏状态。
-
-### 添加 custom.js 文件
-
-在`themes/next/source/js/src`目录下添加`custom.js`文件，该文件用来存放我们自己写的js函数等等，需要注意的是，我们之前是在`custom-foot.swig`文件中的script标签里引入了该文件，也就是说，在该文件里，我们不能再自己添加script标签了，直接书写js函数就行了，如下所示：
-
-```html
-/* 返回随机颜色 */
-function randomColor() {
-	return "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")";
-}
-```
-
 
