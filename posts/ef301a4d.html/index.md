@@ -133,7 +133,7 @@ hexo n page categories
 
 运行之后会在source目录下生成对应的两个文件夹，在文件夹下会存在一个index.md文件，打开这两个index.md文件，分别添加`type: tags`和`type: categories`，如下：
 
-```html file:~/source/tags/index.md
+```html
 ---
 title: 标签
 date: 20xx-xx-xx xx:xx:xx
@@ -141,7 +141,7 @@ type: tags
 ---
 ```
 
-```html file:~/source/categories/index.md
+```html
 ---
 title: 分类
 date: 20xx-xx-xx xx:xx:xx
