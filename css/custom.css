@@ -98,6 +98,10 @@
 	opacity: .95;
 }
 
+.toc .toc-content {
+    font-size: .875rem;
+}
+
 
 /* 标题 */
 .page.single h2 {
