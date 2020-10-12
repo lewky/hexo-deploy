@@ -54,4 +54,14 @@ next: 5.1.4
 
 在`themes/next/layout/_custom/`目录下添加`custom-foot.swig`文件，该文件内容如下：
 
+```html
+{#
+Custom foot in body, Can add script here.
+#}
+<!-- 自定义的js文件 -->
+<script type="text/javascript" src="/js/src/custom.js"></script>
+```
+
+接着修改`themes\next\layout\_layout.swig`，在body标签的闭合标签前添加一行代码，表示将我们新添加的`custom-foot.swig`文件包括进去：
+
 
