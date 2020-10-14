@@ -27,7 +27,7 @@
 /* 首页的分页页码 */
 .pagination {
     margin-top: .1rem;
-    margin-bottom: .3rem;
+    margin-bottom: 0;
 	padding: 1rem 0 .5rem 0;
     background: white;
 	opacity: .95;
@@ -193,7 +193,7 @@ pre code {
 }
 
 /* 标题里的代码块样式 */
-.single .content>h2 code {
+.page.single .content>h2 code {
     color: #f7ab01;
     background: transparent;
     border: none;
