@@ -1,4 +1,7 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yulin Lewis' Blog</title><link>https://lewky.cn/</link><description>不想当写手的码农不是好咸鱼&lt;br>_(xз」∠)_</description><generator>Hugo -- gohugo.io</generator><managingEditor>1019175915@qq.com (雨临Lewis)</managingEditor><webMaster>1019175915@qq.com (雨临Lewis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Oct 2020 16:08:58 +0800</lastBuildDate><atom:link href="https://lewky.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>Hugo系列(3) - 通过配置文件来定制个人站点</title><link>https://lewky.cn/posts/hugo-3.html/</link><pubDate>Sat, 10 Oct 2020 16:08:58 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/hugo-3.html/</guid><description><![CDATA[<h2 id="背景">背景</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Yulin Lewis' Blog</title><link>https://lewky.cn/</link><description>不想当写手的码农不是好咸鱼&lt;br>_(xз」∠)_</description><generator>Hugo -- gohugo.io</generator><managingEditor>1019175915@qq.com (雨临Lewis)</managingEditor><webMaster>1019175915@qq.com (雨临Lewis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 13 Oct 2020 14:20:22 +0800</lastBuildDate><atom:link href="https://lewky.cn/index.xml" rel="self" type="application/rss+xml"/><item><title>小白学做菜(1) - 番茄炒面</title><link>https://lewky.cn/posts/%E5%B0%8F%E7%99%BD%E5%AD%A6%E5%81%9A%E8%8F%9C1-%E7%95%AA%E8%8C%84%E7%82%92%E9%9D%A2.html/</link><pubDate>Tue, 13 Oct 2020 14:20:22 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/%E5%B0%8F%E7%99%BD%E5%AD%A6%E5%81%9A%E8%8F%9C1-%E7%95%AA%E8%8C%84%E7%82%92%E9%9D%A2.html/</guid><description><![CDATA[<h2 id="食材">食材</h2>
+<p>适量面条，3颗蘑菇，1个番茄，1根火腿，1-2个鸡蛋，一把青菜</p>
+<h2 id="调料">调料</h2>
+<p>生抽、老抽、香油（芝麻油）、白糖、番茄酱、葱姜蒜</p>]]></description></item><item><title>Hugo系列(3) - 通过配置文件来定制个人站点</title><link>https://lewky.cn/posts/hugo-3.html/</link><pubDate>Sat, 10 Oct 2020 16:08:58 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/hugo-3.html/</guid><description><![CDATA[<h2 id="背景">背景</h2>
 <p>本文基于<code>LoveIt</code>主题【v0.2.10】，且所使用的Hugo版本如下，不同版本且不同主题可能无法适用某些属性：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -60,26 +63,20 @@ Jekyll build exit with code 1.
 Fail to build jekyll site.
 </code></pre></td></tr></table>
 </div>
-</div>]]></description></item><item><title>Hexo - CNAME文件在每次部署后就没了</title><link>https://lewky.cn/posts/39e3ca60.html/</link><pubDate>Wed, 19 Dec 2018 22:37:58 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/39e3ca60.html/</guid><description><![CDATA[<h2 id="问题">问题</h2>
+</div>]]></description></item><item><title>Eclipse - 怎么设置在启动时提示选择工作空间</title><link>https://lewky.cn/posts/3671826f.html/</link><pubDate>Wed, 30 Jan 2019 22:38:14 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/3671826f.html/</guid><description><![CDATA[<h2 id="方法">方法</h2>
+<ol>
+<li>Window -&gt; Preferences -&gt; General -&gt; Startup and Shutdown -&gt; Workspaces</li>
+<li>勾选<code>Prompt for workspace on startup</code></li>
+</ol>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://jingyan.baidu.com/article/27fa732682e3f446f8271f26.html" target="_blank" rel="noopener noreffer">怎样设置Eclipse在启动时提示选择工作空间</a></li>
+</ul>]]></description></item><item><title>Eclipse - 安装了jd-eclipse插件后依然无法反编译类文件</title><link>https://lewky.cn/posts/89d8e317.html/</link><pubDate>Wed, 30 Jan 2019 01:02:27 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/89d8e317.html/</guid><description><![CDATA[<h2 id="问题">问题</h2>
+<p>Eclipse在安装了jd-eclipse插件后依然无法反编译类文件，这个问题是因为没有修改默认的类文件查看器。</p>
+<h2 id="解决方法">解决方法</h2>]]></description></item><item><title>Hexo - CNAME文件在每次部署后就没了</title><link>https://lewky.cn/posts/39e3ca60.html/</link><pubDate>Wed, 19 Dec 2018 22:37:58 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/39e3ca60.html/</guid><description><![CDATA[<h2 id="问题">问题</h2>
 <p>一般我们会将Hexo博客搭建到Github上，如果在Github上为其配置一个自定义的域名时，会自动在项目仓库根目录下新添加一个<code>CNAME</code>文件。但是这里有个问题，如果将Hexo博客重新部署一遍后，Github仓库里的这个<code>CNAME</code>文件就会消失掉，又需要重新配置一遍。</p>
 <h2 id="解决方法">解决方法</h2>
 <p>其实这里有个技巧，我们可以将需要上传部署到Github的文件都放在<code>source</code>文件夹里，例如<code>CNAME</code>文件、<code>favicon.ico</code>、或者其他的图片等等，这样在执行<code>hexo d</code>这个命令之后，这些文件就不会被删除了。</p>
-<p>Hexo在执行命令时是不会删除掉<code>source</code>目录下的文件的，我们可以在该目录下随意增加其他文件或者文件夹，建议在该目录下添加子文件夹，然后在子文件夹里添加文件，这样便于文件分档归类。</p>]]></description></item><item><title>Hexo - Template render error unexpected token</title><link>https://lewky.cn/posts/2a5ffb7e.html/</link><pubDate>Tue, 23 Oct 2018 23:02:10 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/2a5ffb7e.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
-<p>今天发现在使用<code>hexo g</code>时报错如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">FATAL Something&#39;s wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
-Template render error: unexpected token: }}
-</code></pre></td></tr></table>
-</div>
-</div>]]></description></item><item><title>Hexo写作系列(2) - 如何令文章目录显示序号</title><link>https://lewky.cn/posts/99e0f22b.html/</link><pubDate>Thu, 06 Sep 2018 23:14:09 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/99e0f22b.html/</guid><description><![CDATA[<h2 id="前言">前言</h2>
-<p>NexT主题会自动为每一篇文章生成目录，这个目录可以通过配置来控制是否生成对应的序号。毕竟有时候我们会给文章的小标题写上序号，有时候又会懒得去写，这个时候这个配置就很重要了。</p>
-<p>有两种方法来实现这个效果，一种是全局生效，一种是对具体某篇文章生效。</p>]]></description></item><item><title>Hexo写作系列(1) - NexT主题自带的样式</title><link>https://lewky.cn/posts/38eb04fa.html/</link><pubDate>Wed, 05 Sep 2018 23:14:09 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/38eb04fa.html/</guid><description><![CDATA[<h2 id="前言">前言</h2>
-<p>本系列主要介绍和hexo-NexT主题相关的一些写作技巧，可能会涉及到部分前端知识(不了解也没关系，能用就行)。我之所以选择hexo-NexT来搭建个人网站，一个很重要的原因就是因为简单、方便、快捷！不需要服务器，直接通过Markdown来进行写作，不仅文章布局美观，还可以节省大量的时间。</p>
-<p>我一般不会在文章中手动加入各种html标签，因为太麻烦了&ndash;而NexT主题就很贴心地自带了一些样式，让你可以不需要自己写一大堆html标签就能得到美观的页面效果。</p>]]></description></item><item><title>Hexo瞎折腾系列(8) - 添加评论系统</title><link>https://lewky.cn/posts/ec12c039.html/</link><pubDate>Wed, 05 Sep 2018 22:24:05 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/ec12c039.html/</guid><description><![CDATA[<h2 id="前言">前言</h2>
-<p>Hexo的NexT主题本身就集成了一些评论系统，多说啊之类的已经关闭服务的略过不提，目前比较多人用的有畅言、来必力livere、Gitment、Gitalk、Disqus等。</p>
-<p>我刚用的评论系统的时候，网易云跟贴和多说已经gg了，畅言需要备案，Disqus需要FQ，Gitment和Gitalk类似，都需要GitHub账号。经过搜集资料和考虑，我最终还是决定使用Gitment。只是在用了一段时间后，终于还是放弃了Gitment，转而使用来必力livere。</p>]]></description></item></channel></rss>
+<p>Hexo在执行命令时是不会删除掉<code>source</code>目录下的文件的，我们可以在该目录下随意增加其他文件或者文件夹，建议在该目录下添加子文件夹，然后在子文件夹里添加文件，这样便于文件分档归类。</p>]]></description></item><item><title>Eclipse - lombok的@Slf4j和@Data无效</title><link>https://lewky.cn/posts/eea0b72e.html/</link><pubDate>Wed, 24 Oct 2018 22:49:50 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/eea0b72e.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
+<p>最近开始学习spring-boot框架，我用的是Eclipse，然后发现在使用到了lombok的@Data注解时，Eclipse会编译错误。@Data的作用是自动生成toString方法和setter/getter方法，可以减少大量重复性的代码工作。</p>
+<p>另外在使用了@Slf4j注解时，这个注解可以自动为当前类生成一个log变量，即：<code>rivate  final Logger logger = LoggerFactory.getLogger(XXX.class);</code>。然而Eclipse无法识别log变量，会报log变量未声明的错误。</p>]]></description></item></channel></rss>

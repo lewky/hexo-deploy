@@ -52,8 +52,13 @@
 	opacity: .95;
 }
 
+/* 文章脚部 */
+.single .post-footer {
+    margin-top: 0;
+}
 
-/* 脚部 */
+
+/* 页面脚部 */
 .footer {
     display: block;
 	border-top-width: 3px;
@@ -131,6 +136,7 @@
     padding: 4rem 0 2rem 0;
 }
 
+
 /* 归档、标签、分类页面 */
 .page.archive {
     padding-bottom: 1rem;
@@ -153,6 +159,23 @@
 .archive .tag-cloud-tags {
     padding: 0 .5rem;
 }
+
+.archive .card-item-title a sup {
+    color: #a9a9b3;
+	font-weight: initial;
+}
+
+.archive .group-title sup {
+    color: #a9a9b3;
+	font-weight: initial;
+}
+
+.archive .single-title.animated.pulse.faster sup {
+	margin-left: .4rem;
+    color: #a9a9b3;
+	font-weight: initial;
+}
+
 
 /* 行内代码块 */
 code {
