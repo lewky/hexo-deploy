@@ -1,7 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Yulin Lewis' Blog</title><link>https://lewky.cn/posts/</link><description>所有文章 | Yulin Lewis' Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>1019175915@qq.com (雨临Lewis)</managingEditor><webMaster>1019175915@qq.com (雨临Lewis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 13 Oct 2020 14:20:22 +0800</lastBuildDate><atom:link href="https://lewky.cn/posts/" rel="self" type="application/rss+xml"/><item><title>小白学做菜(1) - 番茄炒面</title><link>https://lewky.cn/posts/%E5%B0%8F%E7%99%BD%E5%AD%A6%E5%81%9A%E8%8F%9C1-%E7%95%AA%E8%8C%84%E7%82%92%E9%9D%A2.html/</link><pubDate>Tue, 13 Oct 2020 14:20:22 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/%E5%B0%8F%E7%99%BD%E5%AD%A6%E5%81%9A%E8%8F%9C1-%E7%95%AA%E8%8C%84%E7%82%92%E9%9D%A2.html/</guid><description><![CDATA[<h2 id="食材">食材</h2>
-<p>适量面条，3颗鲜香菇，1个番茄，1根火腿，1-2个鸡蛋，一把青菜</p>
-<h2 id="调料">调料</h2>
-<p>生抽、老抽、香油（芝麻油）、白糖、番茄酱、葱姜蒜</p>]]></description></item><item><title>Hugo系列(3) - 通过配置文件来定制个人站点</title><link>https://lewky.cn/posts/hugo-3.html/</link><pubDate>Sat, 10 Oct 2020 16:08:58 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/hugo-3.html/</guid><description><![CDATA[<h2 id="背景">背景</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Yulin Lewis' Blog</title><link>https://lewky.cn/posts/</link><description>所有文章 | Yulin Lewis' Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>1019175915@qq.com (雨临Lewis)</managingEditor><webMaster>1019175915@qq.com (雨临Lewis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Oct 2020 16:08:58 +0800</lastBuildDate><atom:link href="https://lewky.cn/posts/" rel="self" type="application/rss+xml"/><item><title>Hugo系列(3) - 通过配置文件来定制个人站点</title><link>https://lewky.cn/posts/hugo-3.html/</link><pubDate>Sat, 10 Oct 2020 16:08:58 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/hugo-3.html/</guid><description><![CDATA[<h2 id="背景">背景</h2>
 <p>本文基于<code>LoveIt</code>主题【v0.2.10】，且所使用的Hugo版本如下，不同版本且不同主题可能无法适用某些属性：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -15,7 +12,33 @@ Hugo Static Site Generator v0.74.2-48565DE6 windows/amd64 BuildDate: 2020-07-17T
 </div>
 </div>]]></description></item><item><title>Hugo系列(1) - 简单入门与搭建</title><link>https://lewky.cn/posts/hugo-1.html/</link><pubDate>Sun, 06 Sep 2020 21:10:47 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/hugo-1.html/</guid><description><![CDATA[<h2 id="背景">背景</h2>
 <p>使用Hexo搭建个人博客也有两年多时间了，当文章数量达到上百篇之后，开始发现Hexo生成文章的效率越来越慢，直到每次生成都需要至少五分钟的时间。我发现生成效率和文章涉及到的分类和标签有很大关系，由于文章数量多，每篇文章又都关联了若干个分类和标签，再加上我使用了压缩样式的插件，最终导致极其低下的生成效率。</p>
-<p>在经过一段时间的考量后，决定将Hexo博客迁移到Hugo。Hugo是用go语言开发的，在用法上和Hexo类似，可以简单地把Hugo当成go语言版的Hexo，但是它拥有更快的生成效率。下面是官网的原话：</p>]]></description></item><item><title>SpringBoot JPA懒加载异常 - JsonMappingException: could not initialize proxy</title><link>https://lewky.cn/posts/742bbb45.html/</link><pubDate>Tue, 22 Oct 2019 20:11:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/742bbb45.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
+<p>在经过一段时间的考量后，决定将Hexo博客迁移到Hugo。Hugo是用go语言开发的，在用法上和Hexo类似，可以简单地把Hugo当成go语言版的Hexo，但是它拥有更快的生成效率。下面是官网的原话：</p>]]></description></item><item><title>Maven无法下载2.1.7.js7版本的itext依赖</title><link>https://lewky.cn/posts/d94da554.html/</link><pubDate>Mon, 16 Mar 2020 11:35:40 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/d94da554.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
+<p>某日忽然发现用Maven编译项目报错如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">Failed</span> <span class="n">to</span> <span class="n">collect</span> <span class="n">dependencies</span> <span class="n">at</span> <span class="n">net</span><span class="o">.</span><span class="na">sf</span><span class="o">.</span><span class="na">jasperreports</span><span class="o">:</span><span class="n">jasperreports</span><span class="o">:</span><span class="n">jar</span><span class="o">:</span><span class="n">6</span><span class="o">.</span><span class="na">10</span><span class="o">.</span><span class="na">0</span>
+<span class="o">-&gt;</span> <span class="n">com</span><span class="o">.</span><span class="na">lowagie</span><span class="o">:</span><span class="n">itext</span><span class="o">:</span><span class="n">jar</span><span class="o">:</span><span class="n">2</span><span class="o">.</span><span class="na">1</span><span class="o">.</span><span class="na">7</span><span class="o">.</span><span class="na">js7</span><span class="o">:</span> <span class="n">Failed</span> <span class="n">to</span> <span class="n">read</span> <span class="n">artifact</span> <span class="n">descriptor</span> <span class="k">for</span> <span class="n">com</span><span class="o">.</span><span class="na">lowagie</span><span class="o">:</span><span class="n">itext</span><span class="o">:</span><span class="n">jar</span><span class="o">:</span><span class="n">2</span><span class="o">.</span><span class="na">1</span><span class="o">.</span><span class="na">7</span><span class="o">.</span><span class="na">js7</span><span class="o">:</span> 
+<span class="n">Could</span> <span class="n">not</span> <span class="n">transfer</span> <span class="n">artifact</span> <span class="n">com</span><span class="o">.</span><span class="na">lowagie</span><span class="o">:</span><span class="n">itext</span><span class="o">:</span><span class="n">pom</span><span class="o">:</span><span class="n">2</span><span class="o">.</span><span class="na">1</span><span class="o">.</span><span class="na">7</span><span class="o">.</span><span class="na">js7</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>PostgreSQL - 如何杀死被锁死的进程</title><link>https://lewky.cn/posts/1514292e.html/</link><pubDate>Thu, 14 Nov 2019 23:24:29 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/1514292e.html/</guid><description><![CDATA[<h2 id="前言">前言</h2>
+<p>在一次系统迭代后用户投诉说无法成功登陆系统，经过测试重现和日志定位，最后发现是由于用户在ui上进行了某些操作后，触发了堆栈溢出异常，导致数据库里的用户登陆信息表的数据被锁住，无法释放。这个表里存放的是用户的session信息。</p>
+<p>虽然后来解决了问题，但是数据库里这个用户登录信息表里被lock住的数据始终无法释放，这导致用户永远无法登陆成功，需要手动跑SQL把锁去掉才行。</p>]]></description></item><item><title>SQL - where条件里的!=会过滤值为null的数据</title><link>https://lewky.cn/posts/949c02c.html/</link><pubDate>Tue, 12 Nov 2019 23:39:42 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/949c02c.html/</guid><description><![CDATA[<h2 id="会过滤值为null的数据">!=会过滤值为null的数据</h2>
+<p>在测试数据时忽然发现，使用如下的SQL是无法查询到对应column为null的数据的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sql" data-lang="sql"><span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">test</span> <span class="k">where</span> <span class="n">name</span> <span class="o">!=</span> <span class="s1">&#39;Lewis&#39;</span><span class="p">;</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>SpringBoot JPA懒加载异常 - JsonMappingException: could not initialize proxy</title><link>https://lewky.cn/posts/742bbb45.html/</link><pubDate>Tue, 22 Oct 2019 20:11:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/742bbb45.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
 <p>某日忽然发现在用postman测试数据时报错如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -101,6 +124,40 @@ Hugo Static Site Generator v0.74.2-48565DE6 windows/amd64 BuildDate: 2020-07-17T
 	<span class="o">...</span> <span class="n">128</span> <span class="n">common</span> <span class="n">frames</span> <span class="n">omitted</span>
 </code></pre></td></tr></table>
 </div>
+</div>]]></description></item><item><title>由Java正则表达式的灾难性回溯引发的高CPU异常：java.util.regex.Pattern$Loop.match</title><link>https://lewky.cn/posts/af92ed86.html/</link><pubDate>Wed, 09 Oct 2019 20:11:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/af92ed86.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
+<p>某天领导report了一个问题：线上的CPU自从上一个版本迭代后就一直处于居高不下的状况，领导看着这段时间的曲线图判断是有两条线程在不停的死循环。</p>
+<p>接到任务后去查看了AWS的CloudWatch，发现线上CPU确实一直居高不下，使用率基本是之前的两倍；另外发现线程使用率以比之前频繁很多。后来公司的大佬拿到dump后经过分析发现，是由正则表达式造成的CPU持续高使用率的问题。</p>]]></description></item><item><title>Jetty - Unable to compile class for JSP</title><link>https://lewky.cn/posts/1411dcba.html/</link><pubDate>Mon, 07 Oct 2019 20:10:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/1411dcba.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
+<p>在启动公司项目时发现报错如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-java" data-lang="java">    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span> <span class="n">2019</span><span class="o">-</span><span class="n">10</span><span class="o">-</span><span class="n">07</span> <span class="n">10</span><span class="o">:</span><span class="n">28</span><span class="o">:</span><span class="n">28</span><span class="o">.</span><span class="na">760</span><span class="o">:</span><span class="n">WARN</span><span class="o">:</span><span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">compiler</span><span class="o">.</span><span class="na">Compiler</span><span class="o">:</span><span class="n">Error</span> <span class="n">compiling</span> <span class="n">file</span><span class="o">:</span> <span class="n">D</span><span class="o">:</span><span class="err">\</span><span class="n">lewis</span><span class="o">.</span><span class="na">liu</span><span class="err">\</span><span class="n">CBX_KME</span><span class="err">\</span><span class="n">Program</span><span class="err">\</span><span class="n">jetty</span><span class="o">-</span><span class="n">temp</span><span class="err">\</span><span class="n">main</span><span class="err">\</span><span class="n">jsp</span><span class="err">\</span><span class="n">org</span><span class="err">\</span><span class="n">apache</span><span class="err">\</span><span class="n">jsp</span><span class="err">\</span><span class="n">invalidatePrevSession_jsp</span><span class="o">.</span><span class="na">javanull</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span> <span class="n">2019</span><span class="o">-</span><span class="n">10</span><span class="o">-</span><span class="n">07</span> <span class="n">10</span><span class="o">:</span><span class="n">28</span><span class="o">:</span><span class="n">28</span><span class="o">.</span><span class="na">763</span><span class="o">:</span><span class="n">WARN</span><span class="o">::/</span><span class="n">main</span><span class="o">/</span><span class="n">invalidatePrevSession</span><span class="o">.</span><span class="na">jsp</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">JasperException</span><span class="o">:</span> <span class="n">PWC6033</span><span class="o">:</span> <span class="n">Unable</span> <span class="n">to</span> <span class="n">compile</span> <span class="kd">class</span> <span class="nc">for</span> <span class="n">JSP</span><span class="o">||</span><span class="n">PWC6199</span><span class="o">:</span> <span class="n">Generated</span> <span class="n">servlet</span> <span class="n">error</span><span class="o">:|</span><span class="n">The</span> <span class="kn">import</span> <span class="nn">com.core.cbx.ui.zk.cul.grid.renderer.FileLinkCellRenderer</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">resolved</span><span class="o">||</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">compiler</span><span class="o">.</span><span class="na">DefaultErrorHandler</span><span class="o">.</span><span class="na">javacError</span><span class="o">(</span><span class="n">DefaultErrorHandler</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">123</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">compiler</span><span class="o">.</span><span class="na">ErrorDispatcher</span><span class="o">.</span><span class="na">javacError</span><span class="o">(</span><span class="n">ErrorDispatcher</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">296</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">compiler</span><span class="o">.</span><span class="na">Compiler</span><span class="o">.</span><span class="na">generateClass</span><span class="o">(</span><span class="n">Compiler</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">376</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">compiler</span><span class="o">.</span><span class="na">Compiler</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">Compiler</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">437</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">JspCompilationContext</span><span class="o">.</span><span class="na">compile</span><span class="o">(</span><span class="n">JspCompilationContext</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">608</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">servlet</span><span class="o">.</span><span class="na">JspServletWrapper</span><span class="o">.</span><span class="na">service</span><span class="o">(</span><span class="n">JspServletWrapper</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">360</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">servlet</span><span class="o">.</span><span class="na">JspServlet</span><span class="o">.</span><span class="na">serviceJspFile</span><span class="o">(</span><span class="n">JspServlet</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">486</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">apache</span><span class="o">.</span><span class="na">jasper</span><span class="o">.</span><span class="na">servlet</span><span class="o">.</span><span class="na">JspServlet</span><span class="o">.</span><span class="na">service</span><span class="o">(</span><span class="n">JspServlet</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">380</span><span class="o">)</span>
+    <span class="o">[</span><span class="n">jetty</span><span class="o">]</span>     <span class="n">at</span> <span class="n">javax</span><span class="o">.</span><span class="na">servlet</span><span class="o">.</span><span class="na">http</span><span class="o">.</span><span class="na">HttpServlet</span><span class="o">.</span><span class="na">service</span><span class="o">(</span><span class="n">HttpServlet</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">820</span><span class="o">)</span>
+</code></pre></td></tr></table>
+</div>
 </div>]]></description></item><item><title>Spring异常 - SpelEvaluationException: EL1030E</title><link>https://lewky.cn/posts/1ee001e8.html/</link><pubDate>Mon, 16 Sep 2019 23:50:38 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/1ee001e8.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
 <p>在本地开发项目时发现报错如下：</p>
 <div class="highlight"><div class="chroma">
@@ -155,99 +212,6 @@ Hugo Static Site Generator v0.74.2-48565DE6 windows/amd64 BuildDate: 2020-07-17T
 <pre class="chroma"><code class="language-java" data-lang="java"><span class="k">if</span> <span class="o">(</span><span class="n">LOGGER</span><span class="o">.</span><span class="na">isDebugEnabled</span><span class="o">())</span> <span class="o">{</span>
     <span class="n">LOGGER</span><span class="o">.</span><span class="na">debug</span><span class="o">(</span><span class="s">&#34;Search parameters: &#34;</span> <span class="o">+</span> <span class="n">searchParams</span><span class="o">);</span>
 <span class="o">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description></item><item><title>ELK系列(7) - 测试环境下Logstash异常退出：block in multi_receive_encoded</title><link>https://lewky.cn/posts/4d3f2358.html/</link><pubDate>Thu, 08 Aug 2019 20:11:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/4d3f2358.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
-<p>在本地测试无误后将ELK部署到了测试环境，结果第二天发现Logstash挂掉了，一开始以为是自动部署之类导致的问题。之后几天时间里Logstash总是会down掉，查看了下日志文件，发现报错如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span><span class="mi">2019-06-28</span><span class="err">T</span><span class="mi">07</span><span class="err">:</span><span class="mi">56</span><span class="err">:</span><span class="mi">13</span><span class="p">,</span><span class="mi">148</span><span class="p">][</span><span class="err">FATAL</span><span class="p">][</span><span class="err">logstash.runner</span>          <span class="p">]</span> <span class="err">An</span> <span class="err">unexpected</span> <span class="err">error</span> <span class="err">occurred!</span>
-<span class="p">{</span>
-	<span class="err">:</span> <span class="err">error=&gt;#&lt;Errno:</span> <span class="err">:</span> <span class="err">EPIPE:</span> <span class="err">Brokenpipe-&lt;STDOUT&gt;&gt;,</span>
-	<span class="err">:</span> <span class="err">backtrace=&gt;[</span><span class="nt">&#34;org/jruby/RubyIO.java:1457:in `write&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;org/jruby/RubyIO.java:1428:in `write&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;/home/cbx6/software/logstash-6.6.1/vendor/bundle/jruby/2.3.0/gems/logstash-output-stdout-3.1.4/lib/logstash/outputs/stdout.rb:43:in `block in multi_receive_encoded&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;org/jruby/RubyArray.java:1734:in `each&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;/home/cbx6/software/logstash-6.6.1/vendor/bundle/jruby/2.3.0/gems/logstash-output-stdout-3.1.4/lib/logstash/outputs/stdout.rb:42:in `multi_receive_encoded&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;/home/cbx6/software/logstash-6.6.1/logstash-core/lib/logstash/outputs/base.rb:87:in `multi_receive&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;org/logstash/config/ir/compiler/OutputStrategyExt.java:114:in `multi_receive&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;org/logstash/config/ir/compiler/AbstractOutputDelegatorExt.java:97:in `multi_receive&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;/home/cbx6/software/logstash-6.6.1/logstash-core/lib/logstash/pipeline.rb:390:in `block in output_batch&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;org/jruby/RubyHash.java:1343:in `each&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;/home/cbx6/software/logstash-6.6.1/logstash-core/lib/logstash/pipeline.rb:389:in `output_batch&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;/home/cbx6/software/logstash-6.6.1/logstash-core/lib/logstash/pipeline.rb:341:in `worker_loop&#39;&#34;</span><span class="p">,</span>
-	<span class="nt">&#34;/home/cbx6/software/logstash-6.6.1/logstash-core/lib/logstash/pipeline.rb:304:in `block in start_workers&#39;&#34;</span><span class="err">]</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
-</div>
-</div>]]></description></item><item><title>Hexo瞎折腾系列(9) - 网页标题崩溃特效</title><link>https://lewky.cn/posts/bdceb0a1.html/</link><pubDate>Sun, 26 May 2019 12:36:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/bdceb0a1.html/</guid><description><![CDATA[<h2 id="前言">前言</h2>
-<p>本系列的所有修改均基于本系列第一篇中的新增文件(譬如<code>custom.js</code>)，请先自行阅读<a href="https://lewky.cn/posts/ef301a4d.html" target="_blank" rel="noopener noreffer">Hexo瞎折腾系列(1) - 准备工作与简单美化</a>；并按照文章所说自行修改代码或文件。</p>
-<h2 id="为网页添加标题崩溃特效">为网页添加标题崩溃特效</h2>
-<p>该特效为：当用户离开站点相关的页面时，网页的标题会变成“已崩溃”，网站图标也会改变；当用户重新回到站点页面时才会恢复正常。</p>]]></description></item><item><title>ELK系列(5) - Logstash怎么分割字符串并添加新的字段到Elasticsearch</title><link>https://lewky.cn/posts/b37842a8.html/</link><pubDate>Sun, 12 May 2019 18:24:07 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/b37842a8.html/</guid><description><![CDATA[<h2 id="问题">问题</h2>
-<p>有时候我们想要在Logstash里对收集到的日志等信息进行分割，并且将分割后的字符作为新的字符来index到Elasticsearch里。假定需求如下：</p>
-<p>Logstash收集到的日志字段<code>message</code>的值是由多个字段拼接而成的，分隔符是<code>;,;</code>，如下：</p>]]></description></item><item><title>ELK系列(4) - Elasticsearch cannot write xcontent for unknown value of type class java.math.BigDecimal</title><link>https://lewky.cn/posts/7784288c.html/</link><pubDate>Sun, 12 May 2019 17:24:07 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/7784288c.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
-<p>在使用Elasticsearch进行index数据时，发现报错如下：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-java" data-lang="java"><span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">IllegalArgumentException</span><span class="o">:</span> <span class="n">cannot</span> <span class="n">write</span> <span class="n">xcontent</span> <span class="k">for</span> <span class="n">unknown</span> <span class="n">value</span> <span class="n">of</span> <span class="n">type</span> <span class="kd">class</span> <span class="nc">java</span><span class="o">.</span><span class="na">math</span><span class="o">.</span><span class="na">BigDecimal</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">xcontent</span><span class="o">.</span><span class="na">XContentBuilder</span><span class="o">.</span><span class="na">unknownValue</span><span class="o">(</span><span class="n">XContentBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">755</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">xcontent</span><span class="o">.</span><span class="na">XContentBuilder</span><span class="o">.</span><span class="na">value</span><span class="o">(</span><span class="n">XContentBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">726</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">xcontent</span><span class="o">.</span><span class="na">XContentBuilder</span><span class="o">.</span><span class="na">field</span><span class="o">(</span><span class="n">XContentBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">711</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">index</span><span class="o">.</span><span class="na">query</span><span class="o">.</span><span class="na">BaseTermQueryBuilder</span><span class="o">.</span><span class="na">doXContent</span><span class="o">(</span><span class="n">BaseTermQueryBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">154</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">index</span><span class="o">.</span><span class="na">query</span><span class="o">.</span><span class="na">AbstractQueryBuilder</span><span class="o">.</span><span class="na">toXContent</span><span class="o">(</span><span class="n">AbstractQueryBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">82</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">index</span><span class="o">.</span><span class="na">query</span><span class="o">.</span><span class="na">BoolQueryBuilder</span><span class="o">.</span><span class="na">doXArrayContent</span><span class="o">(</span><span class="n">BoolQueryBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">275</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">index</span><span class="o">.</span><span class="na">query</span><span class="o">.</span><span class="na">BoolQueryBuilder</span><span class="o">.</span><span class="na">doXContent</span><span class="o">(</span><span class="n">BoolQueryBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">256</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">index</span><span class="o">.</span><span class="na">query</span><span class="o">.</span><span class="na">AbstractQueryBuilder</span><span class="o">.</span><span class="na">toXContent</span><span class="o">(</span><span class="n">AbstractQueryBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">82</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">xcontent</span><span class="o">.</span><span class="na">XContentBuilder</span><span class="o">.</span><span class="na">value</span><span class="o">(</span><span class="n">XContentBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">779</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">xcontent</span><span class="o">.</span><span class="na">XContentBuilder</span><span class="o">.</span><span class="na">value</span><span class="o">(</span><span class="n">XContentBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">772</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">xcontent</span><span class="o">.</span><span class="na">XContentBuilder</span><span class="o">.</span><span class="na">field</span><span class="o">(</span><span class="n">XContentBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">764</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">search</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">SearchSourceBuilder</span><span class="o">.</span><span class="na">toXContent</span><span class="o">(</span><span class="n">SearchSourceBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">1184</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">common</span><span class="o">.</span><span class="na">xcontent</span><span class="o">.</span><span class="na">XContentHelper</span><span class="o">.</span><span class="na">toXContent</span><span class="o">(</span><span class="n">XContentHelper</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">349</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">search</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">SearchSourceBuilder</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">SearchSourceBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">1558</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">search</span><span class="o">.</span><span class="na">builder</span><span class="o">.</span><span class="na">SearchSourceBuilder</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">SearchSourceBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">1553</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">String</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="n">String</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">2994</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">java</span><span class="o">.</span><span class="na">lang</span><span class="o">.</span><span class="na">StringBuilder</span><span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">StringBuilder</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">131</span><span class="o">)</span>
-	<span class="n">at</span> <span class="n">org</span><span class="o">.</span><span class="na">elasticsearch</span><span class="o">.</span><span class="na">action</span><span class="o">.</span><span class="na">search</span><span class="o">.</span><span class="na">SearchRequest</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">SearchRequest</span><span class="o">.</span><span class="na">java</span><span class="o">:</span><span class="n">516</span><span class="o">)</span>
 </code></pre></td></tr></table>
 </div>
 </div>]]></description></item></channel></rss>

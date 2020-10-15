@@ -1,4 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Log4j2 - 标签 - Yulin Lewis' Blog</title><link>https://lewky.cn/tags/Log4j2/</link><description>Log4j2 - 标签 - Yulin Lewis' Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>1019175915@qq.com (雨临Lewis)</managingEditor><webMaster>1019175915@qq.com (雨临Lewis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Aug 2019 11:11:45 +0800</lastBuildDate><atom:link href="https://lewky.cn/tags/Log4j2/" rel="self" type="application/rss+xml"/><item><title>Log4j2 - 日志框架中isDebugEnabled()的作用</title><link>https://lewky.cn/posts/8b26a454.html/</link><pubDate>Sat, 10 Aug 2019 11:11:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/8b26a454.html/</guid><description><![CDATA[<h2 id="为什么要使用isdebugenabled">为什么要使用isDebugEnabled()</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Log4j2 - 标签 - Yulin Lewis' Blog</title><link>https://lewky.cn/tags/log4j2/</link><description>Log4j2 - 标签 - Yulin Lewis' Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>1019175915@qq.com (雨临Lewis)</managingEditor><webMaster>1019175915@qq.com (雨临Lewis)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 10 Aug 2019 11:11:45 +0800</lastBuildDate><atom:link href="https://lewky.cn/tags/log4j2/" rel="self" type="application/rss+xml"/><item><title>Log4j2 - 日志框架中isDebugEnabled()的作用</title><link>https://lewky.cn/posts/8b26a454.html/</link><pubDate>Sat, 10 Aug 2019 11:11:45 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/8b26a454.html/</guid><description><![CDATA[<h2 id="为什么要使用isdebugenabled">为什么要使用isDebugEnabled()</h2>
 <p>之前在系统的代码中发现有时候会在打印日志的时候先进行一次判断，如下：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -78,6 +78,20 @@
     <span class="nt">&lt;artifactId&gt;</span>disruptor<span class="nt">&lt;/artifactId&gt;</span>
     <span class="nt">&lt;version&gt;</span>3.2.0<span class="nt">&lt;/version&gt;</span>
 <span class="nt">&lt;/dependency&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div>]]></description></item><item><title>升级Log4j到Log4j2报错：cannot access org.apache.http.annotation.NotThreadSafe</title><link>https://lewky.cn/posts/55fa957a.html/</link><pubDate>Fri, 28 Dec 2018 01:16:21 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/55fa957a.html/</guid><description><![CDATA[<h2 id="问题与分析">问题与分析</h2>
+<p>今天把项目的log4j的依赖改成了log4j2的依赖后，发现使用Maven打包时报错如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project cbx-core: Compilation failure
+[ERROR] cannot access org.apache.http.annotation.NotThreadSafe
+[ERROR] class file for org.apache.http.annotation.NotThreadSafe not found
 </code></pre></td></tr></table>
 </div>
 </div>]]></description></item><item><title>Log4j和Log4j2怎么动态加载配置文件</title><link>https://lewky.cn/posts/2c65baa3.html/</link><pubDate>Fri, 28 Dec 2018 00:34:44 +0800</pubDate><author>文章作者</author><guid>https://lewky.cn/posts/2c65baa3.html/</guid><description>&lt;h2 id="应用场景与问题">应用场景与问题&lt;/h2>
